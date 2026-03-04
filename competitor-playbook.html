@@ -1,9 +1,10 @@
+# competitor-playbook
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ActiveCampaign Competitor Content Creation Playbook">
+    <meta name="description" content="ActiveCampaign Competitor Content Creation Playbook - Your guide to creating content that showcases ActiveCampaign's competitive advantages">
     <title>ActiveCampaign Competitor Content Playbook</title>
     <style>
         * {
@@ -32,6 +33,7 @@
             background: var(--gray-50);
         }
         
+        /* Header */
         .header {
             background: white;
             border-bottom: 1px solid var(--gray-200);
@@ -87,12 +89,14 @@
             border-color: var(--primary);
         }
         
+        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem 1.5rem;
         }
         
+        /* Sections */
         .section {
             background: white;
             border-radius: 0.75rem;
@@ -153,6 +157,7 @@
             text-decoration: underline;
         }
         
+        /* Callouts */
         .callout {
             padding: 1rem;
             border-radius: 0.5rem;
@@ -191,6 +196,7 @@
             font-size: 1.125rem;
         }
         
+        /* Quote boxes */
         .quote {
             background: var(--gray-50);
             border-left: 4px solid var(--primary);
@@ -207,6 +213,7 @@
             color: var(--gray-600);
         }
         
+        /* Stats grid */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -226,6 +233,7 @@
             margin-bottom: 0.5rem;
         }
         
+        /* Feature list */
         .feature-list {
             background: var(--gray-50);
             padding: 1rem;
@@ -239,6 +247,7 @@
             margin-bottom: 0.5rem;
         }
         
+        /* Cover page */
         .cover {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-medium) 50%, var(--primary-light) 100%);
             color: white;
@@ -289,6 +298,7 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
         
+        /* Footer */
         .footer {
             text-align: center;
             padding: 2rem;
@@ -296,6 +306,7 @@
             font-size: 0.875rem;
         }
         
+        /* Responsive */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -326,14 +337,11 @@
             .section-title {
                 font-size: 1.5rem;
             }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <div class="header">
         <div class="header-content">
             <div class="logo">ActiveCampaign</div>
@@ -347,8 +355,7 @@
                 <button class="nav-btn" onclick="showSection(6)">Brevo & Kit</button>
                 <button class="nav-btn" onclick="showSection(7)">Content Ideas</button>
                 <button class="nav-btn" onclick="showSection(8)">Resources</button>
-                <button class="nav-btn" onclick="showSection(9)">Switch Pages</button>
-                <button class="nav-btn" onclick="showSection(10)">Incentives</button>
+                <button class="nav-btn" onclick="showSection(9)">Incentives</button>
             </nav>
         </div>
     </div>
@@ -440,30 +447,238 @@
             <p>The most extensive integration ecosystem for connecting your entire tech stack.</p>
         </div>
 
-        <!-- Sections 3-7: Competitor pages omitted for brevity but remain unchanged -->
+        <!-- Section 3: Mailchimp -->
         <div class="section" id="section-3">
             <h2 class="section-title">ActiveCampaign vs. Mailchimp</h2>
-            <p>Content unchanged - keeping existing Mailchimp comparison content...</p>
+            
+            <div class="callout callout-warning">
+                <strong>Target Audience:</strong> Businesses outgrowing Mailchimp's basic automation or frustrated by pricing that increases with list growth
+            </div>
+
+            <h3>Acknowledge Mailchimp's Strengths:</h3>
+            <ul>
+                <li>Free plan available (500 contacts)</li>
+                <li>Strong brand recognition</li>
+                <li>Very simple for beginners</li>
+                <li>All-in-one hub (email, basic website, forms)</li>
+            </ul>
+
+            <h3>Where ActiveCampaign Wins:</h3>
+
+            <h4>🤖 Autonomous Marketing vs. Manual Automation</h4>
+            <p>Mailchimp requires you to manually build every workflow. ActiveCampaign's AI agents build campaigns from a single prompt, handling content generation, segmentation, and optimization automatically.</p>
+            <div class="feature-list">
+                <strong>Example:</strong> Type "increase repeat purchases" → AC builds the complete campaign. In Mailchimp, you'd manually create each email, set up triggers, and optimize send times.
+            </div>
+
+            <h4>📊 Advanced Automation Depth</h4>
+            <p>Multi-step journeys in Mailchimp are gated to higher tiers. ActiveCampaign offers 900+ automation templates even on the Starter plan ($15/mo vs. Mailchimp's $20/mo Standard).</p>
+
+            <h4>💰 No Double-Charging</h4>
+            <p>Mailchimp charges per subscriber per list. Same contact on 3 lists? You pay 3x.</p>
+            <p><strong>ActiveCampaign charges once per contact, regardless of how many lists they're on.</strong></p>
+
+            <h4>📧 Superior Deliverability</h4>
+            <p>ActiveCampaign: #1 at 93.4% | Mailchimp: #3 at 92.6%</p>
+
+            <h4>🔗 3x More Integrations</h4>
+            <p>ActiveCampaign: 950+ | Mailchimp: 250+</p>
+
+            <h4>📱 True Multi-Channel</h4>
+            <p>Native WhatsApp automation, SMS, and email in unified journeys. Mailchimp's SMS is basic and not fully integrated.</p>
+
+            <h3>Real Customer Stories:</h3>
+            
+            <div class="quote">
+                "We were using Mailchimp previously, which didn't have adequate automation options available... They also charged for duplicate email addresses that appeared in several lists, whereas ActiveCampaign only charges once per email."
+                <div class="quote-author">— Matt L, <a href="https://www.g2.com/products/activecampaign/reviews/activecampaign-review-5121953" target="_blank">G2 Review</a></div>
+            </div>
+
+            <div class="quote">
+                "Mailchimp was easy to use, but our deliverability rates were just so awful. ActiveCampaign's inbox receive rates were way better. There were a bunch of factors that y'all were taking into account that other email providers just weren't. So we switched."
+                <div class="quote-author">— Nyk Rayne, Director of Operations @ UN|HUSHED<br>
+                <a href="https://www.activecampaign.com/customers/unhushed" target="_blank">Read Case Study</a></div>
+            </div>
+
+            <h3>Verified Proof Points:</h3>
+            <ul>
+                <li><strong>UN|HUSHED:</strong> 238% increase in open rates after switching from Mailchimp<br>
+                <a href="https://www.activecampaign.com/customers/unhushed" target="_blank">Read full case study →</a></li>
+                <li><strong>Palmetto Fortis:</strong> Open rates jumped from 22% with Mailchimp to 52% with ActiveCampaign, plus 20% YoY growth<br>
+                <a href="https://www.activecampaign.com/customers/palmetto-fortis" target="_blank">Read full case study →</a></li>
+                <li><strong>Migration Data:</strong> 600+ businesses switch from Mailchimp to ActiveCampaign monthly<br>
+                <a href="https://www.activecampaign.com/compare/mailchimp" target="_blank">View comparison page →</a></li>
+            </ul>
         </div>
 
+        <!-- Section 4: HubSpot -->
         <div class="section" id="section-4">
             <h2 class="section-title">ActiveCampaign vs. HubSpot</h2>
-            <p>Content unchanged - keeping existing HubSpot comparison content...</p>
+            
+            <div class="callout callout-warning">
+                <strong>Target Audience:</strong> SMBs who need HubSpot's capabilities but can't afford Pro/Enterprise pricing. Teams finding HubSpot too complex for their needs.
+            </div>
+
+            <h3>Acknowledge HubSpot's Strengths:</h3>
+            <ul>
+                <li>Full CRM + marketing + sales + service platform</li>
+                <li>Strong reporting and revenue attribution</li>
+                <li>Generous free CRM tier</li>
+                <li>Excellent for sales-marketing alignment</li>
+            </ul>
+
+            <h3>Where ActiveCampaign Wins:</h3>
+
+            <h4>💰 Cost at Scale</h4>
+            <p>HubSpot's advanced automation requires Pro ($800+/mo) or Enterprise ($3,600+/mo) plans.</p>
+            <p><strong>ActiveCampaign Pro: $79/mo for comparable automation depth</strong></p>
+
+            <h4>⚡ Faster Time-to-Value</h4>
+            <p>HubSpot requires weeks of configuration and onboarding. ActiveCampaign's AI agents get you running in days with 3x faster campaign creation.</p>
+
+            <h4>📧 Better Email Builder</h4>
+            <p>HubSpot's email builder is often cited as less flexible than dedicated ESPs. ActiveCampaign offers 250+ templates with advanced conditional content.</p>
+
+            <h3>Real Customer Stories:</h3>
+
+            <div class="quote">
+                "ActiveCampaign is straightforward to use. It's offering the perfect amount of features without being too bloated (I'm looking at you, HubSpot!). We mainly use automations, email campaigns, and landing pages, and it has already saved us hundreds of hours."
+                <div class="quote-author">— Dennis V., <a href="https://www.g2.com/products/activecampaign/reviews/activecampaign-review-6566403" target="_blank">G2 Review</a></div>
+            </div>
+
+            <h3>Verified Proof Points:</h3>
+            <ul>
+                <li><strong>Cost Comparison:</strong> At 10,000 contacts: ActiveCampaign Enterprise costs $589/mo vs. HubSpot $3,600/mo<br>
+                <a href="https://www.activecampaign.com/compare/hubspot" target="_blank">View comparison →</a></li>
+                <li><strong>Artivive Case Study:</strong> 1000x growth from 100 to 100K users after switching from HubSpot<br>
+                <a href="https://www.activecampaign.com/customers/artivive" target="_blank">Read case study →</a></li>
+                <li><strong>Deliverability:</strong> ActiveCampaign: 93.4% (#1) vs. HubSpot: 79.8% (#12)<br>
+                <a href="https://www.emailtooltester.com/en/email-deliverability-test/" target="_blank">View report →</a></li>
+            </ul>
         </div>
 
+        <!-- Section 5: Klaviyo -->
         <div class="section" id="section-5">
             <h2 class="section-title">ActiveCampaign vs. Klaviyo</h2>
-            <p>Content unchanged - keeping existing Klaviyo comparison content...</p>
+            
+            <div class="callout callout-warning">
+                <strong>Target Audience:</strong> Ecommerce businesses considering or using Klaviyo, or businesses outside ecommerce who need broader marketing capabilities.
+            </div>
+
+            <h3>Acknowledge Klaviyo's Strengths:</h3>
+            <ul>
+                <li>Deep ecommerce data model and integrations</li>
+                <li>Strong product recommendation blocks</li>
+                <li>Predictive analytics (LTV, churn, next order date)</li>
+                <li>Excellent for Shopify/WooCommerce stores</li>
+            </ul>
+
+            <h3>Where ActiveCampaign Wins:</h3>
+
+            <h4>🌐 Beyond Ecommerce</h4>
+            <p>Klaviyo is purpose-built for online stores. If you're B2B, services, content-driven, or have mixed revenue models, ActiveCampaign offers far more flexibility.</p>
+
+            <h4>🤖 Broader Automation Library</h4>
+            <p>Klaviyo's automations focus on ecommerce flows. ActiveCampaign offers 900+ templates across all industries and use cases.</p>
+
+            <h4>📧 Superior Deliverability</h4>
+            <p>ActiveCampaign ranks #1 at 93.4%. Higher deliverability = more revenue per send.</p>
+
+            <h4>🔗 Native WhatsApp</h4>
+            <p>ActiveCampaign offers native WhatsApp automation (~98% open rates). Klaviyo requires third-party integrations.</p>
+
+            <div class="callout callout-purple">
+                <strong>The Positioning Angle:</strong>
+                <p>"Klaviyo is excellent if ecommerce is 100% of your business. ActiveCampaign is better if you have B2B and B2C revenue streams, need lead nurturing beyond purchase flows, want unified marketing + sales operations, or plan to expand beyond pure ecommerce."</p>
+            </div>
         </div>
 
+        <!-- Section 6: Brevo & Kit -->
         <div class="section" id="section-6">
             <h2 class="section-title">ActiveCampaign vs. Brevo & Kit</h2>
-            <p>Content unchanged - keeping existing Brevo & Kit comparison content...</p>
+            
+            <h3>vs. Brevo (formerly Sendinblue)</h3>
+            
+            <div class="callout callout-warning">
+                <strong>Target Audience:</strong> Budget-conscious businesses using Brevo's pay-per-email model or those frustrated by limited automation depth.
+            </div>
+
+            <h4>Where ActiveCampaign Wins:</h4>
+            <ul>
+                <li><strong>📧 Massive Deliverability Gap:</strong> ActiveCampaign: 93.4% (#1) | Brevo: 74.7% (#13) — That's nearly 20% more emails reaching inboxes</li>
+                <li><strong>🤖 Autonomous vs. Basic Automation:</strong> Brevo offers simple workflows. AC provides AI-built campaigns with predictive sending</li>
+                <li><strong>🔗 14x More Integrations:</strong> ActiveCampaign: 950+ | Brevo: 66</li>
+            </ul>
+
+            <div class="callout callout-success">
+                <strong>UBITS Case Study:</strong> After switching from Brevo to ActiveCampaign:
+                <ul>
+                    <li>30% increase in student enrollment</li>
+                    <li>50% increase in team productivity</li>
+                    <li>Significant improvement in open rates</li>
+                </ul>
+                <a href="https://www.activecampaign.com/customers/ubits" target="_blank">Read full case study →</a>
+            </div>
+
+            <h3>vs. Kit (formerly ConvertKit)</h3>
+            
+            <div class="callout callout-warning">
+                <strong>Target Audience:</strong> Creators and small businesses using Kit who need more sophisticated features as they scale.
+            </div>
+
+            <h4>Where ActiveCampaign Wins:</h4>
+            <ul>
+                <li><strong>🎯 Sophisticated Segmentation:</strong> Kit has basic tagging. AC offers advanced segmentation with behavioral triggers and lead scoring</li>
+                <li><strong>💼 Built-in CRM:</strong> Kit is email-focused. AC includes full sales CRM with pipelines and deal tracking</li>
+                <li><strong>📱 True Multi-Channel:</strong> Native SMS and WhatsApp automation. Kit requires third-party integrations</li>
+                <li><strong>🤖 AI-Powered Content:</strong> AC's AI agents build entire campaigns from prompts. Kit lacks AI capabilities</li>
+            </ul>
+
+            <div class="callout callout-primary">
+                <strong>Positioning Both:</strong>
+                <p>"Great starter platforms, but businesses outgrow them. ActiveCampaign is where you graduate when you need enterprise capabilities without the complexity or cost."</p>
+            </div>
         </div>
 
+        <!-- Section 7: Content Ideas -->
         <div class="section" id="section-7">
             <h2 class="section-title">Competitor Content Ideas</h2>
-            <p>Content unchanged - keeping existing content ideas...</p>
+            
+            <h3>Comparison Articles</h3>
+            <ul>
+                <li><strong>"ActiveCampaign vs. [Competitor]: Which is Right for [Your Industry/Use Case]?"</strong><br>
+                Examples: "for Ecommerce," "for Course Creators," "for B2B SaaS"</li>
+                <li><strong>"[X] Reasons We Switched from [Competitor] to ActiveCampaign"</strong><br>
+                Personal story format builds trust and relatability</li>
+                <li><strong>"ActiveCampaign vs. [Competitor]: The Real Cost Comparison"</strong><br>
+                Break down pricing at different contact tiers with actual feature comparisons</li>
+            </ul>
+
+            <h3>Video Content Ideas</h3>
+            <ul>
+                <li><strong>Side-by-Side Feature Demos:</strong> Show the same task in both platforms</li>
+                <li><strong>Migration Walkthroughs:</strong> "How I Migrated in Under 2 Hours"</li>
+                <li><strong>Results Comparison:</strong> "30 Days with [Competitor] vs. ActiveCampaign"</li>
+            </ul>
+
+            <h3>Feature Deep-Dive Content</h3>
+            <ul>
+                <li><strong>Automation Walkthroughs:</strong> Build the same automation in both platforms and compare</li>
+                <li><strong>Deliverability Testing:</strong> Document real tests showing inbox placement rates</li>
+                <li><strong>AI Feature Comparisons:</strong> Show ActiveCampaign's AI agents vs. competitor features</li>
+            </ul>
+
+            <h3>Use Case-Specific Content</h3>
+            <ul>
+                <li><strong>Industry-Specific Comparisons:</strong> Address unique needs of different verticals</li>
+                <li><strong>Business Size Positioning:</strong> Focus on growth inflection points</li>
+                <li><strong>Migration Success Stories:</strong> Real businesses that switched and their results</li>
+            </ul>
+
+            <div class="callout callout-warning">
+                <strong>Pro Tip:</strong>
+                <p>Always include a CTA to a free trial. Your affiliate link should make it easy for readers to try ActiveCampaign immediately after reading your comparison.</p>
+            </div>
         </div>
 
         <!-- Section 8: Resources -->
@@ -471,89 +686,59 @@
             <h2 class="section-title">Key Resources & Proof Points</h2>
             
             <h3>Asset Library</h3>
-            <p>Ready-made creative assets available in your PartnerStack dashboard:</p>
-            
-            <div class="feature-list">
-                <p><strong><a href="https://dash.partnerstack.com/activecampaign/resources/fold_lgqPV8Arck3CfI?skipValidation=true&resourceKey=mat_U3UQNjosll8q6K" target="_blank">ActiveCampaign Creatives →</a></strong><br>
-                Brand logos, banners, and general marketing materials</p>
-                
-                <p><strong><a href="https://dash.partnerstack.com/activecampaign/resources/fold_lgqPV8Arck3CfI?skipValidation=true&resourceKey=mat_0TuvTQuKMAMvXf" target="_blank">Autonomous Marketing Creatives →</a></strong><br>
-                Assets highlighting AI agents and autonomous marketing features</p>
-                
-                <p><strong><a href="https://dash.partnerstack.com/activecampaign/resources/fold_lgqPV8Arck3CfI?skipValidation=true&resourceKey=mat_o819bttPuqkP2a" target="_blank">Mailchimp Comparison Creatives →</a></strong><br>
-                Pre-made graphics and comparison charts</p>
-                
-                <p><strong><a href="https://dash.partnerstack.com/activecampaign/resources/fold_vf0KKDSZjQCFcA?skipValidation=true&resourceKey=mat_Uk2spWZnacgHqp" target="_blank">Platform Images →</a></strong><br>
-                Screenshots and product imagery of ActiveCampaign features</p>
-            </div>
+            <p>Ready-made creative assets to enhance your content. All resources available in your PartnerStack dashboard:</p>
+            <ul>
+                <li><strong><a href="https://dash.partnerstack.com/activecampaign/resources/fold_lgqPV8Arck3CfI?skipValidation=true&resourceKey=mat_U3UQNjosll8q6K" target="_blank">ActiveCampaign Creatives →</a></strong> Brand logos, banners, and marketing materials</li>
+                <li><strong><a href="https://dash.partnerstack.com/activecampaign/resources/fold_lgqPV8Arck3CfI?skipValidation=true&resourceKey=mat_0TuvTQuKMAMvXf" target="_blank">Autonomous Marketing Creatives →</a></strong> Assets highlighting AI agents</li>
+                <li><strong><a href="https://dash.partnerstack.com/activecampaign/resources/fold_lgqPV8Arck3CfI?skipValidation=true&resourceKey=mat_o819bttPuqkP2a" target="_blank">Mailchimp Comparison Creatives →</a></strong> Pre-made comparison graphics</li>
+                <li><strong><a href="https://dash.partnerstack.com/activecampaign/resources/fold_vf0KKDSZjQCFcA?skipValidation=true&resourceKey=mat_Uk2spWZnacgHqp" target="_blank">Platform Images →</a></strong> Screenshots and product imagery</li>
+            </ul>
 
             <h3>Key Stats to Use</h3>
-            <p>Deliverability, ROI, Platform stats, Customer Results...</p>
-        </div>
-
-        <!-- Section 9: Switch Landing Pages -->
-        <div class="section" id="section-9">
-            <h2 class="section-title">Competitor Switch Landing Pages</h2>
             
-            <div class="callout callout-success">
-                <strong>🎉 New Resource Available!</strong>
-                <p>We've launched dedicated switch landing pages designed specifically for prospects actively considering leaving their current platform. These pages are conversion-optimized and speak directly to the pain points of users frustrated with each competitor.</p>
-            </div>
-
-            <h3>Available Switch Pages</h3>
-            <p>Create custom deep-links to these high-converting landing pages for targeted content:</p>
-
-            <div class="stats-grid">
-                <div class="stat-box">
-                    <strong><a href="https://www.activecampaign.com/mailchimp-vs-activecampaign" target="_blank">Mailchimp Switch Page →</a></strong>
-                    <p>For businesses outgrowing Mailchimp's basic automation or frustrated by duplicate contact charges</p>
-                </div>
-                <div class="stat-box">
-                    <strong><a href="https://www.activecampaign.com/hubspot-vs-activecampaign" target="_blank">HubSpot Switch Page →</a></strong>
-                    <p>For SMBs seeking HubSpot capabilities without enterprise pricing</p>
-                </div>
-                <div class="stat-box">
-                    <strong><a href="https://www.activecampaign.com/brevo-vs-activecampaign" target="_blank">Brevo Switch Page →</a></strong>
-                    <p>For users frustrated by limited automation depth and poor deliverability</p>
-                </div>
-                <div class="stat-box">
-                    <strong><a href="https://www.activecampaign.com/klaviyo-vs-activecampaign" target="_blank">Klaviyo Switch Page →</a></strong>
-                    <p>For businesses expanding beyond pure ecommerce or needing CRM integration</p>
-                </div>
-                <div class="stat-box">
-                    <strong><a href="https://www.activecampaign.com/constant-contact-vs-activecampaign" target="_blank">Constant Contact Switch Page →</a></strong>
-                    <p>For businesses needing advanced automation and better testing capabilities</p>
-                </div>
-            </div>
-
-            <h3>How to Create Custom Deep-Links</h3>
-            
-            <div class="callout callout-primary">
-                <strong>Step-by-Step Instructions:</strong>
-                <ol>
-                    <li>Log into your PartnerStack dashboard</li>
-                    <li>Navigate to the <strong>"Links"</strong> page (left sidebar)</li>
-                    <li>Scroll to the <strong>"Custom links"</strong> section</li>
-                    <li>Click <strong>"Create a custom link"</strong></li>
-                    <li>Give the link a name and description</li>
-                    <li>Select the landing page in the link destination drop-down</li>
-                    <li>Add a tag in the link customization field</li>
-                    <li>Click "Create" and copy your custom tracking link</li>
-                    <li>Use this link in your competitor content to maximize conversions!</li>
-                </ol>
-                <p style="margin-top: 1rem;"><a href="https://support.partnerstack.com/hc/en-us/articles/360009476833-Creating-custom-referral-links" target="_blank">View PartnerStack's detailed guide →</a></p>
-            </div>
-
-            <h3>Best Practices</h3>
+            <h4>Deliverability</h4>
             <ul>
-                <li><strong>Match Content to Landing Page:</strong> Writing about Mailchimp? Link to Mailchimp switch page</li>
-                <li><strong>Use Throughout Content:</strong> Link in intro, mid-content, and conclusion</li>
-                <li><strong>Track by Competitor:</strong> Create separate links per competitor to measure performance</li>
+                <li>#1 ranked at 93.4% (EmailTooltester)</li>
+                <li>30% higher click-through rates vs. competitors</li>
+                <li>13% above industry average</li>
+            </ul>
+
+            <h4>ROI</h4>
+            <ul>
+                <li>83% of customers see ROI within first year</li>
+                <li>3x faster campaign building with AI</li>
+                <li>15 days saved from idea to execution</li>
+                <li>10 hours saved per week (520 hours/year)</li>
+            </ul>
+
+            <h4>Platform</h4>
+            <ul>
+                <li>950+ integrations</li>
+                <li>250+ email templates</li>
+                <li>900+ automation recipes</li>
+                <li>First autonomous marketing platform with Claude integration</li>
+            </ul>
+
+            <h4>Customer Results</h4>
+            <ul>
+                <li><strong>UN|HUSHED:</strong> 238% increase in open rates (from Mailchimp)</li>
+                <li><strong>Palmetto Fortis:</strong> 52% open rates, up from 22% (from Mailchimp)</li>
+                <li><strong>UBITS:</strong> 30% enrollment increase (from Brevo)</li>
+                <li><strong>Artivive:</strong> 1000x user growth (from HubSpot)</li>
+            </ul>
+
+            <h3>Official Comparison Pages</h3>
+            <ul>
+                <li><a href="https://www.activecampaign.com/compare/mailchimp" target="_blank">ActiveCampaign vs. Mailchimp</a></li>
+                <li><a href="https://www.activecampaign.com/compare/hubspot" target="_blank">ActiveCampaign vs. HubSpot</a></li>
+                <li><a href="https://www.activecampaign.com/compare/klaviyo" target="_blank">ActiveCampaign vs. Klaviyo</a></li>
+                <li><a href="https://www.activecampaign.com/compare/brevo" target="_blank">ActiveCampaign vs. Brevo</a></li>
+                <li><a href="https://www.activecampaign.com/compare/convertkit" target="_blank">ActiveCampaign vs. Kit</a></li>
             </ul>
         </div>
 
-        <!-- Section 10: INCENTIVES (CORRECTED) -->
-        <div class="section" id="section-10">
+        <!-- Section 9: Incentives -->
+        <div class="section" id="section-9">
             <h2 class="section-title">Campaign Incentive Structure</h2>
             
             <div class="callout callout-primary">
@@ -603,12 +788,6 @@
                 <li>Content with inaccurate information or outdated screenshots</li>
                 <li>AI-generated content without significant human review and value-add</li>
             </ul>
-
-            <div class="callout callout-success">
-                <strong>Questions or Need Support?</strong>
-                <p>Reach out to your ActiveCampaign affiliate manager or visit the PartnerStack dashboard for additional resources and support.</p>
-                <p style="margin-top: 1rem;"><strong>Good luck with your content creation, and thank you for being part of the ActiveCampaign affiliate family!</strong></p>
-            </div>
         </div>
     </div>
 
@@ -619,15 +798,21 @@
 
     <script>
         function showSection(index) {
+            // Hide all sections
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => section.classList.remove('active'));
             
+            // Remove active class from all buttons
             const buttons = document.querySelectorAll('.nav-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
             
+            // Show selected section
             document.getElementById('section-' + index).classList.add('active');
+            
+            // Add active class to clicked button
             buttons[index].classList.add('active');
             
+            // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
