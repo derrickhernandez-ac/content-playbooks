@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ActiveCampaign AI Lab Affiliate Partner Playbook — Everything you need to promote AI Lab with confidence." />
+  <title>AI Lab Affiliate Partner Playbook — ActiveCampaign</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #004CFF;
+      --blue-dark: #0022D2;
+      --blue-100: #F3FAFF;
+      --blue-200: #EAF6FF;
+      --blue-300: #DFEEFA;
+      --midnight: #00002D;
+      --midnight-700: #48556C;
+      --midnight-500: #707B8E;
+      --midnight-300: #B1B7C0;
+      --midnight-200: #E5E5E5;
+      --midnight-100: #F9F9F9;
+      --cream: #FFFCF5;
+      --moss: #255131;
+      --moss-100: #EAF4EC;
+      --dawn: #FF6F40;
+      --midday-500: #F8CE65;
+      --midday-300: #FFF3D8;
+      --dusk-800: #08475D;
+      --dusk-100: #F2FBFD;
+      --palm: #E3FF65;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fff;
+      color: var(--midnight);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: #fff;
+      border-bottom: 1px solid var(--midnight-200);
+      padding: 0 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 4px rgba(0,0,45,0.07);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      min-height: 60px;
+    }
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--blue);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--blue);
+      display: inline-block;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+    nav a {
+      padding: 0.5rem 0.85rem;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--midnight-700);
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+    nav a:hover { background: var(--midnight-100); color: var(--midnight); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--midnight);
+      color: #fff;
+      padding: 64px 2rem 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -100px; right: -60px;
+      width: 420px; height: 420px; border-radius: 50%;
+      background: var(--blue); opacity: 0.1;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: -50px; left: 22%;
+      width: 260px; height: 260px; border-radius: 50%;
+      background: var(--palm); opacity: 0.06;
+    }
+    .hero-inner {
+      max-width: 1200px; margin: 0 auto;
+      position: relative; z-index: 1;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--palm);
+      margin-bottom: 18px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--palm); flex-shrink: 0;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4.5vw, 48px);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: var(--palm); }
+    .hero-sub {
+      font-size: 16px;
+      color: rgba(255,255,255,0.6);
+      max-width: 580px;
+      line-height: 1.65;
+    }
+
+    /* ── LAYOUT ── */
+    .page { max-width: 1200px; margin: 0 auto; padding: 0 2rem 80px; }
+
+    .section { padding-top: 60px; }
+
+    .section-label {
+      display: inline-block;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .section h2 {
+      font-size: 26px; font-weight: 600;
+      letter-spacing: -0.02em; line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .section-intro {
+      font-size: 15px; color: var(--midnight-700);
+      max-width: 680px; line-height: 1.65;
+      margin-bottom: 32px;
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--midnight-200);
+      margin-top: 60px;
+    }
+
+    /* ── STAT STRIP ── */
+    .stat-strip {
+      background: var(--midnight);
+      border-radius: 12px;
+      padding: 32px 36px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+    @media (max-width: 600px) { .stat-strip { grid-template-columns: 1fr; } }
+    .stat-item { text-align: center; }
+    .stat-num { font-size: 30px; font-weight: 600; color: var(--palm); line-height: 1; margin-bottom: 6px; }
+    .stat-label { font-size: 13px; color: rgba(255,255,255,0.5); }
+
+    /* ── CARD GRID ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid var(--midnight-200);
+      border-radius: 10px;
+      padding: 24px;
+    }
+    .card-icon {
+      width: 40px; height: 40px; border-radius: 8px;
+      background: var(--blue-200);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; margin-bottom: 14px;
+    }
+    .card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+    .card p { font-size: 13px; color: var(--midnight-700); line-height: 1.55; }
+    .card a {
+      display: inline-block; margin-top: 12px;
+      font-size: 13px; font-weight: 500; color: var(--blue); text-decoration: none;
+    }
+    .card a:hover { text-decoration: underline; }
+
+    /* ── ACTIVATION ITEMS ── */
+    .activation-list { display: flex; flex-direction: column; gap: 14px; }
+    .activation-item {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 18px;
+      background: #fff;
+      border: 1px solid var(--midnight-200);
+      border-radius: 10px;
+      padding: 22px 26px;
+      align-items: start;
+    }
+    .act-num {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--blue); color: #fff;
+      font-size: 14px; font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .act-body h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+    .act-body p { font-size: 14px; color: var(--midnight-700); line-height: 1.6; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+    .tag {
+      font-size: 11px; font-weight: 600; padding: 3px 9px;
+      border-radius: 20px; letter-spacing: 0.02em;
+    }
+    .tag-blue { background: var(--blue-200); color: var(--blue-dark); }
+    .tag-moss { background: var(--moss-100); color: var(--moss); }
+    .tag-dusk { background: var(--dusk-100); color: var(--dusk-800); }
+    .tag-amber { background: var(--midday-300); color: #756031; }
+
+    .note-box {
+      border-left: 3px solid var(--midday-500);
+      background: #FFFEF5;
+      padding: 12px 16px;
+      border-radius: 0 6px 6px 0;
+      margin-top: 10px;
+      font-size: 13px; color: var(--midnight-700); line-height: 1.6;
+    }
+    .note-box strong { color: var(--midnight); }
+
+    /* ── TOOLS ── */
+    .tools-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+    }
+    @media (max-width: 640px) { .tools-grid { grid-template-columns: 1fr; } }
+    .tool-card {
+      background: #fff;
+      border: 1px solid var(--midnight-200);
+      border-radius: 10px;
+      padding: 22px;
+      border-top: 3px solid var(--blue);
+    }
+    .tool-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+    .tool-card p { font-size: 13px; color: var(--midnight-700); line-height: 1.55; margin-bottom: 14px; }
+    .tool-card a { font-size: 13px; font-weight: 500; color: var(--blue); text-decoration: none; }
+    .tool-card a:hover { text-decoration: underline; }
+
+    /* ── CHART OF THE WEEK ── */
+    .cotw-block {
+      background: #fff;
+      border: 1px solid var(--midnight-200);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .cotw-header {
+      background: var(--midnight);
+      padding: 22px 26px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .cotw-badge {
+      background: var(--palm); color: var(--midnight);
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 4px 9px; border-radius: 4px; flex-shrink: 0;
+    }
+    .cotw-header p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+    .cotw-header a { color: rgba(255,255,255,0.75); }
+    .cotw-body { padding: 26px; }
+    .cotw-body > p { font-size: 14px; color: var(--midnight-700); line-height: 1.65; margin-bottom: 10px; }
+    .arrow-list { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-top: 14px; }
+    .arrow-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 14px; color: var(--midnight-700);
+    }
+    .arrow-list li::before { content: '→'; color: var(--blue); font-weight: 600; flex-shrink: 0; margin-top: 1px; }
+
+    /* ── PLAYBOOKS ── */
+    .pb-block {
+      background: var(--midnight);
+      border-radius: 10px;
+      padding: 32px;
+      position: relative; overflow: hidden;
+    }
+    .pb-block::after {
+      content: ''; position: absolute; bottom: -30px; right: -30px;
+      width: 160px; height: 160px; border-radius: 50%;
+      background: var(--blue); opacity: 0.15;
+    }
+    .pb-block h3 { font-size: 17px; font-weight: 600; color: #fff; margin-bottom: 10px; }
+    .pb-block p { font-size: 14px; color: rgba(255,255,255,0.55); max-width: 500px; line-height: 1.6; margin-bottom: 22px; }
+    .pb-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--blue); color: #fff;
+      font-size: 13px; font-weight: 500;
+      padding: 10px 20px; border-radius: 7px;
+      text-decoration: none; position: relative; z-index: 1;
+      transition: background 0.15s;
+    }
+    .pb-cta:hover { background: var(--blue-dark); }
+
+    /* ── CONTENT IDEAS ── */
+    .ideas-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+    }
+    @media (max-width: 640px) { .ideas-grid { grid-template-columns: 1fr; } }
+    .idea-card {
+      background: #fff;
+      border: 1px solid var(--midnight-200);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .idea-type {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--midnight-500); margin-bottom: 6px;
+    }
+    .idea-card h4 { font-size: 14px; font-weight: 600; color: var(--midnight); line-height: 1.4; margin-bottom: 5px; }
+    .idea-card p { font-size: 13px; color: var(--midnight-700); line-height: 1.55; }
+
+    /* ── DOS AND DON'TS ── */
+    .guidance-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    @media (max-width: 640px) { .guidance-row { grid-template-columns: 1fr; } }
+    .guidance-col { border-radius: 10px; overflow: hidden; border: 1px solid var(--midnight-200); }
+    .guidance-head {
+      padding: 12px 18px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+    }
+    .guidance-do .guidance-head { background: var(--moss-100); color: var(--moss); }
+    .guidance-dont .guidance-head { background: #FFF0E3; color: #993C1D; }
+    .guidance-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 11px 18px;
+      font-size: 13px; color: var(--midnight-700); line-height: 1.5;
+      border-top: 1px solid var(--midnight-200);
+      background: #fff;
+    }
+    .icon-do { color: var(--moss); font-weight: 700; flex-shrink: 0; }
+    .icon-dont { color: var(--dawn); font-weight: 700; flex-shrink: 0; }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--midnight-100);
+      border-top: 1px solid var(--midnight-200);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 12px;
+      color: var(--midnight-500);
+      line-height: 1.7;
+    }
+    .footer a { color: var(--blue); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <span class="logo-dot"></span>
+      ActiveCampaign
+    </a>
+    <nav aria-label="Playbook navigation">
+      <a href="#what-is">What is AI Lab</a>
+      <a href="#activate">How to activate</a>
+      <a href="#tools">AI tools</a>
+      <a href="#chart">Chart of the week</a>
+      <a href="#playbooks">Playbooks</a>
+      <a href="#content">Content ideas</a>
+      <a href="#guidance">Dos and don'ts</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Affiliate Partner Playbook</div>
+    <h1>Promote <span>AI Lab</span><br>with confidence.</h1>
+    <p class="hero-sub">Everything you need to understand, test, and promote AI Lab by ActiveCampaign — frameworks, data-backed insights, and free tools for autonomous marketers.</p>
+  </div>
+</section>
+
+<main class="page">
+
+  <!-- WHAT IS AI LAB -->
+  <section class="section" id="what-is">
+    <span class="section-label">01 — Overview</span>
+    <h2>What is AI Lab?</h2>
+    <p class="section-intro">AI Lab is ActiveCampaign's hub for autonomous marketers. Original research, practitioner stories, free AI tools, and campaign playbooks — all built to help marketers turn AI potential into workflows that actually stick.</p>
+
+    <div class="stat-strip">
+      <div class="stat-item">
+        <div class="stat-num">77,847+</div>
+        <div class="stat-label">Marketers subscribed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100K+</div>
+        <div class="stat-label">Businesses in the research base</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">8.3M</div>
+        <div class="stat-label">Campaigns powering the AI tools</div>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">🔬</div>
+        <h3>Original research</h3>
+        <p>Data-backed insights drawn from 100,000+ businesses — not recycled industry reports.</p>
+        <a href="https://autonomous.activecampaign.com/research" target="_blank">Browse research →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛠️</div>
+        <h3>Free AI tools</h3>
+        <p>Three live tools built on 8.3 million campaigns. Grade emails, benchmark industries, optimize subject lines.</p>
+        <a href="https://autonomous.activecampaign.com/ai-tools" target="_blank">Try the tools →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">📖</div>
+        <h3>Practitioner stories</h3>
+        <p>Real marketers, real workflows, real results. The kind of case study worth bookmarking.</p>
+        <a href="https://autonomous.activecampaign.com/stories" target="_blank">Read stories →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🗺️</div>
+        <h3>Campaign playbooks</h3>
+        <p>Step-by-step templates for building autonomous marketing systems from scratch.</p>
+        <a href="https://autonomous.activecampaign.com/playbooks" target="_blank">See playbooks →</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- HOW TO ACTIVATE -->
+  <section class="section" id="activate">
+    <span class="section-label">02 — Activation</span>
+    <h2>How you can activate</h2>
+    <p class="section-intro">Six ways to promote AI Lab. Not every activation makes sense for every partner — pick what genuinely fits your audience. Forced promotions hurt your credibility more than they help ours.</p>
+
+    <div class="activation-list">
+
+      <div class="activation-item">
+        <div class="act-num">1</div>
+        <div class="act-body">
+          <h3>Drive awareness of AI Lab</h3>
+          <p>Mention AI Lab in relevant content — newsletters, social posts, YouTube descriptions, podcast shoutouts. Frame it as a free resource your audience should know about, not a product pitch.</p>
+          <div class="tag-row">
+            <span class="tag tag-blue">Newsletter</span>
+            <span class="tag tag-blue">Social</span>
+            <span class="tag tag-blue">Podcast</span>
+            <span class="tag tag-blue">YouTube</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activation-item">
+        <div class="act-num">2</div>
+        <div class="act-body">
+          <h3>Educate your audience on what AI Lab is</h3>
+          <p>Write a short explainer post or record a walkthrough. What makes AI Lab different from generic AI content? It is built on real campaign data — not theory. That is a credible angle your audience will appreciate.</p>
+          <div class="tag-row">
+            <span class="tag tag-moss">Blog post</span>
+            <span class="tag tag-moss">Video</span>
+            <span class="tag tag-moss">Newsletter feature</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="activation-item">
+        <div class="act-num">3</div>
+        <div class="act-body">
+          <h3>Use AI Lab content in your own content</h3>
+          <p>Research findings, chart data, and practitioner stories from AI Lab are fair game to reference and link to. Cite the source, link back, and add your own perspective on top. This adds depth to your content without creating everything from scratch.</p>
+          <div class="tag-row">
+            <span class="tag tag-dusk">Reference and link</span>
+            <span class="tag tag-dusk">Add your take</span>
+          </div>
+          <div class="note-box"><strong>Asset request:</strong> Need shareable graphics or embeds from a specific chart or finding? Reach out and we will see what we can pull together.</div>
+        </div>
+      </div>
+
+      <div class="activation-item">
+        <div class="act-num">4</div>
+        <div class="act-body">
+          <h3>Share your reaction to Chart of the Week</h3>
+          <p>Every week, AI Lab publishes a new data visualization from the 8.3 million campaign dataset. If a stat surprises you — or confirms something you have seen in your own work — that is content. Share your take, tag us, or write a post around it.</p>
+          <div class="tag-row">
+            <span class="tag tag-amber">LinkedIn</span>
+            <span class="tag tag-amber">X / Twitter</span>
+            <span class="tag tag-amber">Newsletter commentary</span>
+          </div>
+          <div class="note-box"><strong>Quote opportunity:</strong> If a chart resonates with you and you would be willing to share a short reaction quote, let us know. Affiliate perspectives featured on AI Lab content means more visibility for you.</div>
+        </div>
+      </div>
+
+      <div class="activation-item">
+        <div class="act-num">5</div>
+        <div class="act-body">
+          <h3>Test the free AI tools and share your experience</h3>
+          <p>Three tools are live now — AI Email Grader, Industry Benchmarker, and Subject Line Optimizer. Test them on real campaigns and share what you found. An honest, first-person review will resonate far more than a feature list.</p>
+          <div class="tag-row">
+            <span class="tag tag-blue">Review post</span>
+            <span class="tag tag-blue">Screen-recorded walkthrough</span>
+            <span class="tag tag-blue">Before and after results</span>
+          </div>
+          <div class="note-box"><strong>More tools coming:</strong> We will flag you when new tools go live so you can be among the first to test and cover them.</div>
+        </div>
+      </div>
+
+      <div class="activation-item">
+        <div class="act-num">6</div>
+        <div class="act-body">
+          <h3>Drive your audience to the playbooks</h3>
+          <p>AI Lab's playbooks collect email addresses — so sending your audience there helps both of us. Link to a playbook that is genuinely relevant to what you write about. A specific, contextual recommendation converts better than blasting the homepage.</p>
+          <div class="tag-row">
+            <span class="tag tag-moss">Contextual link in content</span>
+            <span class="tag tag-moss">CTA in newsletter</span>
+          </div>
+          <div class="note-box"><strong>Note:</strong> Only do this when a playbook is a natural fit for the topic you are already covering. A forced recommendation helps no one.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- AI TOOLS -->
+  <section class="section" id="tools">
+    <span class="section-label">03 — Free AI tools</span>
+    <h2>The tools worth testing</h2>
+    <p class="section-intro">Three tools are live now, all free, all built on data from 8.3 million campaigns. Test them yourself before recommending them.</p>
+
+    <div class="tools-grid">
+      <div class="tool-card">
+        <h3>AI Email Grader</h3>
+        <p>Instant A–F audit across six dimensions: subject line, copy, design, mobile, deliverability, and accessibility. A great first tool to demo — the output is concrete and shareable.</p>
+        <a href="https://autonomous.activecampaign.com/ai-tools/ai-email-grader" target="_blank">Try it →</a>
+      </div>
+      <div class="tool-card">
+        <h3>Industry Benchmarker</h3>
+        <p>Compare campaign metrics across industries, drawn from real send data. Good for blog posts targeting a specific niche audience with relevant benchmarks.</p>
+        <a href="https://autonomous.activecampaign.com/ai-tools/industry-benchmarker" target="_blank">Try it →</a>
+      </div>
+      <div class="tool-card">
+        <h3>Subject Line Optimizer</h3>
+        <p>Improve open rates with subject line suggestions grounded in what has actually worked across 8.3 million campaigns — not generic best practices.</p>
+        <a href="https://autonomous.activecampaign.com/ai-tools/subject-line-optimizer" target="_blank">Try it →</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- CHART OF THE WEEK -->
+  <section class="section" id="chart">
+    <span class="section-label">04 — Chart of the Week</span>
+    <h2>Turn data into your content</h2>
+    <p class="section-intro">Each week, AI Lab drops a new chart — a single, shareable data visualization pulled from real campaign performance. It is a low-lift way to publish something original and data-backed.</p>
+
+    <div class="cotw-block">
+      <div class="cotw-header">
+        <div class="cotw-badge">New weekly</div>
+        <p>A fresh chart every week at <a href="https://autonomous.activecampaign.com/chart-of-the-week" target="_blank">autonomous.activecampaign.com/chart-of-the-week</a>. Built from 8.3 million campaigns — the kind of stat you can build a post around.</p>
+      </div>
+      <div class="cotw-body">
+        <p>How to use Chart of the Week in your content without it feeling forced:</p>
+        <ul class="arrow-list">
+          <li>Share the chart with your own commentary — what does it mean for your audience's strategy?</li>
+          <li>Use it as a hook to open a newsletter: "This week's stat that surprised me…"</li>
+          <li>Build a short LinkedIn or X post around a finding and link back to AI Lab for full context.</li>
+          <li>If a chart confirms something you have been telling your audience, use it as third-party validation.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- PLAYBOOKS -->
+  <section class="section" id="playbooks">
+    <span class="section-label">05 — Playbooks</span>
+    <h2>Drive your audience to the playbooks</h2>
+    <p class="section-intro">AI Lab's playbooks are step-by-step guides for building real marketing workflows. They are free, gated by email, and genuinely useful — which makes them easy to recommend honestly.</p>
+
+    <div class="pb-block">
+      <h3>Why link to the playbooks?</h3>
+      <p>They collect email addresses for the AI Lab newsletter, so a contextual referral from your content is valuable to both sides. Your audience gets a useful, free resource. The affiliate team gets a qualified subscriber.</p>
+      <a href="https://autonomous.activecampaign.com/playbooks" target="_blank" class="pb-cta">Browse playbooks →</a>
+    </div>
+
+    <div class="note-box" style="margin-top:18px;">Only recommend a playbook when it is a natural fit for the content you are publishing. A contextual link in a relevant post will always outperform a generic mention on your resource page.</div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- CONTENT IDEAS -->
+  <section class="section" id="content">
+    <span class="section-label">06 — Content ideas</span>
+    <h2>Steal-able content angles</h2>
+    <p class="section-intro">A few starting points if you are not sure what to write. Adapt these to your voice and your audience.</p>
+
+    <div class="ideas-grid">
+      <div class="idea-card">
+        <div class="idea-type">Tool review</div>
+        <h4>"I graded my last five email campaigns. Here is what I found."</h4>
+        <p>Run your own emails through the AI Email Grader and share honest results. First-person tool reviews drive real engagement.</p>
+      </div>
+      <div class="idea-card">
+        <div class="idea-type">Data commentary</div>
+        <h4>"This chart from ActiveCampaign's AI Lab changed how I think about subject lines."</h4>
+        <p>Take one Chart of the Week finding and build your perspective around it. Add your own experience to make it original.</p>
+      </div>
+      <div class="idea-card">
+        <div class="idea-type">Resource roundup</div>
+        <h4>"Five free AI tools for email marketers worth bookmarking in 2026."</h4>
+        <p>Include AI Lab's tools in a broader roundup — not just an AC post, but a genuinely useful list your audience will save.</p>
+      </div>
+      <div class="idea-card">
+        <div class="idea-type">Benchmark comparison</div>
+        <h4>"How does my industry's email performance compare? I used this benchmarker to find out."</h4>
+        <p>Walk through the Industry Benchmarker for your specific niche and share what the data says about typical performance.</p>
+      </div>
+      <div class="idea-card">
+        <div class="idea-type">Workflow walkthrough</div>
+        <h4>"I built a campaign using an AI Lab playbook. Here is what happened."</h4>
+        <p>Follow one of the AI Lab playbooks and document the process. High-trust content because it is genuinely tested by you.</p>
+      </div>
+      <div class="idea-card">
+        <div class="idea-type">Newsletter feature</div>
+        <h4>"This week's free resource worth ten minutes of your time."</h4>
+        <p>A simple, low-friction mention in a newsletter or weekly roundup. Link to a specific tool or chart, not just the homepage.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- DOS AND DON'TS -->
+  <section class="section" id="guidance">
+    <span class="section-label">07 — Guidance</span>
+    <h2>Dos and don'ts</h2>
+    <p class="section-intro">A few principles to keep your AI Lab promotions credible and on-brand.</p>
+
+    <div class="guidance-row">
+      <div class="guidance-col guidance-do">
+        <div class="guidance-head">Do</div>
+        <div class="guidance-item"><span class="icon-do">✓</span> Lead with your audience's problem, not the product</div>
+        <div class="guidance-item"><span class="icon-do">✓</span> Test the tools before recommending them</div>
+        <div class="guidance-item"><span class="icon-do">✓</span> Share your honest take — including limitations</div>
+        <div class="guidance-item"><span class="icon-do">✓</span> Link to specific tools, charts, or playbooks — not just the homepage</div>
+        <div class="guidance-item"><span class="icon-do">✓</span> Add your own perspective on top of AI Lab data</div>
+        <div class="guidance-item"><span class="icon-do">✓</span> Include an affiliate disclosure when applicable</div>
+      </div>
+      <div class="guidance-col guidance-dont">
+        <div class="guidance-head">Do not</div>
+        <div class="guidance-item"><span class="icon-dont">✗</span> Promote AI Lab if it is not relevant to the content you are publishing</div>
+        <div class="guidance-item"><span class="icon-dont">✗</span> Make claims you cannot back up ("the best email tool ever")</div>
+        <div class="guidance-item"><span class="icon-dont">✗</span> Reproduce full charts or data visualizations without permission</div>
+        <div class="guidance-item"><span class="icon-dont">✗</span> Imply an official endorsement beyond your affiliate relationship</div>
+        <div class="guidance-item"><span class="icon-dont">✗</span> Alter or recreate the ActiveCampaign logo</div>
+        <div class="guidance-item"><span class="icon-dont">✗</span> Use AI Lab content as filler — it works best when it earns its place</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>AI Lab Partner Playbook — ActiveCampaign Affiliate Program — V1.0 — May 2026</p>
+  <p>Questions? <a href="mailto:psaffiliates@activecampaign.com">psaffiliates@activecampaign.com</a></p>
+</footer>
+
+</body>
+</html>
