@@ -1,703 +1,883 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ActiveCampaign AI Lab Affiliate Partner Playbook — Everything you need to promote AI Lab with confidence." />
-  <title>AI Lab Affiliate Partner Playbook — ActiveCampaign</title>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ActiveCampaign AI Lab Affiliate Partner Playbook — Everything you need to promote AI Lab with confidence.">
+    <title>The AI Lab Content Advantage — ActiveCampaign</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Arimo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    :root {
-      --blue: #004CFF;
-      --blue-dark: #0022D2;
-      --blue-100: #F3FAFF;
-      --blue-200: #EAF6FF;
-      --blue-300: #DFEEFA;
-      --midnight: #00002D;
-      --midnight-700: #48556C;
-      --midnight-500: #707B8E;
-      --midnight-300: #B1B7C0;
-      --midnight-200: #E5E5E5;
-      --midnight-100: #F9F9F9;
-      --cream: #FFFCF5;
-      --moss: #255131;
-      --moss-100: #EAF4EC;
-      --dawn: #FF6F40;
-      --midday-500: #F8CE65;
-      --midday-300: #FFF3D8;
-      --dusk-800: #08475D;
-      --dusk-100: #F2FBFD;
-      --palm: #E3FF65;
-    }
+        :root {
+            --ac-blue-800: #004CFF;
+            --ac-blue-700: #3E83EA;
+            --ac-blue-600: #94BFF1;
+            --ac-blue-100: #F3FAFF;
+            --midnight-1000: #00002D;
+            --midnight-900: #23314C;
+            --midnight-800: #3B4861;
+            --midnight-200: #E5E5E5;
+            --midnight-100: #F9F9F9;
+            --cream: #FFFCF5;
+            --moss-800: #255131;
+            --moss-600: #347C44;
+            --moss-100: #EAF4EC;
+            --dusk-800: #08475D;
+            --dusk-600: #598796;
+            --dusk-100: #F2FBFD;
+            --midday-500: #F8CE65;
+            --midday-300: #FFF3D8;
+            --maroon-700: #9D1D86;
+            --maroon-100: #FEF0FF;
+            --palm: #E3FF65;
+        }
 
-    html { scroll-behavior: smooth; }
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--midnight-1000);
+            background: var(--cream);
+        }
 
-    body {
-      font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #fff;
-      color: var(--midnight);
-      line-height: 1.6;
-      font-size: 16px;
-    }
+        /* ── HEADER ── */
+        .header {
+            background: var(--midnight-1000);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 0 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
 
-    /* ── HEADER ── */
-    .header {
-      background: #fff;
-      border-bottom: 1px solid var(--midnight-200);
-      padding: 0 1.5rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 1px 4px rgba(0,0,45,0.07);
-    }
-    .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      min-height: 60px;
-    }
-    .logo {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--blue);
-      text-decoration: none;
-      letter-spacing: -0.01em;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .logo-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--blue);
-      display: inline-block;
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0;
-    }
-    nav a {
-      padding: 0.5rem 0.85rem;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--midnight-700);
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.15s, color 0.15s;
-      white-space: nowrap;
-    }
-    nav a:hover { background: var(--midnight-100); color: var(--midnight); }
+        .header-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
 
-    /* ── HERO ── */
-    .hero {
-      background: var(--midnight);
-      color: #fff;
-      padding: 64px 2rem 56px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute; top: -100px; right: -60px;
-      width: 420px; height: 420px; border-radius: 50%;
-      background: var(--blue); opacity: 0.1;
-    }
-    .hero::after {
-      content: '';
-      position: absolute; bottom: -50px; left: 22%;
-      width: 260px; height: 260px; border-radius: 50%;
-      background: var(--palm); opacity: 0.06;
-    }
-    .hero-inner {
-      max-width: 1200px; margin: 0 auto;
-      position: relative; z-index: 1;
-    }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--palm);
-      margin-bottom: 18px;
-    }
-    .hero-eyebrow::before {
-      content: '';
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--palm); flex-shrink: 0;
-    }
-    .hero h1 {
-      font-size: clamp(28px, 4.5vw, 48px);
-      font-weight: 600;
-      line-height: 1.1;
-      letter-spacing: -0.025em;
-      margin-bottom: 16px;
-    }
-    .hero h1 span { color: var(--palm); }
-    .hero-sub {
-      font-size: 16px;
-      color: rgba(255,255,255,0.6);
-      max-width: 580px;
-      line-height: 1.65;
-    }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
 
-    /* ── LAYOUT ── */
-    .page { max-width: 1200px; margin: 0 auto; padding: 0 2rem 80px; }
+        .logo-glyph {
+            width: 30px; height: 30px;
+            background: var(--ac-blue-800);
+            border-radius: 6px;
+            display: flex; align-items: center; justify-content: center;
+        }
 
-    .section { padding-top: 60px; }
+        .logo-glyph svg {
+            width: 16px; height: 16px;
+            fill: none; stroke: white;
+            stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+        }
 
-    .section-label {
-      display: inline-block;
-      font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--blue);
-      margin-bottom: 10px;
-    }
-    .section h2 {
-      font-size: 26px; font-weight: 600;
-      letter-spacing: -0.02em; line-height: 1.2;
-      margin-bottom: 10px;
-    }
-    .section-intro {
-      font-size: 15px; color: var(--midnight-700);
-      max-width: 680px; line-height: 1.65;
-      margin-bottom: 32px;
-    }
+        .logo-wordmark {
+            font-family: 'Arimo', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: -0.01em;
+        }
 
-    hr.divider {
-      border: none;
-      border-top: 1px solid var(--midnight-200);
-      margin-top: 60px;
-    }
+        .nav {
+            display: flex;
+            gap: 4px;
+            overflow-x: auto;
+        }
 
-    /* ── STAT STRIP ── */
-    .stat-strip {
-      background: var(--midnight);
-      border-radius: 12px;
-      padding: 32px 36px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-bottom: 28px;
-    }
-    @media (max-width: 600px) { .stat-strip { grid-template-columns: 1fr; } }
-    .stat-item { text-align: center; }
-    .stat-num { font-size: 30px; font-weight: 600; color: var(--palm); line-height: 1; margin-bottom: 6px; }
-    .stat-label { font-size: 13px; color: rgba(255,255,255,0.5); }
+        .nav-btn {
+            padding: 6px 14px;
+            background: transparent;
+            border: 1px solid transparent;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.55);
+            transition: all 0.15s;
+            white-space: nowrap;
+        }
 
-    /* ── CARD GRID ── */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #fff;
-      border: 1px solid var(--midnight-200);
-      border-radius: 10px;
-      padding: 24px;
-    }
-    .card-icon {
-      width: 40px; height: 40px; border-radius: 8px;
-      background: var(--blue-200);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px; margin-bottom: 14px;
-    }
-    .card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
-    .card p { font-size: 13px; color: var(--midnight-700); line-height: 1.55; }
-    .card a {
-      display: inline-block; margin-top: 12px;
-      font-size: 13px; font-weight: 500; color: var(--blue); text-decoration: none;
-    }
-    .card a:hover { text-decoration: underline; }
+        .nav-btn:hover {
+            color: white;
+            background: rgba(255,255,255,0.08);
+        }
 
-    /* ── ACTIVATION ITEMS ── */
-    .activation-list { display: flex; flex-direction: column; gap: 14px; }
-    .activation-item {
-      display: grid;
-      grid-template-columns: 44px 1fr;
-      gap: 18px;
-      background: #fff;
-      border: 1px solid var(--midnight-200);
-      border-radius: 10px;
-      padding: 22px 26px;
-      align-items: start;
-    }
-    .act-num {
-      width: 36px; height: 36px; border-radius: 50%;
-      background: var(--blue); color: #fff;
-      font-size: 14px; font-weight: 600;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; margin-top: 2px;
-    }
-    .act-body h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
-    .act-body p { font-size: 14px; color: var(--midnight-700); line-height: 1.6; }
-    .tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
-    .tag {
-      font-size: 11px; font-weight: 600; padding: 3px 9px;
-      border-radius: 20px; letter-spacing: 0.02em;
-    }
-    .tag-blue { background: var(--blue-200); color: var(--blue-dark); }
-    .tag-moss { background: var(--moss-100); color: var(--moss); }
-    .tag-dusk { background: var(--dusk-100); color: var(--dusk-800); }
-    .tag-amber { background: var(--midday-300); color: #756031; }
+        .nav-btn.active {
+            background: var(--ac-blue-800);
+            color: white;
+            border-color: var(--ac-blue-800);
+        }
 
-    .note-box {
-      border-left: 3px solid var(--midday-500);
-      background: #FFFEF5;
-      padding: 12px 16px;
-      border-radius: 0 6px 6px 0;
-      margin-top: 10px;
-      font-size: 13px; color: var(--midnight-700); line-height: 1.6;
-    }
-    .note-box strong { color: var(--midnight); }
+        /* ── CONTAINER ── */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
 
-    /* ── TOOLS ── */
-    .tools-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
-    }
-    @media (max-width: 640px) { .tools-grid { grid-template-columns: 1fr; } }
-    .tool-card {
-      background: #fff;
-      border: 1px solid var(--midnight-200);
-      border-radius: 10px;
-      padding: 22px;
-      border-top: 3px solid var(--blue);
-    }
-    .tool-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
-    .tool-card p { font-size: 13px; color: var(--midnight-700); line-height: 1.55; margin-bottom: 14px; }
-    .tool-card a { font-size: 13px; font-weight: 500; color: var(--blue); text-decoration: none; }
-    .tool-card a:hover { text-decoration: underline; }
+        /* ── SECTIONS ── */
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--midnight-200);
+            display: none;
+        }
 
-    /* ── CHART OF THE WEEK ── */
-    .cotw-block {
-      background: #fff;
-      border: 1px solid var(--midnight-200);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    .cotw-header {
-      background: var(--midnight);
-      padding: 22px 26px;
-      display: flex; align-items: center; gap: 14px;
-    }
-    .cotw-badge {
-      background: var(--palm); color: var(--midnight);
-      font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
-      text-transform: uppercase; padding: 4px 9px; border-radius: 4px; flex-shrink: 0;
-    }
-    .cotw-header p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5; }
-    .cotw-header a { color: rgba(255,255,255,0.75); }
-    .cotw-body { padding: 26px; }
-    .cotw-body > p { font-size: 14px; color: var(--midnight-700); line-height: 1.65; margin-bottom: 10px; }
-    .arrow-list { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-top: 14px; }
-    .arrow-list li {
-      display: flex; align-items: flex-start; gap: 10px;
-      font-size: 14px; color: var(--midnight-700);
-    }
-    .arrow-list li::before { content: '→'; color: var(--blue); font-weight: 600; flex-shrink: 0; margin-top: 1px; }
+        .section.active { display: block; }
 
-    /* ── PLAYBOOKS ── */
-    .pb-block {
-      background: var(--midnight);
-      border-radius: 10px;
-      padding: 32px;
-      position: relative; overflow: hidden;
-    }
-    .pb-block::after {
-      content: ''; position: absolute; bottom: -30px; right: -30px;
-      width: 160px; height: 160px; border-radius: 50%;
-      background: var(--blue); opacity: 0.15;
-    }
-    .pb-block h3 { font-size: 17px; font-weight: 600; color: #fff; margin-bottom: 10px; }
-    .pb-block p { font-size: 14px; color: rgba(255,255,255,0.55); max-width: 500px; line-height: 1.6; margin-bottom: 22px; }
-    .pb-cta {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--blue); color: #fff;
-      font-size: 13px; font-weight: 500;
-      padding: 10px 20px; border-radius: 7px;
-      text-decoration: none; position: relative; z-index: 1;
-      transition: background 0.15s;
-    }
-    .pb-cta:hover { background: var(--blue-dark); }
+        .section-title {
+            font-family: 'Arimo', sans-serif;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--midnight-1000);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--ac-blue-800);
+            letter-spacing: -0.02em;
+        }
 
-    /* ── CONTENT IDEAS ── */
-    .ideas-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
-    }
-    @media (max-width: 640px) { .ideas-grid { grid-template-columns: 1fr; } }
-    .idea-card {
-      background: #fff;
-      border: 1px solid var(--midnight-200);
-      border-radius: 10px;
-      padding: 18px 20px;
-    }
-    .idea-type {
-      font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
-      text-transform: uppercase; color: var(--midnight-500); margin-bottom: 6px;
-    }
-    .idea-card h4 { font-size: 14px; font-weight: 600; color: var(--midnight); line-height: 1.4; margin-bottom: 5px; }
-    .idea-card p { font-size: 13px; color: var(--midnight-700); line-height: 1.55; }
+        h3 {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--midnight-1000);
+            margin-top: 2rem;
+            margin-bottom: 0.875rem;
+        }
 
-    /* ── DOS AND DON'TS ── */
-    .guidance-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    @media (max-width: 640px) { .guidance-row { grid-template-columns: 1fr; } }
-    .guidance-col { border-radius: 10px; overflow: hidden; border: 1px solid var(--midnight-200); }
-    .guidance-head {
-      padding: 12px 18px;
-      font-size: 11px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
-    }
-    .guidance-do .guidance-head { background: var(--moss-100); color: var(--moss); }
-    .guidance-dont .guidance-head { background: #FFF0E3; color: #993C1D; }
-    .guidance-item {
-      display: flex; align-items: flex-start; gap: 10px;
-      padding: 11px 18px;
-      font-size: 13px; color: var(--midnight-700); line-height: 1.5;
-      border-top: 1px solid var(--midnight-200);
-      background: #fff;
-    }
-    .icon-do { color: var(--moss); font-weight: 700; flex-shrink: 0; }
-    .icon-dont { color: var(--dawn); font-weight: 700; flex-shrink: 0; }
+        h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--midnight-900);
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
 
-    /* ── FOOTER ── */
-    .footer {
-      background: var(--midnight-100);
-      border-top: 1px solid var(--midnight-200);
-      text-align: center;
-      padding: 28px 24px;
-      font-size: 12px;
-      color: var(--midnight-500);
-      line-height: 1.7;
-    }
-    .footer a { color: var(--blue); text-decoration: none; }
-    .footer a:hover { text-decoration: underline; }
-  </style>
+        p {
+            margin-bottom: 1rem;
+            color: var(--midnight-900);
+            font-size: 0.9375rem;
+            line-height: 1.7;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            color: var(--midnight-900);
+            font-size: 0.9375rem;
+            line-height: 1.65;
+        }
+
+        a {
+            color: var(--ac-blue-800);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover { text-decoration: underline; }
+
+        /* ── CALLOUTS ── */
+        .callout {
+            padding: 1.25rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid;
+        }
+
+        .callout strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9375rem;
+        }
+
+        .callout-warning  { background: var(--midday-300);  border-color: var(--midday-500); }
+        .callout-primary  { background: var(--ac-blue-100); border-color: var(--ac-blue-800); }
+        .callout-success  { background: var(--moss-100);    border-color: var(--moss-600); }
+        .callout-info     { background: var(--dusk-100);    border-color: var(--dusk-600); }
+        .callout-purple   { background: var(--maroon-100);  border-color: var(--maroon-700); }
+
+        /* ── QUOTE ── */
+        .quote {
+            background: var(--midnight-100);
+            border-left: 4px solid var(--ac-blue-800);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .quote p { font-style: italic; color: var(--midnight-900); margin-bottom: 0.5rem; }
+        .quote-author { font-style: normal; font-weight: 600; font-size: 0.875rem; color: var(--midnight-800); margin-top: 0.5rem; }
+
+        /* ── STATS GRID ── */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-box {
+            border: 1px solid var(--midnight-200);
+            padding: 1.25rem;
+            border-radius: 10px;
+            background: var(--midnight-100);
+        }
+
+        .stat-box strong {
+            font-family: 'Arimo', sans-serif;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--ac-blue-800);
+            display: block;
+            margin-bottom: 0.375rem;
+        }
+
+        .stat-box p { font-size: 0.875rem; color: var(--midnight-800); margin-bottom: 0; }
+
+        /* ── FEATURE LIST ── */
+        .feature-list {
+            background: var(--midnight-100);
+            padding: 1.25rem 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .feature-list strong {
+            color: var(--ac-blue-800);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-list p, .feature-list li { font-size: 0.9rem; }
+
+        /* ── COVER ── */
+        .cover {
+            background: var(--midnight-1000);
+            color: white;
+            padding: 5rem 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: -100px; right: -100px;
+            width: 480px; height: 480px;
+            background: radial-gradient(circle, rgba(0,76,255,0.2) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .cover::after {
+            content: '';
+            position: absolute;
+            bottom: -80px; left: 5%;
+            width: 320px; height: 320px;
+            background: radial-gradient(circle, rgba(227,255,101,0.06) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .cover-logo {
+            background: white;
+            padding: 1.25rem 2rem;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 2.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-logo-glyph {
+            width: 32px; height: 32px;
+            background: var(--ac-blue-800);
+            border-radius: 7px;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .cover-logo-glyph svg {
+            width: 17px; height: 17px;
+            fill: none; stroke: white;
+            stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+        }
+
+        .cover-logo-text {
+            font-family: 'Arimo', sans-serif;
+            color: var(--midnight-1000);
+            font-size: 1.375rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .cover h1 {
+            font-family: 'Arimo', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.25rem);
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.03em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover h1 span { color: var(--palm); }
+
+        .cover h2 {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 1.375rem;
+            font-weight: 300;
+            margin-bottom: 1.25rem;
+            color: rgba(255,255,255,0.7);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover > p {
+            font-size: 1.0625rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 0;
+            position: relative;
+            z-index: 1;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ── NUMBER STEPS ── */
+        .step-list { list-style: none; margin-left: 0; }
+        .step-list li {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            padding: 1rem 1.25rem;
+            background: white;
+            border: 1px solid var(--midnight-200);
+            border-radius: 10px;
+            margin-bottom: 0.75rem;
+        }
+        .step-num {
+            width: 32px; height: 32px;
+            background: var(--ac-blue-800);
+            color: white;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.875rem; font-weight: 700;
+            flex-shrink: 0;
+        }
+        .step-body { flex: 1; }
+        .step-body strong { display: block; font-size: 0.9375rem; color: var(--midnight-1000); margin-bottom: 0.25rem; }
+        .step-body p { font-size: 0.875rem; margin-bottom: 0; }
+
+        /* ── FOOTER ── */
+        .footer {
+            text-align: center;
+            padding: 2.5rem;
+            color: var(--midnight-800);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--midnight-200);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .header { height: auto; padding: 0.75rem 1rem; }
+            .header-content { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+            .nav { width: 100%; }
+            .section { padding: 1.5rem; }
+            .cover { padding: 3rem 1.5rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="header-inner">
-    <a href="#" class="logo">
-      <span class="logo-dot"></span>
-      ActiveCampaign
-    </a>
-    <nav aria-label="Playbook navigation">
-      <a href="#what-is">What is AI Lab</a>
-      <a href="#activate">How to activate</a>
-      <a href="#tools">AI tools</a>
-      <a href="#chart">Chart of the week</a>
-      <a href="#playbooks">Playbooks</a>
-      <a href="#content">Content ideas</a>
-      <a href="#guidance">Dos and don'ts</a>
-    </nav>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Affiliate Partner Playbook</div>
-    <h1>Promote <span>AI Lab</span><br>with confidence.</h1>
-    <p class="hero-sub">Everything you need to understand, test, and promote AI Lab by ActiveCampaign — frameworks, data-backed insights, and free tools for autonomous marketers.</p>
-  </div>
-</section>
-
-<main class="page">
-
-  <!-- WHAT IS AI LAB -->
-  <section class="section" id="what-is">
-    <span class="section-label">01 — Overview</span>
-    <h2>What is AI Lab?</h2>
-    <p class="section-intro">AI Lab is ActiveCampaign's hub for autonomous marketers. Original research, practitioner stories, free AI tools, and campaign playbooks — all built to help marketers turn AI potential into workflows that actually stick.</p>
-
-    <div class="stat-strip">
-      <div class="stat-item">
-        <div class="stat-num">77,847+</div>
-        <div class="stat-label">Marketers subscribed</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">100K+</div>
-        <div class="stat-label">Businesses in the research base</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">8.3M</div>
-        <div class="stat-label">Campaigns powering the AI tools</div>
-      </div>
-    </div>
-
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-icon">🔬</div>
-        <h3>Original research</h3>
-        <p>Data-backed insights drawn from 100,000+ businesses — not recycled industry reports.</p>
-        <a href="https://autonomous.activecampaign.com/research" target="_blank">Browse research →</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">🛠️</div>
-        <h3>Free AI tools</h3>
-        <p>Three live tools built on 8.3 million campaigns. Grade emails, benchmark industries, optimize subject lines.</p>
-        <a href="https://autonomous.activecampaign.com/ai-tools" target="_blank">Try the tools →</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">📖</div>
-        <h3>Practitioner stories</h3>
-        <p>Real marketers, real workflows, real results. The kind of case study worth bookmarking.</p>
-        <a href="https://autonomous.activecampaign.com/stories" target="_blank">Read stories →</a>
-      </div>
-      <div class="card">
-        <div class="card-icon">🗺️</div>
-        <h3>Campaign playbooks</h3>
-        <p>Step-by-step templates for building autonomous marketing systems from scratch.</p>
-        <a href="https://autonomous.activecampaign.com/playbooks" target="_blank">See playbooks →</a>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- HOW TO ACTIVATE -->
-  <section class="section" id="activate">
-    <span class="section-label">02 — Activation</span>
-    <h2>How you can activate</h2>
-    <p class="section-intro">Six ways to promote AI Lab. Not every activation makes sense for every partner — pick what genuinely fits your audience. Forced promotions hurt your credibility more than they help ours.</p>
-
-    <div class="activation-list">
-
-      <div class="activation-item">
-        <div class="act-num">1</div>
-        <div class="act-body">
-          <h3>Drive awareness of AI Lab</h3>
-          <p>Mention AI Lab in relevant content — newsletters, social posts, YouTube descriptions, podcast shoutouts. Frame it as a free resource your audience should know about, not a product pitch.</p>
-          <div class="tag-row">
-            <span class="tag tag-blue">Newsletter</span>
-            <span class="tag tag-blue">Social</span>
-            <span class="tag tag-blue">Podcast</span>
-            <span class="tag tag-blue">YouTube</span>
-          </div>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAOWA5YDASIAAhEBAxEB/8QAHQABAAICAwEBAAAAAAAAAAAAAAcIBQYDBAkCAf/EAD8QAQABAwIDBQYEAwcDBQEAAAABAgMFBAYHESESEzFRYQgiQVJicRQycoEjQmMVMzVzdLGyJEORU4KhwdGz/8QAHAEBAAIDAQEBAAAAAAAAAAAAAAEGAgUHBAMI/8QAPhEBAAECAwUFBgMGBAcAAAAAAAECAwQFEQYhMUFREiJxgdFSYZGxwfATQqEjNJKywuEHMjWCFBYXJHLS8f/aAAwDAQACEQMRAD8AikB+o3KgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAD8AB//2Q==" alt="ActiveCampaign" style="height:30px;width:30px;border-radius:6px;">
+                <span class="logo-wordmark">ActiveCampaign</span>
+            </div>
+            <nav class="nav" id="nav">
+                <button class="nav-btn active" onclick="showSection(0)">Home</button>
+                <button class="nav-btn" onclick="showSection(1)">What is AI Lab</button>
+                <button class="nav-btn" onclick="showSection(2)">Start Here</button>
+                <button class="nav-btn" onclick="showSection(3)">AI Tools Worth Testing</button>
+                <button class="nav-btn" onclick="showSection(4)">Be Featured: Chart of the Week</button>
+                <button class="nav-btn" onclick="showSection(5)">Content Ideas</button>
+                <button class="nav-btn" onclick="showSection(6)">Dos and Don'ts</button>
+                <button class="nav-btn" onclick="showSection(7)">Your Next Move</button>
+            </nav>
         </div>
-      </div>
+    </div>
 
-      <div class="activation-item">
-        <div class="act-num">2</div>
-        <div class="act-body">
-          <h3>Educate your audience on what AI Lab is</h3>
-          <p>Write a short explainer post or record a walkthrough. What makes AI Lab different from generic AI content? It is built on real campaign data — not theory. That is a credible angle your audience will appreciate.</p>
-          <div class="tag-row">
-            <span class="tag tag-moss">Blog post</span>
-            <span class="tag tag-moss">Video</span>
-            <span class="tag tag-moss">Newsletter feature</span>
-          </div>
+    <div class="container">
+
+        <!-- SECTION 0: COVER -->
+        <div class="section active" id="section-0">
+            <div class="cover">
+                <div class="cover-logo">
+                    <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAOWA5YDASIAAhEBAxEB/8QAHQABAAICAwEBAAAAAAAAAAAAAAcIBQYDBAkCAf/EAD8QAQABAwIDBQYEAwcDBQEAAAABAgMFBAYHESESEzFRYQgiQVJicRQycoEjQmMVMzVzdLGyJEORU4KhwdGz/8QAHAEBAAIDAQEBAAAAAAAAAAAAAAEGAgUHBAMI/8QAPhEBAAECAwUFBgMGBAcAAAAAAAECAwQFEQYhMUFREiJxgdFSYZGxwfATQqEjNJKywuEHMjWCFBYXJHLS8f/aAAwDAQACEQMRAD8AikB+o3KgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAD8AB//2Q==" alt="ActiveCampaign" style="height:40px;width:40px;border-radius:8px;">
+                    <span class="cover-logo-text">ActiveCampaign</span>
+                </div>
+                
+                <h1><span style="color:#E3FF65;">AI Lab by</span> <span style="color:#94BFF1;">ActiveCampaign</span></h1>
+                <h2>The AI Lab Content Advantage</h2>
+                <p>AI Lab gives you original research, real campaign data, and free tools your audience hasn&#39;t seen — built to make your content convert.</p>
+            </div>
         </div>
-      </div>
 
-      <div class="activation-item">
-        <div class="act-num">3</div>
-        <div class="act-body">
-          <h3>Use AI Lab content in your own content</h3>
-          <p>Research findings, chart data, and practitioner stories from AI Lab are fair game to reference and link to. Cite the source, link back, and add your own perspective on top. This adds depth to your content without creating everything from scratch.</p>
-          <div class="tag-row">
-            <span class="tag tag-dusk">Reference and link</span>
-            <span class="tag tag-dusk">Add your take</span>
-          </div>
-          <div class="note-box"><strong>Asset request:</strong> Need shareable graphics or embeds from a specific chart or finding? Reach out and we will see what we can pull together.</div>
+        <!-- SECTION 1<!-- SECTION 1: WHAT IS AI LAB -->
+        <div class="section" id="section-1">
+            <h2 class="section-title">What is AI Lab?</h2>
+
+            <div class="callout callout-primary">
+                <strong>The core message</strong>
+                <p>Most marketing resources tell you what's possible. AI Lab shows you what's working — and what's actually been tested in the real world.</p>
+            </div>
+
+            <p>AI Lab by ActiveCampaign is a hub for autonomous marketers. It brings together original research from 100,000+ businesses, real practitioner stories, free tools powered by data from 8.3 million campaigns, and campaign playbooks — all built to help marketers turn AI potential into workflows that actually stick.</p>
+            <p>Visit: <a href="https://autonomous.activecampaign.com/" target="_blank">autonomous.activecampaign.com</a></p>
+
+            <h3>By the numbers</h3>
+            <div style="background:var(--midnight-1000);border-radius:12px;padding:2rem 2.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:1rem 0 2rem;">
+                <div style="text-align:center;">
+                    <div style="font-family:'Arimo',sans-serif;font-size:2rem;font-weight:700;color:#E3FF65;line-height:1;margin-bottom:0.5rem;">77,847+</div>
+                    <div style="font-size:0.875rem;color:rgba(255,255,255,0.55);">Marketers subscribed</div>
+                </div>
+                <div style="text-align:center;">
+                    <div style="font-family:'Arimo',sans-serif;font-size:2rem;font-weight:700;color:#E3FF65;line-height:1;margin-bottom:0.5rem;">100K+</div>
+                    <div style="font-size:0.875rem;color:rgba(255,255,255,0.55);">Businesses in the research base</div>
+                </div>
+                <div style="text-align:center;">
+                    <div style="font-family:'Arimo',sans-serif;font-size:2rem;font-weight:700;color:#E3FF65;line-height:1;margin-bottom:0.5rem;">8.3M</div>
+                    <div style="font-size:0.875rem;color:rgba(255,255,255,0.55);">Campaigns powering the AI tools</div>
+                </div>
+            </div>
+
+            <h3>What's on AI Lab?</h3>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1rem;">
+                <div style="background:white;border:1px solid var(--midnight-200);border-radius:10px;padding:1.5rem;">
+                    <div style="width:40px;height:40px;background:var(--ac-blue-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1rem;">🔬</div>
+                    <h4 style="margin-top:0;">Original research</h4>
+                    <p style="font-size:0.875rem;">Data-backed insights drawn from 100,000+ businesses — not recycled industry reports.</p>
+                    <a href="https://autonomous.activecampaign.com/research" target="_blank" style="font-size:0.875rem;">Browse research →</a>
+                </div>
+                <div style="background:white;border:1px solid var(--midnight-200);border-radius:10px;padding:1.5rem;">
+                    <div style="width:40px;height:40px;background:var(--ac-blue-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1rem;">🛠️</div>
+                    <h4 style="margin-top:0;">Free AI tools</h4>
+                    <p style="font-size:0.875rem;">Three live tools built on 8.3 million campaigns. Grade emails, benchmark industries, optimize subject lines.</p>
+                    <a href="https://autonomous.activecampaign.com/ai-tools" target="_blank" style="font-size:0.875rem;">Try the tools →</a>
+                </div>
+                <div style="background:white;border:1px solid var(--midnight-200);border-radius:10px;padding:1.5rem;">
+                    <div style="width:40px;height:40px;background:var(--ac-blue-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1rem;">📖</div>
+                    <h4 style="margin-top:0;">Practitioner stories</h4>
+                    <p style="font-size:0.875rem;">Real marketers, real workflows, real results. The kind of case study worth bookmarking.</p>
+                    <a href="https://autonomous.activecampaign.com/stories" target="_blank" style="font-size:0.875rem;">Read stories →</a>
+                </div>
+                <div style="background:white;border:1px solid var(--midnight-200);border-radius:10px;padding:1.5rem;">
+                    <div style="width:40px;height:40px;background:var(--ac-blue-100);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:1rem;">🗺️</div>
+                    <h4 style="margin-top:0;">Campaign playbooks</h4>
+                    <p style="font-size:0.875rem;">Step-by-step templates for building autonomous marketing systems from scratch.</p>
+                    <a href="https://autonomous.activecampaign.com/playbooks" target="_blank" style="font-size:0.875rem;">See playbooks →</a>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="activation-item">
-        <div class="act-num">4</div>
-        <div class="act-body">
-          <h3>Share your reaction to Chart of the Week</h3>
-          <p>Every week, AI Lab publishes a new data visualization from the 8.3 million campaign dataset. If a stat surprises you — or confirms something you have seen in your own work — that is content. Share your take, tag us, or write a post around it.</p>
-          <div class="tag-row">
-            <span class="tag tag-amber">LinkedIn</span>
-            <span class="tag tag-amber">X / Twitter</span>
-            <span class="tag tag-amber">Newsletter commentary</span>
-          </div>
-          <div class="note-box"><strong>Quote opportunity:</strong> If a chart resonates with you and you would be willing to share a short reaction quote, let us know. Affiliate perspectives featured on AI Lab content means more visibility for you.</div>
+        <!-- SECTION 2: HOW TO ACTIVATE -->
+        <div class="section" id="section-2">
+            <h2 class="section-title">Start Here</h2>
+
+            <div class="callout callout-primary">
+                <strong>The mindset shift</strong>
+                <p>You are not here to promote AI Lab. You are here to use it — and let better content do the promoting for you. The affiliates who will get the most out of AI Lab are the ones who treat it as a research tool first and a referral opportunity second.</p>
+            </div>
+
+            <p>Think of AI Lab activation as a three-stage journey. Each stage builds on the last — and each one pays off for you before it pays off for us.</p>
+
+            <h3>Stage 1 — Use it yourself first</h3>
+            <p>Before you recommend anything to your audience, get your own hands on it. Run your last five emails through the AI Email Grader. Pull your industry's benchmarks. Test a subject line. The content ideas will come naturally once you have real results to talk about.</p>
+
+            <div class="feature-list">
+                <strong>What to do in Stage 1</strong>
+                <ul>
+                    <li>Run your own email campaigns through the <a href="https://autonomous.activecampaign.com/ai-tools/ai-email-grader" target="_blank">AI Email Grader</a> and note what surprised you</li>
+                    <li>Check the <a href="https://autonomous.activecampaign.com/chart-of-the-week" target="_blank">Chart of the Week</a> — does it confirm or challenge something you already believed?</li>
+                    <li>Pull your industry's data from the <a href="https://autonomous.activecampaign.com/ai-tools/industry-benchmarker" target="_blank">Industry Benchmarker</a></li>
+                    <li>Read one piece of <a href="https://autonomous.activecampaign.com/research" target="_blank">original research</a> relevant to your niche</li>
+                </ul>
+            </div>
+
+            <div class="callout callout-warning">
+                <strong>Why this matters</strong>
+                <p>First-person experience is the only thing that makes tool content trustworthy. "I tested this on my own campaigns" converts at a completely different rate than "here is a tool you should check out."</p>
+            </div>
+
+            <h3>Stage 2 — Let it improve your existing content</h3>
+            <p>You are already writing about email marketing, automation, and marketing strategy. AI Lab gives you data, charts, and research findings that make those posts more original and more credible — without changing your topic or your voice.</p>
+
+            <div class="feature-list">
+                <strong>What to do in Stage 2</strong>
+                <ul>
+                    <li>Reference a Chart of the Week finding in a newsletter you were already planning to send</li>
+                    <li>Open a blog post with a stat from AI Lab's research instead of a generic industry claim</li>
+                    <li>Add a before-and-after subject line comparison to a post about email copywriting</li>
+                    <li>Use your industry benchmark results as original data in a niche-specific post</li>
+                    <li>Cite AI Lab as the source — the link back builds credibility for you and visibility for AI Lab</li>
+                </ul>
+            </div>
+
+            <div class="callout callout-success">
+                <strong>The compounding effect</strong>
+                <p>Every piece of content you publish with AI Lab data in it is a potential entry point for a reader to discover ActiveCampaign. Your affiliate link does the rest — you do not need to make a separate ask.</p>
+            </div>
+
+            <h3>Stage 3 — Point your audience toward what's useful</h3>
+            <p>Once you have used AI Lab yourself and referenced it in your content, sending your audience directly to a specific tool or playbook is a natural next step. At this point it is a recommendation, not a promotion — and your audience will feel the difference.</p>
+
+            <div class="feature-list">
+                <strong>What to do in Stage 3</strong>
+                <ul>
+                    <li>Link to the specific AI tool you wrote about — not just the AI Lab homepage</li>
+                    <li>Recommend a playbook when it genuinely fits a topic you are covering — it is free, useful, and gated by email</li>
+                    <li>Share a Chart of the Week reaction on LinkedIn or X with your own take and tag ActiveCampaign</li>
+                    <li>If you are willing, share a short quote on a chart or finding with the affiliate team — we may feature it on AI Lab, which drives visibility back to you</li>
+                </ul>
+            </div>
+
+            <div class="callout callout-warning">
+                <strong>Keep it contextual</strong>
+                <p>A specific recommendation tied to content your audience just read will always outperform a generic "check out this resource" mention. If it does not fit naturally, wait until it does.</p>
+            </div>
+
+            <h3>What we need from you</h3>
+            <p>A few things that help us help you — none of them mandatory, all of them genuinely useful if you are up for it:</p>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <strong>Chart reactions</strong>
+                    <p>A short quote on a Chart of the Week finding gets you featured on AI Lab content. More reach for you, more credibility for the data.</p>
+                </div>
+                <div class="stat-box">
+                    <strong>Asset requests</strong>
+                    <p>Need a shareable graphic or embed from a specific chart or finding? Reach out and we will see what we can pull together.</p>
+                </div>
+            </div>
+
+            <p style="margin-top:1.5rem;">For any of the above: <a href="mailto:psaffiliates@activecampaign.com">psaffiliates@activecampaign.com</a></p>
+
         </div>
-      </div>
 
-      <div class="activation-item">
-        <div class="act-num">5</div>
-        <div class="act-body">
-          <h3>Test the free AI tools and share your experience</h3>
-          <p>Three tools are live now — AI Email Grader, Industry Benchmarker, and Subject Line Optimizer. Test them on real campaigns and share what you found. An honest, first-person review will resonate far more than a feature list.</p>
-          <div class="tag-row">
-            <span class="tag tag-blue">Review post</span>
-            <span class="tag tag-blue">Screen-recorded walkthrough</span>
-            <span class="tag tag-blue">Before and after results</span>
-          </div>
-          <div class="note-box"><strong>More tools coming:</strong> We will flag you when new tools go live so you can be among the first to test and cover them.</div>
+        <!-- SECTION 3: AI TOOLS -->
+        <div class="section" id="section-3">
+            <h2 class="section-title">AI Tools Worth Testing</h2>
+
+            <div class="callout callout-primary">
+                <strong>Experience first, content second</strong>
+                <p>Three tools are live now, all free, all built on data from 8.3 million real campaigns. Use them on your own work before you mention them to your audience. The results — surprising, validating, or somewhere in between — are the content.</p>
+            </div>
+
+            <h3>🔍 AI Email Grader</h3>
+            <p><strong>The question it answers for you:</strong> How do my emails actually hold up against what's working across 8.3 million campaigns?</p>
+            <p>Run any email through the grader and get an instant A–F audit across six dimensions: subject line, copy, design, mobile, deliverability, and accessibility. The score is concrete, shareable, and almost always surprising in at least one area.</p>
+
+            <div class="feature-list">
+                <strong>What tends to happen when you use it</strong>
+                <p>Most people expect to score well on the things they obsess over and poorly on the things they ignore. The grader usually flips that — which is exactly the kind of result worth writing about. "I thought my subject lines were the problem. Turns out it was mobile formatting" is a better post than any tool review.</p>
+            </div>
+            <p><a href="https://autonomous.activecampaign.com/ai-tools/ai-email-grader" target="_blank">Try the AI Email Grader →</a></p>
+
+            <h3>📊 Industry Benchmarker</h3>
+            <p><strong>The question it answers for you:</strong> Is my audience's performance actually good, or have I just normalized underperforming?</p>
+            <p>Pull real campaign benchmarks for your specific industry — open rates, click rates, and more — drawn from actual send data, not surveys. If you write for a specific niche, this tool hands you original data your audience has likely never seen presented this way.</p>
+
+            <div class="feature-list">
+                <strong>What tends to happen when you use it</strong>
+                <p>The benchmark numbers are often either better or worse than what your audience assumes is normal. Either direction makes for a strong post: "Your industry's open rates are higher than you think — here's why that's actually a problem" works just as well as the opposite finding.</p>
+            </div>
+            <p><a href="https://autonomous.activecampaign.com/ai-tools/industry-benchmarker" target="_blank">Try the Industry Benchmarker →</a></p>
+
+            <h3>✉️ Subject Line Optimizer</h3>
+            <p><strong>The question it answers for you:</strong> What would actually improve my open rates, based on what has worked across millions of sends?</p>
+            <p>Paste in a subject line and get AI-powered suggestions grounded in real campaign performance — not copywriting frameworks or generic best practices. The comparison between your original and the suggestions is where the content lives.</p>
+
+            <div class="feature-list">
+                <strong>What tends to happen when you use it</strong>
+                <p>Run ten subject lines through the optimizer and you will start to see patterns in what the tool flags. Those patterns — not the individual suggestions — are what make for a genuinely useful post your audience will save and share.</p>
+            </div>
+            <p><a href="https://autonomous.activecampaign.com/ai-tools/subject-line-optimizer" target="_blank">Try the Subject Line Optimizer →</a></p>
+
+            <div class="callout callout-warning">
+                <strong>More tools coming — you will hear first</strong>
+                <p>Additional AI tools are in development. When new tools go live, we will reach out so you can be among the first to test them. Early access means early content — and early content on a new tool almost always ranks and converts better than reviews that come later.</p>
+            </div>
+
+            <h3>Share what you find</h3>
+            <p>Once you have tested a tool, we want to hear about it — the good, the surprising, and the things that could be better. Your feedback directly shapes what gets built next, and if a result is share-worthy we may feature your take on AI Lab content.</p>
+
+            <div class="callout callout-success">
+                <strong>Got feedback on a tool?</strong>
+                <p>Reach out at <a href="mailto:psaffiliates@activecampaign.com">psaffiliates@activecampaign.com</a> — what surprised you, what you would improve, or what you ended up writing about. All of it is useful.</p>
+            </div>
+
         </div>
-      </div>
 
-      <div class="activation-item">
-        <div class="act-num">6</div>
-        <div class="act-body">
-          <h3>Drive your audience to the playbooks</h3>
-          <p>AI Lab's playbooks collect email addresses — so sending your audience there helps both of us. Link to a playbook that is genuinely relevant to what you write about. A specific, contextual recommendation converts better than blasting the homepage.</p>
-          <div class="tag-row">
-            <span class="tag tag-moss">Contextual link in content</span>
-            <span class="tag tag-moss">CTA in newsletter</span>
-          </div>
-          <div class="note-box"><strong>Note:</strong> Only do this when a playbook is a natural fit for the topic you are already covering. A forced recommendation helps no one.</div>
+        <!-- SECTION 4: CHART OF THE WEEK -->
+        <div class="section" id="section-4">
+            <h2 class="section-title">Chart of the Week</h2>
+
+            <p>Every week, AI Lab publishes a new data visualization pulled from real campaign performance across 8.3 million sends. Each chart is a single, focused finding — the kind of stat that makes a marketer stop scrolling and think.</p>
+            <p>Find the latest at: <a href="https://autonomous.activecampaign.com/chart-of-the-week" target="_blank">autonomous.activecampaign.com/chart-of-the-week</a></p>
+
+            <h3>What makes Chart of the Week different</h3>
+            <p>Most email marketing stats come from surveys or third-party aggregations. Chart of the Week pulls directly from ActiveCampaign's own campaign data — 8.3 million sends across industries, audience sizes, and send frequencies. The findings are not directional estimates. They are what actually happened.</p>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <strong>Published every week</strong>
+                    <p>A new chart drops weekly — always fresh, always based on real campaign data from the ActiveCampaign platform.</p>
+                </div>
+                <div class="stat-box">
+                    <strong>Built on 8.3M campaigns</strong>
+                    <p>Not surveys. Not estimates. Actual send data from businesses across every major industry.</p>
+                </div>
+                <div class="stat-box">
+                    <strong>Shareable by design</strong>
+                    <p>Each chart is formatted to stand alone — easy to reference in a post, newsletter, or social update.</p>
+                </div>
+            </div>
+
+            <h3>Be featured on AI Lab</h3>
+            <p>Each week, we invite affiliate partners to share a short reaction to the latest chart. Your quote — along with your name and a link back to your site — gets featured directly on the AI Lab Chart of the Week page.</p>
+
+            <div class="callout callout-primary">
+                <strong>What's in it for you</strong>
+                <p>A featured quote on AI Lab puts your name and your site in front of 77,847+ marketers who are already reading. It takes two minutes to write and runs every week — meaning there is a new opportunity to be featured 52 times a year.</p>
+            </div>
+
+            <h3>How to submit your quote</h3>
+            <ul>
+                <li>Check the latest Chart of the Week at <a href="https://autonomous.activecampaign.com/chart-of-the-week" target="_blank">autonomous.activecampaign.com/chart-of-the-week</a></li>
+                <li>Write 2–4 sentences sharing your reaction — what surprised you, what confirmed something you already knew, or what it means for your audience's strategy</li>
+                <li>Submit your quote using the form below — takes under two minutes</li>
+            </ul>
+
+            <div class="callout callout-success">
+                <strong>Ready to be featured?</strong>
+                <p style="margin-bottom:1rem;">Submit your Chart of the Week reaction and we will reach out if your quote is selected for that week's feature.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7j8euNwfpTmMV6b2SFFJm_IovB2_yDtYU-pF3KSt1vsVLOA/viewform" target="_blank" style="display:inline-block;background:var(--ac-blue-800);color:white;font-weight:600;font-size:0.9375rem;padding:0.75rem 1.5rem;border-radius:8px;text-decoration:none;">Submit your quote →</a>
+            </div>
+
+            <div class="callout callout-warning">
+                <strong>Tips for a strong quote</strong>
+                <ul style="margin-top:0.5rem;">
+                    <li>Be specific — reference the actual stat from the chart, not just "this was interesting"</li>
+                    <li>Add your own angle — what does this mean for your specific audience or niche?</li>
+                    <li>Keep it conversational — two to four sentences is the sweet spot</li>
+                    <li>Include a link to your site or latest relevant content so readers can find you</li>
+                </ul>
+            </div>
+
         </div>
-      </div>
+        <!-- SECTION 5: CONTENT IDEAS -->
+        <div class="section" id="section-5">
+            <h2 class="section-title">Content Ideas</h2>
 
+            <div class="callout callout-warning">
+                <strong>An honest note on commissions</strong>
+                <p>AI Lab does not have a checkout page, a free trial, or a pricing tier. That means content purely about AI Lab will not directly earn you commissions. We are telling you this upfront because we think a strategy you understand is more valuable than one you have to reverse-engineer yourself.</p>
+            </div>
+
+            <p>The content ideas below are split into two types — and understanding the difference is the key to making AI Lab work for you as an affiliate.</p>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0;">
+                <div style="background:var(--ac-blue-100);border:1px solid var(--ac-blue-600);border-radius:10px;padding:1.25rem 1.5rem;">
+                    <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ac-blue-800);margin-bottom:0.5rem;">Type 1 — Authority builders</p>
+                    <p style="font-size:0.9rem;margin-bottom:0;">Pure AI Lab content. No commission, but builds your credibility and audience trust. These posts make your Type 2 content convert better.</p>
+                </div>
+                <div style="background:var(--moss-100);border:1px solid var(--moss-600);border-radius:10px;padding:1.25rem 1.5rem;">
+                    <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--moss-800);margin-bottom:0.5rem;">Type 2 — Commission earners</p>
+                    <p style="font-size:0.9rem;margin-bottom:0;">Bridge content that connects AI Lab data to ActiveCampaign. This is where your affiliate link lives and where commissions are earned.</p>
+                </div>
+            </div>
+
+            <h3>Type 1 — Authority builders</h3>
+            <p>These posts earn you nothing directly. What they earn you is something more valuable long-term — a reputation as someone who publishes original, data-backed content your audience can trust. That trust is what makes your Type 2 content convert.</p>
+
+            <h4>Tool review</h4>
+            <p><em>"I graded my last five email campaigns with AI. Here's what I found."</em></p>
+            <p>Run your own emails through the AI Email Grader and share honest results — score, breakdown, and what surprised you. First-person tool reviews with real data outperform generic recommendations every time.</p>
+
+            <h4>Data commentary</h4>
+            <p><em>"This chart changed how I think about email send times."</em></p>
+            <p>Take one Chart of the Week finding, add your own interpretation, and publish it. You are not summarizing AI Lab — you are adding a perspective that only you can provide.</p>
+
+            <h4>Benchmark breakdown</h4>
+            <p><em>"How does my industry's email performance actually compare? I used this free tool to find out."</em></p>
+            <p>Pull your industry's numbers from the Industry Benchmarker and share what they mean for your specific niche. Original data for a specific audience is some of the most shareable content you can produce.</p>
+
+            <h4>Subject line experiment</h4>
+            <p><em>"I ran 10 of my subject lines through an AI optimizer. Here's what it flagged."</em></p>
+            <p>Before-and-after subject line comparisons are highly shareable and genuinely useful. The patterns the tool flags across multiple lines are more interesting than any single suggestion.</p>
+
+            <h3>Type 2 — Commission earners</h3>
+            <p>These posts use AI Lab data as the foundation and ActiveCampaign as the conclusion. The bridge between them has to be honest — the data should genuinely support the recommendation, not just provide cover for an affiliate pitch.</p>
+
+            <h4>The data-to-platform bridge</h4>
+            <p><em>"AI Lab's research shows the average open rate in my industry is X. Here's the platform I use to beat it."</em></p>
+            <p>Lead with a specific AI Lab finding, explain what it means for your audience, and then introduce ActiveCampaign as the tool that helps you hit or exceed that benchmark. Your affiliate link belongs at the end of that argument, not at the beginning.</p>
+
+            <h4>The deliverability angle</h4>
+            <p><em>"I tested my emails with AI Lab's grader. The biggest problem wasn't my copy — it was my platform."</em></p>
+            <p>If the Email Grader surfaces deliverability or design issues that your current tool can't solve, ActiveCampaign is a natural next step. This only works if it is true for you — do not manufacture a problem that does not exist.</p>
+
+            <h4>The benchmark-to-trial bridge</h4>
+            <p><em>"Industry benchmarks say X. ActiveCampaign users average Y. Here's how to close the gap."</em></p>
+            <p>Use Industry Benchmarker data to establish what good looks like, then show how ActiveCampaign's features help get there. Link to a free trial with your affiliate link as the CTA.</p>
+
+            <h4>The research roundup</h4>
+            <p><em>"5 things AI Lab's data taught me about email marketing in 2026 — and the tool I use because of them."</em></p>
+            <p>Aggregate several AI Lab findings into a single post and let the cumulative weight of the data lead naturally to an ActiveCampaign recommendation. Multiple data points make the conclusion feel earned rather than forced.</p>
+
+            <div class="callout callout-primary">
+                <strong>The two-post play</strong>
+                <p>The most effective approach is to publish a Type 1 post first — a genuine, no-pitch AI Lab piece that builds credibility with your audience. Then publish a Type 2 post that references the same data and bridges to ActiveCampaign. Your audience already trusts you on the topic. The affiliate link converts because the authority was established first.</p>
+            </div>
+
+        </div>
+
+        <!-- SECTION 6: DOS AND DON'TS -->
+        <div class="section" id="section-6">
+            <h2 class="section-title">Dos and Don'ts</h2>
+
+            <p>A few principles to keep your AI Lab content credible, effective, and worth your audience's time.</p>
+
+            <h3>✅ Do</h3>
+            <ul>
+                <li><strong>Lead with your audience's problem, not the product.</strong> If your content starts with "AI Lab is a great resource," it reads like an ad. If it starts with "here is what the data says about email open rates," it reads like journalism.</li>
+                <li><strong>Test the tools before recommending them.</strong> Your first-hand experience is the only thing that makes tool content genuinely trustworthy. Run your own campaigns through the tools first.</li>
+                <li><strong>Share your honest take — including limitations.</strong> If a tool surprised you in a bad way, say so. That candor is what makes your recommendations worth reading.</li>
+                <li><strong>Link to specific tools or charts, not just the AI Lab homepage.</strong> A contextual link to a specific resource will always outperform a generic "check this out" mention.</li>
+                <li><strong>Add your own perspective on top of AI Lab data.</strong> Rephrasing what the page already says adds no value. Your interpretation — especially for your specific niche — is what your audience is coming for.</li>
+                <li><strong>Let Type 1 content earn the right for Type 2.</strong> Publish a genuine AI Lab piece first. Build the credibility. Then bridge to ActiveCampaign when it is earned — that is when your affiliate link converts.</li>
+                <li><strong>Include an affiliate disclosure when applicable.</strong> Required where your jurisdiction mandates it, and builds trust even where it does not.</li>
+            </ul>
+
+            <h3>❌ Do not</h3>
+            <ul>
+                <li><strong>Force an ActiveCampaign affiliate link into AI Lab content where it does not belong.</strong> AI Lab is a credibility builder, not a conversion page. Shoehorning an affiliate pitch into a data post undermines both. Let the two-post play work as designed.</li>
+                <li><strong>Write about AI Lab content you have not actually used.</strong> If you have not run your own campaigns through the tools, your audience will feel it. Generic tool coverage is easy to spot and easy to ignore.</li>
+                <li><strong>Make claims you cannot back up.</strong> Stick to what the data says and what you have personally tested. Do not extrapolate beyond what AI Lab's research actually shows.</li>
+                <li><strong>Reproduce full charts or data visualizations without permission.</strong> Reference them, link to them, add your take — but do not screengrab and republish without checking with us first.</li>
+                <li><strong>Imply an official endorsement beyond your affiliate relationship.</strong> You are a partner sharing a resource — not a spokesperson for ActiveCampaign or AI Lab.</li>
+                <li><strong>Use AI Lab content as filler.</strong> If it does not genuinely fit what you are publishing, leave it out. One strong, relevant reference beats three forced mentions every time.</li>
+                <li><strong>Alter or recreate the ActiveCampaign logo.</strong> Use brand assets as provided.</li>
+            </ul>
+
+            <div class="callout callout-info">
+                <strong>Questions or need support?</strong>
+                <p>Reach out to the affiliate team at <a href="mailto:psaffiliates@activecampaign.com">psaffiliates@activecampaign.com</a> — whether it is about assets, content ideas, tool feedback, or anything else.</p>
+            </div>
+
+        </div>
+
+        <!-- SECTION 7: YOUR NEXT MOVE -->
+        <div class="section" id="section-7">
+            <h2 class="section-title">Your Next Move</h2>
+
+            <p>Here is the strategy in one paragraph: AI Lab gives you original data, free tools, and weekly research findings that make your content more credible than anything your competitors are publishing. That credibility is not just good for your audience — it is the foundation that makes your ActiveCampaign content convert. Use AI Lab to build the authority. Then let that authority do the selling.</p>
+
+            <div class="callout callout-primary">
+                <strong>The two-post play, one more time</strong>
+                <p>Publish a genuine AI Lab piece first — a tool review, a chart reaction, a benchmark breakdown. No affiliate link, no pitch. Just useful content built on real data. Then publish a follow-up that bridges from that data to ActiveCampaign. That second post is where your commissions live — and it converts because the first post earned the trust.</p>
+            </div>
+
+            <h3>Start here this week</h3>
+            <p>Close this tab and do one of these four things before you open it again.</p>
+
+            <ul class="step-list">
+                <li>
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                        <strong>Run your last email through the AI Email Grader</strong>
+                        <p>Takes five minutes. Note what surprises you — that reaction is your next post. <a href="https://autonomous.activecampaign.com/ai-tools/ai-email-grader" target="_blank">Try it →</a></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                        <strong>Check this week's Chart of the Week</strong>
+                        <p>Read it. Write two to four sentences about what it means for your audience. Submit them as a quote and get featured. <a href="https://autonomous.activecampaign.com/chart-of-the-week" target="_blank">See the latest chart →</a></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                        <strong>Pull your industry's benchmarks</strong>
+                        <p>Find out where your audience's email performance actually stands — and whether that makes for a good post. <a href="https://autonomous.activecampaign.com/ai-tools/industry-benchmarker" target="_blank">Try the benchmarker →</a></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                        <strong>Write the first Type 1 post</strong>
+                        <p>Pick whichever tool gave you the most interesting result and write about it honestly. No affiliate link. No pitch. Just what you found. The Type 2 post comes after.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <h3>We are here when you need us</h3>
+            <p>Whether you have a question about a tool, want to flag something that could be better, or are ready to submit a Chart of the Week quote — reach out. This playbook is a starting point, not a rulebook, and the affiliate team is a resource, not a compliance department.</p>
+
+            <div class="callout callout-success">
+                <strong>Get in touch</strong>
+                <p style="margin-bottom:1rem;">For tool feedback, content questions, quote submissions, or anything else — we are at <a href="mailto:psaffiliates@activecampaign.com">psaffiliates@activecampaign.com</a>.</p>
+                <p style="margin-bottom:1rem;">To submit a Chart of the Week quote: <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7j8euNwfpTmMV6b2SFFJm_IovB2_yDtYU-pF3KSt1vsVLOA/viewform" target="_blank">Submit your quote →</a></p>
+                <p style="margin-bottom:0;">To explore AI Lab: <a href="https://autonomous.activecampaign.com/" target="_blank">autonomous.activecampaign.com →</a></p>
+            </div>
+
+        </div>
+
+
+        <div class="footer">
+        <p><strong>AI Lab by ActiveCampaign</strong> — Playbook for Affiliates — May 2026</p>
+        <p style="margin-top: 0.75rem; color: var(--midnight-800);">Questions? Email <a href="mailto:psaffiliates@activecampaign.com">psaffiliates@activecampaign.com</a></p>
     </div>
-  </section>
 
-  <hr class="divider" />
-
-  <!-- AI TOOLS -->
-  <section class="section" id="tools">
-    <span class="section-label">03 — Free AI tools</span>
-    <h2>The tools worth testing</h2>
-    <p class="section-intro">Three tools are live now, all free, all built on data from 8.3 million campaigns. Test them yourself before recommending them.</p>
-
-    <div class="tools-grid">
-      <div class="tool-card">
-        <h3>AI Email Grader</h3>
-        <p>Instant A–F audit across six dimensions: subject line, copy, design, mobile, deliverability, and accessibility. A great first tool to demo — the output is concrete and shareable.</p>
-        <a href="https://autonomous.activecampaign.com/ai-tools/ai-email-grader" target="_blank">Try it →</a>
-      </div>
-      <div class="tool-card">
-        <h3>Industry Benchmarker</h3>
-        <p>Compare campaign metrics across industries, drawn from real send data. Good for blog posts targeting a specific niche audience with relevant benchmarks.</p>
-        <a href="https://autonomous.activecampaign.com/ai-tools/industry-benchmarker" target="_blank">Try it →</a>
-      </div>
-      <div class="tool-card">
-        <h3>Subject Line Optimizer</h3>
-        <p>Improve open rates with subject line suggestions grounded in what has actually worked across 8.3 million campaigns — not generic best practices.</p>
-        <a href="https://autonomous.activecampaign.com/ai-tools/subject-line-optimizer" target="_blank">Try it →</a>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- CHART OF THE WEEK -->
-  <section class="section" id="chart">
-    <span class="section-label">04 — Chart of the Week</span>
-    <h2>Turn data into your content</h2>
-    <p class="section-intro">Each week, AI Lab drops a new chart — a single, shareable data visualization pulled from real campaign performance. It is a low-lift way to publish something original and data-backed.</p>
-
-    <div class="cotw-block">
-      <div class="cotw-header">
-        <div class="cotw-badge">New weekly</div>
-        <p>A fresh chart every week at <a href="https://autonomous.activecampaign.com/chart-of-the-week" target="_blank">autonomous.activecampaign.com/chart-of-the-week</a>. Built from 8.3 million campaigns — the kind of stat you can build a post around.</p>
-      </div>
-      <div class="cotw-body">
-        <p>How to use Chart of the Week in your content without it feeling forced:</p>
-        <ul class="arrow-list">
-          <li>Share the chart with your own commentary — what does it mean for your audience's strategy?</li>
-          <li>Use it as a hook to open a newsletter: "This week's stat that surprised me…"</li>
-          <li>Build a short LinkedIn or X post around a finding and link back to AI Lab for full context.</li>
-          <li>If a chart confirms something you have been telling your audience, use it as third-party validation.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- PLAYBOOKS -->
-  <section class="section" id="playbooks">
-    <span class="section-label">05 — Playbooks</span>
-    <h2>Drive your audience to the playbooks</h2>
-    <p class="section-intro">AI Lab's playbooks are step-by-step guides for building real marketing workflows. They are free, gated by email, and genuinely useful — which makes them easy to recommend honestly.</p>
-
-    <div class="pb-block">
-      <h3>Why link to the playbooks?</h3>
-      <p>They collect email addresses for the AI Lab newsletter, so a contextual referral from your content is valuable to both sides. Your audience gets a useful, free resource. The affiliate team gets a qualified subscriber.</p>
-      <a href="https://autonomous.activecampaign.com/playbooks" target="_blank" class="pb-cta">Browse playbooks →</a>
-    </div>
-
-    <div class="note-box" style="margin-top:18px;">Only recommend a playbook when it is a natural fit for the content you are publishing. A contextual link in a relevant post will always outperform a generic mention on your resource page.</div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- CONTENT IDEAS -->
-  <section class="section" id="content">
-    <span class="section-label">06 — Content ideas</span>
-    <h2>Steal-able content angles</h2>
-    <p class="section-intro">A few starting points if you are not sure what to write. Adapt these to your voice and your audience.</p>
-
-    <div class="ideas-grid">
-      <div class="idea-card">
-        <div class="idea-type">Tool review</div>
-        <h4>"I graded my last five email campaigns. Here is what I found."</h4>
-        <p>Run your own emails through the AI Email Grader and share honest results. First-person tool reviews drive real engagement.</p>
-      </div>
-      <div class="idea-card">
-        <div class="idea-type">Data commentary</div>
-        <h4>"This chart from ActiveCampaign's AI Lab changed how I think about subject lines."</h4>
-        <p>Take one Chart of the Week finding and build your perspective around it. Add your own experience to make it original.</p>
-      </div>
-      <div class="idea-card">
-        <div class="idea-type">Resource roundup</div>
-        <h4>"Five free AI tools for email marketers worth bookmarking in 2026."</h4>
-        <p>Include AI Lab's tools in a broader roundup — not just an AC post, but a genuinely useful list your audience will save.</p>
-      </div>
-      <div class="idea-card">
-        <div class="idea-type">Benchmark comparison</div>
-        <h4>"How does my industry's email performance compare? I used this benchmarker to find out."</h4>
-        <p>Walk through the Industry Benchmarker for your specific niche and share what the data says about typical performance.</p>
-      </div>
-      <div class="idea-card">
-        <div class="idea-type">Workflow walkthrough</div>
-        <h4>"I built a campaign using an AI Lab playbook. Here is what happened."</h4>
-        <p>Follow one of the AI Lab playbooks and document the process. High-trust content because it is genuinely tested by you.</p>
-      </div>
-      <div class="idea-card">
-        <div class="idea-type">Newsletter feature</div>
-        <h4>"This week's free resource worth ten minutes of your time."</h4>
-        <p>A simple, low-friction mention in a newsletter or weekly roundup. Link to a specific tool or chart, not just the homepage.</p>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <!-- DOS AND DON'TS -->
-  <section class="section" id="guidance">
-    <span class="section-label">07 — Guidance</span>
-    <h2>Dos and don'ts</h2>
-    <p class="section-intro">A few principles to keep your AI Lab promotions credible and on-brand.</p>
-
-    <div class="guidance-row">
-      <div class="guidance-col guidance-do">
-        <div class="guidance-head">Do</div>
-        <div class="guidance-item"><span class="icon-do">✓</span> Lead with your audience's problem, not the product</div>
-        <div class="guidance-item"><span class="icon-do">✓</span> Test the tools before recommending them</div>
-        <div class="guidance-item"><span class="icon-do">✓</span> Share your honest take — including limitations</div>
-        <div class="guidance-item"><span class="icon-do">✓</span> Link to specific tools, charts, or playbooks — not just the homepage</div>
-        <div class="guidance-item"><span class="icon-do">✓</span> Add your own perspective on top of AI Lab data</div>
-        <div class="guidance-item"><span class="icon-do">✓</span> Include an affiliate disclosure when applicable</div>
-      </div>
-      <div class="guidance-col guidance-dont">
-        <div class="guidance-head">Do not</div>
-        <div class="guidance-item"><span class="icon-dont">✗</span> Promote AI Lab if it is not relevant to the content you are publishing</div>
-        <div class="guidance-item"><span class="icon-dont">✗</span> Make claims you cannot back up ("the best email tool ever")</div>
-        <div class="guidance-item"><span class="icon-dont">✗</span> Reproduce full charts or data visualizations without permission</div>
-        <div class="guidance-item"><span class="icon-dont">✗</span> Imply an official endorsement beyond your affiliate relationship</div>
-        <div class="guidance-item"><span class="icon-dont">✗</span> Alter or recreate the ActiveCampaign logo</div>
-        <div class="guidance-item"><span class="icon-dont">✗</span> Use AI Lab content as filler — it works best when it earns its place</div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <p>AI Lab Partner Playbook — ActiveCampaign Affiliate Program — V1.0 — May 2026</p>
-  <p>Questions? <a href="mailto:psaffiliates@activecampaign.com">psaffiliates@activecampaign.com</a></p>
-</footer>
-
+    <script>
+        function showSection(index) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('section-' + index).classList.add('active');
+            document.querySelectorAll('.nav-btn')[index].classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
