@@ -7,11 +7,7 @@
     <title>The Autonomous Marketer Playbook</title>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Arimo:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --ac-blue-800: #004CFF;
@@ -24,10 +20,9 @@
             --midnight-200: #E5E5E5;
             --midnight-100: #F9F9F9;
             --cream: #FFFCF5;
-            --moss-800: #255131;
             --moss-600: #347C44;
+            --moss-800: #255131;
             --moss-100: #EAF4EC;
-            --dusk-800: #08475D;
             --dusk-600: #598796;
             --dusk-100: #F2FBFD;
             --midday-500: #F8CE65;
@@ -54,7 +49,6 @@
             display: flex;
             align-items: center;
         }
-
         .header-content {
             max-width: 1200px;
             width: 100%;
@@ -64,34 +58,7 @@
             align-items: center;
             gap: 1rem;
         }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-shrink: 0;
-        }
-
-        .logo-glyph {
-            width: 30px;
-            height: 30px;
-            background: var(--ac-blue-800);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .logo-glyph svg {
-            width: 16px;
-            height: 16px;
-            fill: none;
-            stroke: white;
-            stroke-width: 2.5;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
+        .logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
         .logo-wordmark {
             font-family: 'Arimo', sans-serif;
             font-size: 1rem;
@@ -99,13 +66,7 @@
             color: white;
             letter-spacing: -0.01em;
         }
-
-        .nav {
-            display: flex;
-            gap: 4px;
-            overflow-x: auto;
-        }
-
+        .nav { display: flex; gap: 4px; overflow-x: auto; }
         .nav-btn {
             padding: 6px 14px;
             background: transparent;
@@ -119,204 +80,15 @@
             transition: all 0.15s;
             white-space: nowrap;
         }
-
-        .nav-btn:hover {
-            color: white;
-            background: rgba(255,255,255,0.08);
-        }
-
-        .nav-btn.active {
-            background: var(--ac-blue-800);
-            color: white;
-            border-color: var(--ac-blue-800);
-        }
-
-        /* ── CONTAINER ── */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
+        .nav-btn:hover { color: white; background: rgba(255,255,255,0.08); }
+        .nav-btn.active { background: var(--ac-blue-800); color: white; border-color: var(--ac-blue-800); }
 
         /* ── SECTIONS ── */
-        .section {
-            background: white;
-            border-radius: 12px;
-            padding: 2.5rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid var(--midnight-200);
-            display: none;
-        }
-
-        .section.active {
-            display: block;
-        }
-
-        .section-title {
-            font-family: 'Arimo', sans-serif;
-            font-size: 1.875rem;
-            font-weight: 700;
-            color: var(--midnight-1000);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 3px solid var(--ac-blue-800);
-            letter-spacing: -0.02em;
-        }
-
-        h3 {
-            font-family: 'IBM Plex Sans', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--midnight-1000);
-            margin-top: 2rem;
-            margin-bottom: 0.875rem;
-        }
-
-        h4 {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--midnight-900);
-            margin-top: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            color: var(--midnight-900);
-            font-size: 0.9375rem;
-            line-height: 1.7;
-        }
-
-        ul, ol {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-            color: var(--midnight-900);
-            font-size: 0.9375rem;
-            line-height: 1.65;
-        }
-
-        a {
-            color: var(--ac-blue-800);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* ── CALLOUTS ── */
-        .callout {
-            padding: 1.25rem 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-            border-left: 4px solid;
-        }
-
-        .callout strong {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 0.9375rem;
-        }
-
-        .callout-warning {
-            background: var(--midday-300);
-            border-color: var(--midday-500);
-        }
-
-        .callout-primary {
-            background: var(--ac-blue-100);
-            border-color: var(--ac-blue-800);
-        }
-
-        .callout-success {
-            background: var(--moss-100);
-            border-color: var(--moss-600);
-        }
-
-        .callout-info {
-            background: var(--dusk-100);
-            border-color: var(--dusk-600);
-        }
-
-        /* ── QUOTE ── */
-        .quote {
-            background: var(--midnight-100);
-            border-left: 4px solid var(--ac-blue-800);
-            padding: 1.25rem 1.5rem;
-            margin: 1.25rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .quote p {
-            font-style: italic;
-            color: var(--midnight-900);
-            margin-bottom: 0.5rem;
-        }
-
-        .quote-author {
-            font-style: normal;
-            font-weight: 600;
-            font-size: 0.875rem;
-            color: var(--midnight-800);
-            margin-top: 0.5rem;
-        }
-
-        /* ── STATS GRID ── */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-
-        .stat-box {
-            border: 1px solid var(--midnight-200);
-            padding: 1.25rem;
-            border-radius: 10px;
-            background: var(--midnight-100);
-        }
-
-        .stat-box strong {
-            font-family: 'Arimo', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--ac-blue-800);
-            display: block;
-            margin-bottom: 0.375rem;
-            letter-spacing: -0.02em;
-        }
-
-        .stat-box p {
-            font-size: 0.875rem;
-            color: var(--midnight-800);
-            margin-bottom: 0;
-        }
-
-        /* ── FEATURE LIST ── */
-        .feature-list {
-            background: var(--midnight-100);
-            padding: 1.25rem 1.5rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-        }
-
-        .feature-list strong {
-            color: var(--ac-blue-800);
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-list p, .feature-list li {
-            font-size: 0.9rem;
+        .section { display: none; animation: fadeIn 0.25s ease; }
+        .section.active { display: block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* ── COVER ── */
@@ -330,25 +102,20 @@
             position: relative;
             overflow: hidden;
         }
-
         .cover::before {
             content: '';
-            position: absolute;
-            top: -100px; right: -100px;
+            position: absolute; top: -100px; right: -100px;
             width: 480px; height: 480px;
             background: radial-gradient(circle, rgba(0,76,255,0.2) 0%, transparent 65%);
             pointer-events: none;
         }
-
         .cover::after {
             content: '';
-            position: absolute;
-            bottom: -80px; left: 5%;
+            position: absolute; bottom: -80px; left: 5%;
             width: 320px; height: 320px;
             background: radial-gradient(circle, rgba(227,255,101,0.07) 0%, transparent 65%);
             pointer-events: none;
         }
-
         .cover-logo {
             background: white;
             padding: 1.25rem 2rem;
@@ -360,20 +127,6 @@
             position: relative;
             z-index: 1;
         }
-
-        .cover-logo-glyph {
-            width: 32px; height: 32px;
-            background: var(--ac-blue-800);
-            border-radius: 7px;
-            display: flex; align-items: center; justify-content: center;
-        }
-
-        .cover-logo-glyph svg {
-            width: 17px; height: 17px;
-            fill: none; stroke: white;
-            stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
-        }
-
         .cover-logo-text {
             font-family: 'Arimo', sans-serif;
             color: var(--midnight-1000);
@@ -381,7 +134,6 @@
             font-weight: 700;
             letter-spacing: -0.01em;
         }
-
         .cover h1 {
             font-family: 'Arimo', sans-serif;
             font-size: clamp(2rem, 5vw, 3.25rem);
@@ -391,12 +143,7 @@
             position: relative;
             z-index: 1;
         }
-
-        .cover h1 em {
-            font-style: normal;
-            color: var(--palm);
-        }
-
+        .cover h1 em { font-style: normal; color: var(--palm); }
         .cover h2 {
             font-family: 'IBM Plex Sans', sans-serif;
             font-size: 1.375rem;
@@ -406,7 +153,6 @@
             position: relative;
             z-index: 1;
         }
-
         .cover > p {
             font-size: 1.0625rem;
             color: rgba(255,255,255,0.6);
@@ -418,63 +164,280 @@
             margin-right: auto;
         }
 
-        /* ── FOOTER ── */
-        .footer {
-            text-align: center;
-            padding: 2.5rem;
-            color: var(--midnight-800);
-            font-size: 0.875rem;
-            border-top: 1px solid var(--midnight-200);
+        /* ── CONTAINER ── */
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+        .section-inner { background: white; border-radius: 12px; padding: 2.5rem; margin-bottom: 1.5rem; border: 1px solid var(--midnight-200); }
+
+        /* ── TYPOGRAPHY ── */
+        .section-title {
+            font-family: 'Arimo', sans-serif;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--midnight-1000);
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--ac-blue-800);
+            letter-spacing: -0.02em;
+        }
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--midnight-1000);
+            margin-top: 1.25rem;
+            margin-bottom: 0.875rem;
+        }
+        h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--midnight-900);
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        p { margin-bottom: 1rem; color: var(--midnight-900); font-size: 0.9375rem; line-height: 1.7; }
+        ul, ol { margin-left: 1.5rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.5rem; color: var(--midnight-900); font-size: 0.9375rem; line-height: 1.65; }
+        a { color: var(--ac-blue-800); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+
+        /* ── CALLOUTS ── */
+        .callout {
+            padding: 1.25rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid;
+        }
+        .callout strong { display: block; margin-bottom: 0.5rem; font-size: 0.9375rem; }
+        .callout p { font-size: 0.875rem; margin-bottom: 0; }
+        .callout ul { margin-top: 6px; }
+        .callout li { font-size: 0.875rem; margin-bottom: 4px; }
+        .callout-warning { background: var(--midday-300); border-color: var(--midday-500); }
+        .callout-primary { background: var(--ac-blue-100); border-color: var(--ac-blue-800); }
+        .callout-success { background: var(--moss-100); border-color: var(--moss-600); }
+        .callout-info { background: var(--dusk-100); border-color: var(--dusk-600); }
+        .callout-dark { background: var(--midnight-900); border-color: var(--ac-blue-800); }
+        .callout-dark strong { color: white; }
+        .callout-dark p { color: rgba(255,255,255,0.75); }
+
+        /* ── QUOTE ── */
+        .quote {
+            background: var(--midnight-100);
+            border-left: 4px solid var(--ac-blue-800);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .quote p { font-style: italic; color: var(--midnight-900); margin-bottom: 0.5rem; }
+        .quote-author { font-style: normal; font-weight: 600; font-size: 0.875rem; color: var(--midnight-800); margin-top: 0.5rem; }
+
+        /* ── STATS ── */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .stat-box {
+            border: 1px solid var(--midnight-200);
+            padding: 1.25rem;
+            border-radius: 10px;
+            background: var(--midnight-100);
+        }
+        .stat-box strong {
+            font-family: 'Arimo', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--ac-blue-800);
+            display: block;
+            margin-bottom: 0.375rem;
+            letter-spacing: -0.02em;
+        }
+        .stat-box p { font-size: 0.875rem; color: var(--midnight-800); margin-bottom: 0; }
+
+        /* ── FEATURE LIST ── */
+        .feature-list {
+            background: var(--midnight-100);
+            padding: 1.25rem 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        .feature-list strong {
+            color: var(--ac-blue-800);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .feature-list p, .feature-list li { font-size: 0.9rem; }
+
+        /* ── PILLARS ── */
+        .pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 2rem; }
+        .pillar { background: white; border: 1px solid var(--midnight-200); border-radius: 12px; overflow: hidden; }
+        .pillar-head { padding: 22px 24px; color: white; }
+        .pillar-num { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 4px; }
+        .pillar-name { font-family: 'Arimo', sans-serif; font-size: 18px; font-weight: 700; letter-spacing: -0.01em; color: white; }
+        .pillar-body { padding: 20px 24px; }
+        .pillar-desc { font-size: 14px; color: var(--midnight-900); line-height: 1.6; margin-bottom: 14px; }
+        .pillar-features { list-style: none; margin-left: 0; display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+        .pillar-features li {
+            font-size: 13px; color: var(--midnight-900);
+            padding-left: 16px; position: relative; line-height: 1.5; margin-bottom: 0;
+        }
+        .pillar-features li::before { content: '→'; position: absolute; left: 0; color: var(--ac-blue-800); font-weight: 600; }
+        .pillar-example { background: var(--midnight-100); border-radius: 8px; padding: 14px 16px; font-size: 13px; color: var(--midnight-900); line-height: 1.55; }
+        .pillar-example strong { color: var(--ac-blue-800); font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; display: block; margin-bottom: 4px; }
+
+        /* ── POSITIONING ── */
+        .positioning { background: var(--midnight-900); color: white; border-radius: 12px; padding: 28px 32px; margin-bottom: 2rem; }
+        .positioning-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 10px; }
+        .positioning-quote { font-size: 19px; font-style: italic; color: var(--palm); font-weight: 500; line-height: 1.4; }
+
+        /* ── 2.8 FEATURE CARDS ── */
+        .feature-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1.5rem 0; }
+        .feature-card { background: white; border: 1px solid var(--midnight-200); border-radius: 10px; padding: 1.25rem 1.5rem; }
+        .feature-card-icon { font-size: 1.5rem; margin-bottom: 10px; }
+        .feature-card-title { font-size: 0.9375rem; font-weight: 700; color: var(--ac-blue-800); margin-bottom: 6px; letter-spacing: -0.01em; }
+        .feature-card-body { font-size: 0.875rem; color: var(--midnight-900); line-height: 1.6; }
+
+        /* ── IDEAS ── */
+        .idea-list { list-style: none; margin-left: 0; display: flex; flex-direction: column; gap: 12px; margin-bottom: 2rem; }
+        .idea-item {
+            background: white; border: 1px solid var(--midnight-200);
+            border-radius: 10px; padding: 18px 22px;
+            display: grid; grid-template-columns: auto 1fr auto;
+            align-items: center; gap: 16px;
+        }
+        .idea-tag { font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; white-space: nowrap; display: inline-block; width: fit-content; align-self: center; }
+        .tag-blog { background: var(--ac-blue-100); color: var(--ac-blue-800); }
+        .tag-video { background: var(--midday-300); color: #756031; }
+        .tag-social { background: var(--moss-100); color: var(--moss-600); }
+        .idea-text { font-size: 0.9375rem; font-weight: 500; color: var(--midnight-1000); }
+        .idea-note { font-size: 11px; color: var(--dusk-600); white-space: nowrap; }
+
+        /* ── KEYWORDS ── */
+        .kw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin-bottom: 2rem; }
+        .kw-pill {
+            background: white; border: 1px solid var(--midnight-200);
+            border-radius: 8px; padding: 12px 16px;
+            font-size: 13px; font-weight: 500; color: var(--midnight-900);
+            display: flex; align-items: center; gap: 8px;
         }
 
-        /* ── RESPONSIVE ── */
+        /* ── TIPS ── */
+        .tip-list { list-style: none; margin-left: 0; display: flex; flex-direction: column; gap: 12px; margin-bottom: 2rem; }
+        .tip-item {
+            background: white; border: 1px solid var(--midnight-200);
+            border-radius: 10px; padding: 18px 22px;
+            display: flex; gap: 14px; align-items: flex-start;
+        }
+        .tip-num {
+            font-size: 13px; font-weight: 700; color: var(--ac-blue-800);
+            background: var(--ac-blue-100); border-radius: 6px;
+            padding: 2px 8px; flex-shrink: 0; margin-top: 1px;
+        }
+        .tip-title { font-size: 14px; font-weight: 600; color: var(--midnight-1000); margin-bottom: 4px; }
+        .tip-body { font-size: 13px; color: var(--midnight-900); line-height: 1.55; }
+
+        /* ── AEO ── */
+        .aeo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 16px; margin-bottom: 2rem; }
+        .aeo-card { background: white; border: 1px solid var(--midnight-200); border-radius: 12px; padding: 22px 24px; }
+        .aeo-title { font-size: 14px; font-weight: 600; color: var(--midnight-1000); margin-bottom: 6px; }
+        .aeo-body { font-size: 13px; color: var(--midnight-900); line-height: 1.55; }
+
+        /* ── RESOURCES ── */
+        .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 1.5rem; }
+        .resource-card { background: white; border: 1px solid var(--midnight-200); border-radius: 10px; padding: 20px 22px; display: flex; flex-direction: column; gap: 6px; }
+        .resource-icon { font-size: 20px; }
+        .resource-title { font-size: 14px; font-weight: 600; color: var(--midnight-1000); }
+        .resource-desc { font-size: 12px; color: var(--midnight-900); line-height: 1.5; }
+        .resource-link { margin-top: 4px; font-size: 12px; font-weight: 600; color: var(--ac-blue-800); text-decoration: none; }
+        .resource-link:hover { text-decoration: underline; }
+
+        /* ── FOOTER ── */
+        .footer { text-align: center; padding: 2.5rem; color: var(--midnight-800); font-size: 0.875rem; border-top: 1px solid var(--midnight-200); }
+
         @media (max-width: 768px) {
             .header { height: auto; padding: 0.75rem 1rem; }
             .header-content { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
             .nav { width: 100%; }
-            .section { padding: 1.5rem; }
+            .section-inner { padding: 1.5rem; }
             .cover { padding: 3rem 1.5rem; }
             .stats-grid { grid-template-columns: 1fr; }
+            .feature-cards { grid-template-columns: 1fr; }
+            .pillar-grid { grid-template-columns: 1fr; }
+            .idea-item { grid-template-columns: 1fr; gap: 8px; }
+            .idea-note { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <div class="header-content">
-            <div class="logo">
-                <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAOWA5YDASIAAhEBAxEB/8QAHQABAAICAwEBAAAAAAAAAAAAAAcIBQYDBAkCAf/EAD8QAQABAwIDBQYEAwcDBQEAAAABAgMFBAYHESESEzFRYQgiQVJicRQycoEjQmMVMzVzdLGyJEORU4KhwdGz/8QAHAEBAAIDAQEBAAAAAAAAAAAAAAEGAgUHBAMI/8QAPhEBAAECAwUFBgMGBAcAAAAAAAECAwQFEQYhMUFREiJxgdFSYZGxwfATQqEjNJKywuEHMjWCFBYXJHLS8f/aAAwDAQACEQMRAD8AikB+o3KgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASbwI4d47iJOe0Gs1d/R6nS2LVzS37cdqKapmqJiqmfzRPT4xPTx8ecZLB+xX/j24/9LZ/5VNFtNiruEyu7es1aVU6aT/uh78rtUXsVRRXGsTr8pRTxG4ebm2Jru4zWj56auqYs6yzzqs3ftPwn0nlLUnoxlcfocrj72PyWks6vSXqezcs3qIqpqj1iVcOLXs8XbEXsvsOqq9bj3q8Xdq9+mPj3Vc/m/TV18pmeUK3kO3VjFaWcdpRX7X5Z8eny98NnmGQ12ta7Hejpz/v81dhyarT39Jqbul1Vi7Yv2qpouWrlE010VR0mJiesTHk43QYmJjWFe4AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABYP2K/8e3H/pbP/KpXxYP2K/8AHtx/6Wz/AMqla2w/0a/4R/NDZ5N++2/P5Ss8A4C6E0jibww2xv3TTVkdN+GyNNPK1r7ERF2nyir4V0+k/tMKl8TeGO59haqZyOmnU46qrla19imZtVeUVfJV6T+3NetxavT6fV6a5pdXYtaixdpmi5au0RVRXTPjExPSY9FqyLazGZTMW579v2Z5eE8vDh7mpx+UWcX3uFXX1ecYsvxa9ni3fm7lthTTZuTzquYu7Xyon/Krnw/TV06zymOUQrjlMfrsXr7ugyWkv6TVWauzcs3qJpqpn1iXY8pzvB5rb7eHq384njHjH14KZi8DewlWlyPPlLrANs8YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACc/Y01tuzv3LaGuYirUY2a6Ofxmi5T0/8VTP7IMbRwo3NO0OIOIz1UzFize7GpiOvOzXHZr6fGYpmZj1iGpz3B1Y3Lr1ijjNM6eMb4/WHswF6LGJouTwiV+R8Wbtu/ZovWblNy1cpiqiumecVRMc4mJ8n2/OUxo6SAANR4j8PNtb7x/cZjSRTqqKZixrbPKm9a/f4x9M84bcPth8Tdw1yLtmqaao4TDC5aou0zRXGsSpDxV4R7m2Hcr1V23/aOH5+7r7FM8qOc8oi5T40T4ecTzjlPPojx6P3bdu7artXaKbluumaa6Ko5xVE+MTHxhA3Ff2e8dk4vZTZM28drZma6tBXPLT3J+PYn/tz6fl/S6pkO3lF3SzmHdq9qOE+McvGN3gqeYZBVRrXht8dOfl1VZHdzmIyeDyd3G5fQ39FrLU8q7V2nszHr6x6x0l0nR6K6a6YqpnWJVqYmmdJAGSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWQ9mXi1pdPo7Oydz6uixFv3cZqrtXKnlM/3NVU+HL+WfD4fCOdkXm8mDhJx0zm1Js4vPd7mMNHux2qud+xH0VT+aI+Wf2mHNdp9iqsRcqxeB/zTvmnrPWPfPT/4s+V53FumLN/hHCfVcEYfaO58HuvE0ZTA5C1rNPVy7XZnlVbn5a6fGmfSWYcpu2q7Vc0XI0mOMTxWymqmuIqpnWABgyAAa5vzZG297Y2dFn8fRemmJizqKPdvWZn40V/Dz5TzifjEqo8WeDG49k1XdfpKa8vhInnGqs0e/Zj+rRHh+qOdP258l0SYiYmJiJiekxKx5HtPjMoq0ontUc6Z4eXSfuYlrcdldnGRrVGlXWPr1ebwtrxb4B4jcU3crtWbOIylXOquxMctPfn7R+SfWOnp8VXt0bezW2MrXi87jr+h1VHXsXKelUeHapnwqp6T1jnDsmTbQ4PN6NbNWlXOmeMese+FLxuXXsHV343deTFgN48AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMxtHc+c2plqMpgchd0eop5drszzpuR8tdPhVHpK1PCLjnhN2TZxWdi1iM1Vypp51fwNRV9FU/lmfln9plT4aHO9nMHm9H7WNK+VUcfPrHuny0bDA5lewc9ydY6cv7PSEVB4Scds3tbucXuLvsxh6fdpqmrnqLEfTVP5oj5av2mPBajae5MJurE0ZTA5CzrdNV0maJ96iflqpnrTPpLjGdbO4zKK/wBrGtHKqOE+k+6fLVdcDmVnGU9ydJ6c2WAaFsAABhN57UwG78RVjM/j7Wrszzmiqely1V81FUdaZ+3j4TzjozY+lq7XZri5bmYqjhMbpY10U10zTVGsSp7xZ4F5/affZPBzdzOGp6zNNP8A1Fin66Y/NEfNT+8QiB6Qoh4r8C9v7si9ksJ3eFzNUTVNVFP8C/V9dMflmfmp8+cxU6bkO3vCzmP8cf1R9Y+HNV8w2f414b4eingze8tqZ7aGXqxmfx93SX460VT1t3afmoqjpVH28PCeU9GEdOtXaL1EXLcxNM8JjfCrV0VUVTTVGkwAPoxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZnZ+6c7tLL0ZTAZC7pL8coriJ50XaflrpnpVH3/ZhhhdtUXqJouRExPGJ4MqK6qKoqpnSYXE4R8csFu7ucZm+6w+aq5UxTVVysair6Kp8Jn5Z/aZS683kx8JOO2b2t3OL3F32Yw9Pu01TVz1FiPpqn80R8tX7THg5hn+wemt/Lv4J/pn6T8eS05fn/CjE/H1W+GK2tuLC7oxNGVwORs67SV9O1bnrTPy1Uz1pq6+ExEsq5jct12qporjSY4xPFaKaoqjtUzrAAwZAAMZufb+G3LirmLzmPs67SV9excp60z81M+NM+sdVXuLfAPMbfm7lNpxey+MjnVVp4jnqLEfaPzx6x19PitoN5k20OMyivWzVrTzpnhPpPvh4Mbl1nGU9+N/Xm83piYmYmJiY8YkXS4tcGdu74pu5DSxTic5Mc/xdqj3L0/1af5v1Ryq8PGI5Ko792NuTZGR/B5/QVWqapmLOotz2rN6POmr/AOp5THxiHZMj2nweb09miezc50zx8usfcxCl47K72DnWY1p6x9ejWwFja0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAErey7tPSbm4jRqMjaovaTFWfxU26o5xXc7URREx5RMzV/7fV48wxtGAwteJucKY1/t5vvh7FWIu02qeMuvsfgbvrdGht6/8PpsTpLkdq3Xr66qKq484oiJq5feI5u5u32f9+YPQ1a3S0aLM2qI510aK5VN2mPjPYqiJq/9vOfRccciq/xAzOb3biKez7On14/fBcI2ewvY7MzOvV5v3KK7dyq3cpqorpmYqpqjlMTHjEw/F1OLfBvb2+bd3XaamjFZyY5xq7VHu3Z8rtMfm/V4x68uSpm+9l7i2TlZx+f0FViapnub9PvWb8R8aKvj8OnSY5xziHRsj2mweb06UT2bnOmePl1j7mIVrH5Xewc6zvp6+vRrwCxtaAAzezN157aGXpyeAyF3SXo5RXTHW3dp+WumelUffw8Y5T1Ws4R8cMDvHucZmO6w+cq5Uxbrq/gairw/h1T4TM/yVdesRE1KcCv53s3g83p1uRpXyqjj59Y90+WjY4HM72DnuzrT0++D0hFROEnHnNbYizity99mcRT7tNyauep08fTVP56Y+WqfLlMRHJaba24sLujE0ZXA5GzrtJX07VuetM/LVTPWmrr4TES4znWzuMyivS9GtPKqOE+k+6fLVdcFmNnGU9yd/TmyoDRPeAAOlnMRjM5jLuNy+hsa3R3Y5V2rtPOJ9fSfWOsO6MqK6qKoqpnSYRMRVGkqtcWPZ6yGMi9ldk1XMjpKYmqvH1zzv24+if8AuR6fm8u0gW7buWrtdq7RVbuUVTTVTVHKaZjxiY+EvR9HvFPhJtjfdu5qr1r+z8xy93X2KY7VXKOURcp8K48PHr0jlLo+Q7eXLWlnMO9HtRxjxjn48fFWswyCmvWvD7p6cvLopANt4j8PNy7EyHcZjSTVpa6pixrLXOqzd+0/CfpnlLUnVMPibWJtxds1RVTPCYVS5artVTRXGkwAPs+YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwfsVxH9vbjn4/hbP/OpXxYP2K/8AHtx/6Wz/AMqla2w/0a/4R/NDZ5N++2/P5Ss8A4C6EMfuHC4ncGKu4vNaCxrtHejlXau084+8T4xMfCY5THwZAZUV1W6oqpnSY5wiqmKo0ngqbxf4B5TAd/l9o99lMVTzrr0s9dRYj48uX95T9useU9ZQhMTEzExMTHjEvSFFXFrgpt/ekXcjjooxGbq6zft0fw70/wBSmPj9UdfPm6Zs/t5NGljMd8cq+f8Aujn4xv8AdPFWMwyCJ1rw3w9FMxnd7bRz+zcvVjM/oK9Nd8bdyOtu7T81FXhMf/MfHkwTqNm9bvURct1RNM8JjgqldFVFU01RpMAD6MRm9mbrz20MvTk8BkLukvRyiumOtu7T8tdM9Ko+/h4xynqwg+d21Reom3ciJpnjE74ZUV1UVRVTOkwuPwj44YHePc4zMd1h85Vypi3XV/A1FXh/DqnwmZ/kq69YiJqS083kzcJOPOa2xFnFbl77M4in3abk1c9Tp4+mqfz0x8tU+XKYiOTmGf7BzGt7Lv4J/pn6T8eS1Zfn+ulGJ+Pqt2MVtbcWF3RiaMrgcjZ12kr6dq3PWmflqpnrTV18JiJZVzK5brtVTRXGkxxieKz01RVHapnWABgyAAdfJ6HRZPQ3tBkdLZ1elvU9m5ZvURVRXHlMSrhxb9ni5Z73LbC53bf5q8Xdr96n/Krnxj6ap59J5TPSFlxtspzvGZVc7eHq3c4nhPjH14vHi8DZxdPZuR584eces02o0equ6TV2Lun1FqqaLlq7RNNVFUeMTE9YlxL18TuGW2d+6Sf7S0/4bIU08rOvsREXafKJ+en0n9uSpnE7hdujYV+a8jpvxWNqq5W9fp4mbU+UVfGir0nx+Ey7HkW1mDzWItz3Lnszz8J5+HFTMflF7Cd6O9T19WjgLU1IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwfsV/49uP/AEtn/lUr42Th7vbPbGzX9p4LUU0VVxFN+zcp7Vu9TE8+zVH/ANxymPNqM/wFzMMuu4a1p2qo3a+6Yn6PZl+Ipw+Jpu18IX9EdcKOLm2t+WqNLRcjG5nl7+gv1xzr5RzmbdXhXHj06THKeccuqRX59xmCv4K7NnEUzTVHKfvfHvdEs37d+iK7c6wAPK+oADF7o29htzYi5is7j7Ot0lzxouR1pn5qZjrTPrExKrHFvgPmtsReyu2u+zOIp96q3FPPU6ePqpj89MfNTHnziIjmt2N7ku0WMyivWzOtM8aZ4T6T7489XgxuXWcZT3439ebzeFxOL/A/B7v77K4XusRm6udVVVNPKzqKvH+JTHhVPzR169YlVPd22M5tTLV4vPY+7o9RTz7PajnTcj5qavCqPWHZ8k2jweb0fsp0r50zx8use+PPRScdlt7B1d6Naev3wYcBv2vAAZvZm689tDL05PAZC7pL0corpjrbu0/LXTPSqPv4eMcp6rWcI+OGB3j3OMzHdYfOVcqYt11fwNRV4fw6p8Jmf5KuvWIialOBX872bweb063I0r5VRx8+se6fLRscDmd7Bz3Z1p6ffB6QionCTjzmtsRZxW5e+zOIp92m5NXPU6ePpqn89MfLVPlymIjktNtbcWF3RiaMrgcjZ12kr6dq3PWmflqpnrTV18JiJcZzrZ3GZRXpejWnlVHCfSfdPlquuCzGzjKe5O/pzZUBonvAAHHqtPY1emu6XVWLV+xdpmi5auURVRXTPSYmJ6TE+TkExMxOsHFXfix7PFjUd9ltiVxYuzzqrxl2v3KvPuqp/L+mrp5TEcoVvyuP12KyF7H5LSXtJq7NXZuWb1E01Uz6xL0YanxE4e7Y31oos5vRf9RRTMWdZZmKL9r7VcusekxMejoGQ7dX8LpZx2tdHX80evz98q7mGQ27utdjuz05f2UKEicVuEe5dh3K9VXROSw3P3NfYonlRznlEXKes0T4ecTzjlPPojt1nB42xjbUXsPXFVM84+90+6VRvWLliuaLkaSAPS+QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPq1cuWrtF21XVbuUVRVRXTPKaZjwmJ+Ep84R+0Jrcd3OI3z3uu0kcqKMlRHav2o8P4kf9yPWPe6T+aZQCNbmeUYTM7X4WJp16Tzjwn7jq9WFxl7C19q1Onyl6LYfJ4/MY2zksVrbGt0d+ntW71muKqav3j4x4THwl21B+Hm/ty7FyP4rBa2Ys1zzv6S7zqsXv1U8/H6o5T6racKeLu2t+W6NLRXGNzPL39BfrjnXyjnM26ukVx4+UxynnHLq45n+yGLyvW7b79rrHGPGPrw8Fzy/OLOL0pq7tXTr4JEAVFuAABh93bYwe68TXi89j7Ws09XPs9qOVVufmoq8aZ9YZgZ2rtdquK7c6THCY4saqaa4mmqNYU84v8Ds3tHvsrg+9y+Fp51VTTTzvaen66Y8Yj5o/eIRC9IUM8W+A2F3PN7K7a7nDZer3qrcU8tNqJ+qmPyVT81McvHnEzPN1DZ/byJ0sZj5V/wDtH1jzjmq2YZBxrw3w9PRUQZTdO3c1tfLXMVnsde0Oro69i5HSqPmpqjpVT0nrEzDFum27lF2mK6J1ieExwVeqmaZ7NUaSAM2IzezN157aGXpyeAyF3SXo5RXTHW3dp+WumelUffw8Y5T1YQfO7aovUTbuRE0zxid8MqK6qKoqpnSYXH4R8cMDvHucZmO6w+cq5Uxbrq/gairw/h1T4TM/yVdesRE1JaebyZuEnHnNbYizity99mcRT7tNyauep08fTVP56Y+WqfLlMRHJzDP9g5jW9l38E/0z9J+PJasvz/XSjE/H1W7GL2xuDDbmxNvK4LIWddpLn89uetM/LVE9aZ9J5SyjmVy3XbqmiuNJjjE8VopqiqNaZ1gAYJAAfN2ii7bqtXaKa6K4mmqmqOcVRPjEx5II4t+z7jst3uV2V3WO10+9XoavdsXf0f8Apz6fl+yeRsctzbFZZd/Fw1ek845T4x9+55sVhLWKo7N2NfnDzsz2HymCyd3GZjQX9DrLU+/avU8p+8eceUx0l0V/997K27vbFTj8/oKb8UxPc36fdvWJn40VfD4dOsTyjnEqf8YOF2Z4e5GKr0/jMRfrmNLraKen6K4/lr5ftPw+MR2PZ7a7DZtpZuR2LvTlPhP04+KmZjk9zCd+nfT16eLQAFvaYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB9Wrly1dou2q6rdyiqKqK6Z5TTMeExPwl8hxFgeEftCavQ9ziN9d5q9N0poyVFPO7bj+pTH54+qPe/UsticloMvjrORxmssazSXqe1bvWa4qpqj7w86G28N+Ie5Nh5Dv8Nq+1pa6om/o7vOqzd+8fCfqjlLn+f7DWMXrewWlFfT8s+k/p7o4rFl+e12dKL++nrzj1X0Ef8K+K+2t+2KbGnuxoMtFPO5oL9UdqfOaJ8K4+3XziEgOS4vB38HdmzfpmmqOU/f6rdZvW71EV251gAeZ9QAGC3rtLAbxxNWNz+Pt6q1426/C5aq+airxpn/f481T+LXBTcGy5u5HHxXl8JT1m/bo/iWY/qUx8Pqjp58lzSYiYmJiJiekxKw5HtLjMoq0tz2qOdM8PLpP3MS12OyyzjI70aVdfvi83hbPi9wExW4e+y20+4xWUnnXXp+XLT6if2/u6vWOk+UeKrm4cLldvZa9is1oL+h1lmeVdq7Tynl5xPhMT8JjpPwdnybaDB5vb1szpVHGmeMese+FJxuXXsHVpXG7ryY8Bu3hAAZzZe7c/s7LU5LAZC5pbvSLlHjbu0/LXT4VR/t8OS13CTjbgN5d1jcp3eHzdXKmLNdf8K/P9Oqfj9M9fLmpqR0nnCv53s1g83p1uR2a+VUcfPrHj5aNjgczvYOe7OtPT74PSEVH4R8esztvucVujvsviaeVNF7nz1NiPSZ/PHpPXyn4LSbY3BhtzYm3lcFkLOu0lz+e3PWmflqietM+k8pcZzrZ7GZRXpep1p5VRwn0n3T+q64LMbOMp7k7+nNlAGie8AAY7cuExu4sHq8LltPTqNHqrc0XKJ8fSYn4TE8pifhMQyIyorqt1RXROkxviUVUxVExPBQPibtDW7H3hrMBrJm5Tbnt6e/2eUXrU/lqj/afKYmPg1pbP2vNr05PY+n3JYtxOpxF2IuVRHWbNyYpn/xV2Z9OcqmP0Hs1m05rl9F6r/NG6rxj1jSfNzvM8H/wmImiOHGPAAb5rwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfenvXtPfov2Ltdq7bqiqiuiqaaqZjwmJjwlYHhL7Q2o0cWsVvuLmq08e7RkrdPO5RH9SmPzR6x19JV7GszTJ8Jmlr8PE069J5x4T9x1erC4y9ha+1an0l6LYfJ4/MY2zksVrbGt0d+ntW71muKqav3j4x4THwl21BeH+/Ny7HyH4rBa+u3aqq53tLc51WL36qfP1jlMea1vCnjLtre/daC9XGKzVURH4S9V7t2fj3VfhV+npV6Ty5uP59sdi8s1u2u/b6xxjxj6xu8FywGc2cVpTV3aunXwSaAp7cgADXd97K27vbFTj8/oKb8UxPc36fdvWJn40VfD4dOsTyjnEtiH1s37li5Fy1VNNUcJjiwropuUzTVGsSpZxb4Nbh2NVc1+mirK4PnzjV2qPfsx5Xaf5f1Rzj7TPJGK3PGLjrhttU38Ntymxmctymi5XM9rTWJ+MVTH56vpjp5z05Kl6zUV6vV3tVdpt013q6q6ot26aKYmZ5zyppiIiPSI5Q7xsvjsyxmE7eOt6dJ4TVHWY5eO7XooOa2MNZu6WKtesdPNxALM1YAAzmy925/Z2WpyWAyFzS3ekXKPG3dp+Wunwqj/b4cmDHzu2bd6ibdyImmeMTvhlRXVRVFVM6TC5nCTjXgN502cdkpt4nOVe73FdX8K/P9Oqf+M9fulVQ7hpw63NvvIRbw2lm3pLdcRe113nTZtfv/NV9MdftHVdfZGE1G3ds6PEarMazL3dPR2atVqpjt1en2j4c5meXxlxLa7J8vy6//wBrc3zxo49nz+k715yfG4jE0ftad3Xr99YZoBTW6AAa/wASMdRluH+fx1dPa7/HX6aY5eFXYmaZ/aYiXn89EdzXKLO28neuTyoo0d2qqfSKJl53Os/4b11TZv08omn9Yn0hUdpYjt2590gDpSsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAETMTExMxMeEwAJs4Ucfszt6LeN3XGozONjlFN/tc9TZj7zPvx6TPP1+CzW0927c3Xo41W38xpdfT2e1VRRXyuUfqon3qf3iHny5NLqL+lv0X9Nfu2L1E86bluuaaqZ9JjrClZzsRgsfVN2zP4dc9I3T5bv00828wWe38PHZr70fr8Xo6KI43irxFx9uLen3flKqY8O+u99/8ANcS+clxS4h5G3NvU7vysUVc4mLN7uuceXuclV/6c43tafi06eevw0+rbf8yWNP8AJOvkufvPeu2Nn6SdRn8vp9LV2ZqosdrtXrn6aI6z9/DzmFXeLvHLObum9i8HN3D4SrnTNNNXK/qKfrqjwiflj95lEl+9e1F6q9fu13btc86q66pqqqn1mXwtuS7F4LLaou3J/ErjnMbo8I3/ABnX3aNPjs7v4mOxT3af1+IAuTSgAANy4a8Ndz781kU4rSd1oaauV7XX4mmzb84if5qvpj9+UdXwxOKs4W3N29VFNMc5fS1aru1RRRGstR0unv6vU29NpbF2/fu1RTbt26JqqrqnwiIjrMrC8JvZ4u34s5bflVVm3PKqjGWq/fqj+rXH5f009fOY8Eu8LuFu2dg6am5obP4zKVU8ruQv0x3k8/GKI8KKfSOvnMt7cpz/AG7u39bOX92n2uc+HT5+C25fkFFvSvEb56cvPr8vF18bodFjNDZ0GO0tnSaWzT2bdmzRFNFEeURDsA51VVNU6zO9Y4iIjSABCQAGg+0FnaMDwlzl6a+zd1dn8FZjnymqq77s8vtTNU/so4m72sd8W87uixtfHaiLmhxMzOommelepnpMevYjp96qkIu6bE5ZVgctiq5GlVye15cv03+ah55iov4mYp4U7vUAW9pgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHLo9NqNZqrWk0li7qNRdqii3atUTVVXVPhERHWZbfwz4abm37rIpxem7jQUVcr2vvxMWqPOI+ar0j9+UdVteF/C/bOwdLFWPsfislVTyu6+/TE3KvOKfkp9I/eZVbPtq8JlMTRHfuezHLxnl8/c22Ayi9i+9wp6+iI+Efs81V9zl9+86aeldvF26+s/5tUeH6af3mOsLG6DR6TQaO1otDprOm01mns27VqiKaKI8oiOkOccbzbOsXmt3t4irdyiOEeEfXiumEwNnCU9m3HnzkAal6wAAHBr9ZpNBo7ut12ps6bTWae1cu3a4poojzmZ6QmImqdIRM6b5c6H/aC4t6bZ+Ou4HCX6L24dRRNNU0zzjRUTH56vr+Wn956conTOLftDTXF/EbDpmmJ50V5S7T19e6onw/VV+0eEq66rUX9Vqbmp1V65fv3apruXLlU1VV1T1mZmfGXSdmdiblddOJzCnSmN8U85/wDLpHu4zz99ZzTPKYpm1h51nr6er4uV13LlVy5VVXXVMzVVVPOZmfGZl+A6yqIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN14Z8Mtz791Uf2Xpe4x9NXZva+/Exao84j411ekenPl4vhicVZwtqbt6qKaY5y+lq1XdqiiiNZafo9NqNZqrWk0li7qNRdqii3atUTVVXVPhERHWZWI4R+zzVX3OX37zpp6V28Xbr6z/m1R4fpp/eY6wlzhfwv2zsHSxVj7H4rJVU8ruvv0xNyrzin5KfSP3mW8OUZ/t3dxGtnAd2n2vzT4dPn4Lbl+Q0W9K8Rvnpy/v8nBoNHpNBo7Wi0Oms6bTWaezbtWqIpoojyiI6Q5wc7mZqnWVjiNN0ACEgAA62UyGhxWPvZDJauxpNJZp7Vy9erimimPWZVu4t+0Ne1MXcTsPt2LM+7Xk7lHKur/Lpn8sfVPXyiPFt8pyPGZtc7GHp3c5nhHjP04vHjMdZwlOtyfLnKX+KHFTbGwtPVb1t/wDG5SaedrH2Ko7yefhNc+FFPrPXyiVTOJnEvc2/dZ2srqe40NFXOzobEzFmjymY/mq9Z/blHRqGpv3tTqLmo1N65evXKpquXLlU1VV1T4zMz1mXG7JkWymDymIr07dz2p5eEcvn71Lx+bXsX3eFPT16gC0NUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACYABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5tFpdTrtXa0ei093U6i9VFFu1aomquuqfCIiOsy3Lhfwv3Nv7VRVj7H4XG01cr2vv0zFunzin56vSP3mFtOGfDPbGwtJH9maXv8hVT2b2vvxE3q/OI+Sn0j058/FVc+2sweUxNuO/c9mOXjPLw4ttgMovYvvTup6+iI+Ens8/3OX37+q3i7Vf8A/WuP+NM+XOfGFi9FpdNodJa0ei09rTaezTFFu1aoimiimPCIiOkQ5hxvNc6xea3fxMRVr0jlHhH14rphMFZwlPZtx585AGqesAAB081lcbhcbeyWW1tjRaOzHO5evVxTTH/7Pp4yyppqrqimmNZlEzERrLuI94q8WttbDs16e7cjIZiaedGgsVx2qfKblXhRH/z5Qh3iz7QmvyXfYnZEXNBo55015CuOV+5H9OP5I9fzfpQJeuXL12u7euV3LlczVVXVPOapnxmZ+Muj5DsHcu6Xsw7tPs858Z5eHHwVrMM/po1ow++evLy6tp4i8Qdy77yH4jNayfw9FXOxo7XOmzZ+1Pxn6p5y1QHVMPh7WGtxas0xTTHCIVO5cru1TVXOsyAPswAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABvHC/hfubf2qirH2PwuNpq5XtffpmLdPnFPz1ekfvMPPisXZwlqbt+qKaY5y+lqzXeqii3GstN0Gj1ev1lrRaHTXtTqb1XZt2rVE1V1z5REdZWN4R+zzTR3OX37yqq6V28Xbr6R/m1R4/pp/eZ6wlrhlw02zsLRxTi9N3+vrp5XtffiJu1+cR8tPpH7856t0cnz/AG6vYnWzgNaKPa/NPh0j9fBbsvyGi1pXiN89OUevycWj02m0eltaTSWLWn09qmKLdq1RFNNFMeEREdIhyg57MzM6yscRoAIAAAY/cObxO38Xdyma19jQ6O1HvXbtXKPtEeMz5RHOZVj4te0Dk81F3FbNi9i8fPOmvWVdNRej6eX93H2971jwbvJ8gxmbV6WKe7zqnhHrPuh4cbmFnB063J39OaYeK/GTbexqbmhtVRlc1Eco0dmuOzan+rV/L9us+kc+aqHEHfm5N85L8XnddNduiednS2udNmz+mnn4+s859Ws11VV1TXXVNVVU85mZ5zMvx2TI9l8HlERVTHaue1PHy6fPrKl47Nb2MnSd1PSPr1AFkawAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABzaDR6vX6y1otDpr2p1N6rs27Vqiaq658oiOst04XcLdzb+1NNzQ2fweLpq5Xchfpnu45eMUx411ekdPOYW14a8NdsbD0cU4rSd9rqqeV7XX4iq9c84if5afpj9+c9VUz7a3CZVrbp79z2Y5eM8vDi2+X5Rexfenu09fREfCP2eaaO5y+/eVVXSu3i7dfSP82qPH9NP7zPWFidHptNo9La0mksWtPp7VMUW7VqiKaaKY8IiI6RDlHHM1znF5rd/ExFWvSOUeEfcrnhMFZwlPZtx585AGqesAABi9z7gw22cTcymdyFnQ6S307dyetU/LTEdap9I5yzt267lUUURrM8IjiiqqKY1qnSGURbxZ41bd2XTdx+hqoy+bp50/hrVf8ADsz/AFKo8Jj5Y6+fLxQ1xa4+ZrcU3sXtbvsPip501Xonlqb8fePyR6U9fOevJCs9Z5y6XkOwU1aXsx3R7Ef1T9I+MKvmG0ERrRhvj6Ng3zvLcO9MrOQz+vr1FUc+6tU+7asxPwop8I+/jPxmWvg6jZs27FEW7dMRTHCI3Qq1ddVdU1VTrMgD6MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAb7ws4Vbl37qKbuks/gsVTVyu6+/TPY9Yojxrq9I6ecw8+LxdjB2pvX6oppjnL62bNy9XFFuNZaVjdDrcnrrOgx2lvavVXquzbs2aJqrrnyiIWP4S+zxasTZy2/JpvXOlVGMtV+7TP8AVrj836aennM+CWuG3DnbWw9B3WI0veayunlf116IqvXfTn/LT9Mco+89W4OTZ/t1exWtnA60Ue1+afDpH6+HBbsvyGi1pXf3z05R6/Jx6XT2NJprem0ti1YsWqYpt27dEU00Ux4RER0iHIDn0zMzrKxcABAAADDbv3RgdpYqrJ5/I2tHp46U9rrXcn5aKY61T9lWeLXHfO7qi7i9vxdwuIq501TTV/1F+n6qo/LE/LT+8zDfZLs5jc3q/ZRpRzqnh/efdHno1+OzKxg4786z05/2TFxa45YHaM3cZhYtZnM086aqKK/4Fir66o8Zj5aevnMKr7z3ZuDd+VnI5/I3dXd6xbonpbtR8tFMdKY/3+PNgx2bJdm8FlFOtqNa+dU8fLpHh56qXjszv4ye9OlPT74gDftcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACYABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7GN0Otyeus6DHaW9q9Veq7NuzZomquufKIhsnDDYWb3/AJ6Mdi6ItWLfKrVau5TPd2KfOfOqfhT8fSImYuLw24c7a2HoO6xGl7zWV08r+uvRFV676c/5afpjlH3nqq20G1WGyiPw47132enjPLw4/Ntsuym7jO9wp6+iJ+Ens9WdP3OX352b9781GMt1c6Kf82qPzT9MdPOZ8FhNNYsabT29PprNuzZt0xTbt26YppopjwiIjpEOQcZzTOMXml38TE1a9I5R4R9z1XXCYKzhKOzbj1kAat6gAAGC3pu3AbOxNWSz+Qt6W14W6PG5dq+WimOtU/7fHk+lqzcvVxbt0zNU8IjfLGuumimaqp0iGdQ3xa48YPbEXcZtybOZy8c6aqqauensT9VUfnmPlp/eY8EM8WuN24N5TdxuKm5h8JVzpm1br/jX4/qVR8Ppjp580UOn5DsFEaXsx/gj+qfpHx5KtmG0GutGG+Poy269yZvdWWrymeyF7W6mrpE1z7tEfLTTHSmPSGJB023botURRRGkRwiOCr1VVVz2qp1kAZsQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHYxmh1WTyWmx2is1XtVqrtNmzbp8aq6p5RH/mXXSx7KWEt5fixY1V6iKreL0tzV8qo5xNfSin94mvtR+l4syxkYHCXMRP5YmfPl+r74WzN+9TbjnK0HC7Zuh2Ls/S4TSRTXeiO81d+I63r0xHaq+3TlHlEQ2kH5vxF+5iLtV27OtVU6zLpdu3TbpiimNIgAfFmAAEzERMzMREdZmWub83vtzZOM/HZ/X02e1E9zYo969enyop+P36RHxmFUeLHGjce9pu4/SVVYnCVTy/DWq/fvR/Ur+P6Y5R9+XNY8k2Yxmb1dqiOzRzqnh5dZ+5mGtx2aWcHGlU61dPvgmLi3x+xOAm7itpRZy+TjnTXqZnnprM+kx/eT9unrPgq/uXP5jcmVuZTOZC/rtXc8a7tXhHlTHhTHpHKGNHZMm2fweUUaWadaudU8Z9I90KXjcxvYyrWud3TkAN48AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwHsWW4ncm4bvTnTo7VPh51z/+K/rB+xX/AI9uP/S2f+VSt7Xzpk1/wj+aGzyb99t+fylZ4BwB0IBq/EHfm29jY38XnddFN2qOdnS2+VV69+mny9Z5R6vtYw93EXItWqZqqnhEMLlym3TNVc6RDZ7ldFu3VcuV00UUxM1VVTyiIjxmZQTxZ9oLGYjvsVsuLWT18e7VrquuntT9P/qT6/l9Z8EOcV+L+5N93Lmk7c4zDc/d0Vmuffj4Tcq/nn06R6fFHDqeQ7B0W9L2Y759mOEeM8/CN3iqmYZ/VVrRht0dfR3s9mMpnspdyeZ11/Xay7POu7dq5z9o+ER5RHSHRB0iiimimKaY0iFZmqap1kAZIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWD9iv/Htx/wCls/8AKpXxYP2K/wDHtx/6Wz/yqVrbD/Rr/hH80Nnk377b8/lKzz4vXbVizXevXKLVqimaq666oimmI8ZmZ8IalxJ4jba2HoO9y+r7zWV087GhszFV6768v5afqnlH3noqdxT4s7n35er0+ou/2fiO1zt6CxVPZnl4Tcq8a5+/Tp0iHKMi2VxmbTFcR2LftT9I5/L3rdj82s4Pu8aunr0S/wAXPaE0mh77EbF7vV6nrTXkq6edq3P9Omfzz9U+7+pWvMZPIZjI3sjldZf1mrvVdq5evVzVVVP3n4enwdQdkyjIsHlNvsYenfzqnjPn9I3KXjMfexdWtyd3TkANw8QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADbeHm/8AM7FsZacFTZo1eRtUWvxFyntTZimZnnTTPSZ6/HnEeUtSHxxGGtYm3Nq9T2qZ4xPDdOr6W7ldqrtUTpLsZLXa3J669r8jqr2r1V6rtXL16uaq6585mXXB9aaYpjSODCZmZ1kASgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAD8AB//2Q==" alt="ActiveCampaign" style="height:32px;width:32px;border-radius:6px;">
-                <span class="logo-wordmark">ActiveCampaign</span>
+<header class="header">
+    <div class="header-content">
+        <div class="logo">
+            <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAOWA5YDASIAAhEBAxEB/8QAHQABAAICAwEBAAAAAAAAAAAAAAcIBQYDBAkCAf/EAD8QAQABAwIDBQYEAwcDBQEAAAABAgMFBAYHESESEzFRYQgiQVJicRQycoEjQmMVMzVzdLGyJEORU4KhwdGz/8QAHAEBAAIDAQEBAAAAAAAAAAAAAAEGAgUHBAMI/8QAPhEBAAECAwUFBgMGBAcAAAAAAAECAwQFEQYhMUFREiJxgdFSYZGxwfATQqEjNJKywuEHMjWCFBYXJHLS8f/aAAwDAQACEQMRAD8AikB+o3KgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAD8AB//2Q==" alt="ActiveCampaign" style="height:30px;width:30px;border-radius:6px;">
+            <span class="logo-wordmark">ActiveCampaign</span>
+        </div>
+        <nav class="nav">
+            <button class="nav-btn active" onclick="showSection(0)">Home</button>
+            <button class="nav-btn" onclick="showSection(1)">Why This Matters</button>
+            <button class="nav-btn" onclick="showSection(2)">Platform and Positioning</button>
+            <button class="nav-btn" onclick="showSection(3)">Proof Points</button>
+            <button class="nav-btn" onclick="showSection(4)">Content Ideas</button>
+            <button class="nav-btn" onclick="showSection(5)">Content Tips</button>
+            <button class="nav-btn" onclick="showSection(6)">Resources</button>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- SECTION 0: HOME -->
+    <div class="section active" id="section-0">
+        <div class="cover">
+            <div class="cover-logo">
+                <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAOWA5YDASIAAhEBAxEB/8QAHQABAAICAwEBAAAAAAAAAAAAAAcIBQYDBAkCAf/EAD8QAQABAwIDBQYEAwcDBQEAAAABAgMFBAYHESESEzFRYQgiQVJicRQycoEjQmMVMzVzdLGyJEORU4KhwdGz/8QAHAEBAAIDAQEBAAAAAAAAAAAAAAEGAgUHBAMI/8QAPhEBAAECAwUFBgMGBAcAAAAAAAECAwQFEQYhMUFREiJxgdFSYZGxwfATQqEjNJKywuEHMjWCFBYXJHLS8f/aAAwDAQACEQMRAD8AikB+o3KgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAD8AB//2Q==" alt="ActiveCampaign" style="height:36px;width:36px;border-radius:7px;">
+                <span class="cover-logo-text">ActiveCampaign</span>
             </div>
-            <nav class="nav" id="nav">
-                <button class="nav-btn active" onclick="showSection(0)">Home</button>
-                <button class="nav-btn" onclick="showSection(1)">The Opportunity</button>
-                <button class="nav-btn" onclick="showSection(2)">The AC Angle</button>
-                <button class="nav-btn" onclick="showSection(3)">Proof Points</button>
-                <button class="nav-btn" onclick="showSection(4)">Content Ideas</button>
-                <button class="nav-btn" onclick="showSection(5)">Resources</button>
-                <button class="nav-btn" onclick="showSection(6)">Content Tips</button>
-            </nav>
+            <h1>The <em>Autonomous</em> Marketer</h1>
+            <h2>Content Creation Playbook</h2>
+            <p>Your guide to creating content that converts around the future of marketing automation.</p>
+        </div>
+
+        <div class="section-inner">
+            <div class="callout callout-warning">
+                <strong>Content contest coming July &#8211; August 2026</strong>
+                <p>A dedicated content challenge focused on Active Intelligence 2.8 is launching in July. Everything in this playbook, especially the Platform and Positioning section, will prepare you to create content that qualifies. Watch your PartnerStack dashboard and inbox for the full announcement.</p>
+            </div>
+
+            <h3>What is in this playbook</h3>
+            <p>This playbook covers everything you need to create high-performing content about autonomous marketing and Active Intelligence &#8212; including what changed in the 2.8 release. Use the navigation above to move through each section.</p>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <strong>2</strong>
+                    <p>Content formats that qualify (blog and video)</p>
+                </div>
+                <div class="stat-box">
+                    <strong>6</strong>
+                    <p>Target keywords covered in Content Tips</p>
+                </div>
+                <div class="stat-box">
+                    <strong>2.8</strong>
+                    <p>The current Active Intelligence release, built into Platform and Positioning</p>
+                </div>
+                <div class="stat-box">
+                    <strong>94.2%</strong>
+                    <p>ActiveCampaign email deliverability, ranked number one</p>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="container">
-
-        <!-- Section 0: Cover -->
-        <div class="section active" id="section-0">
-            <div class="cover">
-                <div class="cover-logo">
-                    <img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAOWA5YDASIAAhEBAxEB/8QAHQABAAICAwEBAAAAAAAAAAAAAAcIBQYDBAkCAf/EAD8QAQABAwIDBQYEAwcDBQEAAAABAgMFBAYHESESEzFRYQgiQVJicRQycoEjQmMVMzVzdLGyJEORU4KhwdGz/8QAHAEBAAIDAQEBAAAAAAAAAAAAAAEGAgUHBAMI/8QAPhEBAAECAwUFBgMGBAcAAAAAAAECAwQFEQYhMUFREiJxgdFSYZGxwfATQqEjNJKywuEHMjWCFBYXJHLS8f/aAAwDAQACEQMRAD8AikB+o3KgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAD8AB//2Q==" alt="ActiveCampaign" style="height:40px;width:40px;border-radius:8px;">
-                    <span class="cover-logo-text">ActiveCampaign</span>
-                </div>
-                <h1>The <em>Autonomous</em> Marketer</h1>
-                <h2>Content Creation Playbook</h2>
-                <p>Your guide to creating content that converts around the future of marketing automation.</p>
-            </div>
-        </div>
-
-        <!-- Section 1: The Opportunity -->
-        <div class="section" id="section-1">
+    <!-- SECTION 1: WHY THIS MATTERS -->
+    <div class="section" id="section-1">
+        <div class="section-inner">
             <h2 class="section-title">The Autonomous Marketing Opportunity</h2>
 
             <div class="callout callout-warning">
@@ -484,27 +447,17 @@
 
             <h3>The market reality</h3>
             <div class="stats-grid">
-                <div class="stat-box">
-                    <strong>$15.7B</strong>
-                    <p>Marketing automation market size by 2027</p>
-                </div>
-                <div class="stat-box">
-                    <strong>68%</strong>
-                    <p>Of top performers use automation extensively</p>
-                </div>
+                <div class="stat-box"><strong>$15.7B</strong><p>Marketing automation market size by 2027</p></div>
+                <div class="stat-box"><strong>68%</strong><p>Of top performers use automation extensively</p></div>
                 <div class="stat-box">
                     <strong>13 hrs/week</strong>
-                    <p>Average time saved with marketing automation</p>
-                    <p style="font-size: 0.75rem; margin-top: 0.5rem;"><a href="https://www.activecampaign.com/reports/13-hours-back-each-week" target="_blank">View report →</a></p>
+                    <p>Average time saved with marketing automation. <a href="https://www.activecampaign.com/reports/13-hours-back-each-week" target="_blank">View report</a></p>
                 </div>
-                <div class="stat-box">
-                    <strong>451%</strong>
-                    <p>Increase in qualified leads with automation</p>
-                </div>
+                <div class="stat-box"><strong>451%</strong><p>Increase in qualified leads with automation</p></div>
             </div>
 
             <h3>What is autonomous marketing?</h3>
-            <p>Autonomous marketing is not just automation — it is AI agents that imagine, activate, and validate your entire marketing strategy. While traditional automation requires you to build every workflow manually, autonomous marketing lets you set goals in plain language and AI handles the execution.</p>
+            <p>Autonomous marketing is not just automation &#8212; it is AI agents that imagine, activate, and validate your entire marketing strategy. While traditional automation requires you to build every workflow manually, autonomous marketing lets you set goals in plain language and AI handles the execution.</p>
 
             <div class="callout callout-primary">
                 <strong>The shift</strong>
@@ -522,366 +475,419 @@
                 <li><strong>E-commerce brands:</strong> Personalize at scale without manual segmentation.</li>
             </ul>
         </div>
+    </div>
 
-        <!-- Section 2: The AC Angle -->
-        <div class="section" id="section-2">
-            <h2 class="section-title">The ActiveCampaign Angle</h2>
+    <!-- SECTION 2: PLATFORM AND POSITIONING (includes Active Intelligence 2.8) -->
+    <div class="section" id="section-2">
+        <div class="section-inner">
+            <h2 class="section-title">Platform and Positioning</h2>
 
-            <p>ActiveCampaign is an all-in-one platform that combines lead generation, personalization, tracking, and behavioral automation — powered by <a href="https://www.activecampaign.com/platform/active-intelligence" target="_blank">Active Intelligence</a> to make marketing truly autonomous.</p>
+            <p>ActiveCampaign is an all-in-one platform that combines lead generation, personalization, tracking, and behavioral automation &#8212; powered by <a href="https://www.activecampaign.com/platform/active-intelligence" target="_blank">Active Intelligence</a>, the AI layer built across every part of ActiveCampaign that makes marketing truly autonomous. The 2.8 release is the most significant update to Active Intelligence to date.</p>
 
-            <div class="callout callout-primary">
-                <strong>Your core positioning</strong>
-                <p style="font-size: 1.0625rem; font-style: italic; color: var(--midnight-1000);">"Competitors make you build campaigns. ActiveCampaign builds them for you."</p>
+            <div class="positioning">
+                <p class="positioning-label">Your core positioning</p>
+                <p class="positioning-quote">"Competitors make you build campaigns. ActiveCampaign builds them for you &#8212; and now they actually sound like you."</p>
             </div>
 
-            <h3>The three pillars of autonomous marketing</h3>
+            <div class="callout callout-primary" style="border-left-color:var(--ac-blue-800);background:var(--ac-blue-100);">
+                <strong>Start here &#8212; see Active Intelligence 2.8 in action</strong>
+                <p>Before you write or record, experience the platform yourself. Both of these are worth your time before you create anything.</p>
+                <ul>
+                    <li><a href="https://www.activecampaign.com/demo" target="_blank"><strong>Launch the interactive demo</strong></a>: hands-on walkthrough of Active Intelligence 2.8 features</li>
+                    <li><a href="https://www.youtube.com/watch?v=b3adnXhCG-8" target="_blank"><strong>Watch the overview video</strong></a>: a narrated look at what 2.8 does and why it matters</li>
+                </ul>
+            </div>
 
-            <h4>🤖 Imagine: Autonomous execution</h4>
-            <p>Goal-setting in plain language replaces workflow engineering. Active Intelligence learns your business and executes your vision — it flows through every part of the platform.</p>
+            <h3>What Active Intelligence 2.8 solves</h3>
+            <p>The number one complaint about AI marketing tools has always been the same: the output does not sound like the brand. Marketers spend more time editing AI drafts than they would have spent writing from scratch. Active Intelligence 2.8 is a direct response to that problem.</p>
+
+            <div class="callout callout-dark">
+                <strong>The 2.8 story in one sentence</strong>
+                <p>"Active Intelligence 2.8 closes the gap between AI-generated and actually sendable &#8212; every draft now builds from your brand, your voice, and your past campaigns instead of starting from a blank page."</p>
+            </div>
+
+            <h3>What shipped in Active Intelligence 2.8</h3>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <div class="feature-card-title">Brand Kit</div>
+                    <div class="feature-card-body">Every AI draft automatically reflects your brand: logo, colors, fonts, and voice pulled in from the start. No more manually correcting off-brand output.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-title">Memory</div>
+                    <div class="feature-card-body">Active Intelligence remembers context across sessions. Past campaigns, preferences, and decisions carry forward &#8212; no more re-explaining your business every time.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-title">Custom Instructions</div>
+                    <div class="feature-card-body">Set your voice, tone, and rules once. Every generation follows them automatically &#8212; without prompting, without reminders.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-title">File Attachments</div>
+                    <div class="feature-card-body">Pull from your own briefs, brand guides, and existing content. AI builds from what you already have instead of starting from a blank page.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-title">Contact Import</div>
+                    <div class="feature-card-body">Bring contact data directly into AI workflows. Build smarter, more personalized campaigns using real audience data from the start.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-title">Autonomous Insights</div>
+                    <div class="feature-card-body">Active Intelligence proactively surfaces recommendations and opportunities &#8212; flagging what to act on before you have to go looking for it.</div>
+                </div>
+                <div class="feature-card" style="grid-column: 1 / -1;">
+                    <div class="feature-card-title">Resources</div>
+                    <div class="feature-card-body">A centralized hub of assets, templates, and references inside Active Intelligence &#8212; so everything you need to build great campaigns is always within reach.</div>
+                </div>
+            </div>
+
+            <h3>The Three Pillars of Autonomous Marketing</h3>
+            <p>Every piece of content you create should map back to at least one of these pillars. The 2.8 features slot naturally underneath each one.</p>
+
+            <div class="pillar-grid">
+                <div class="pillar">
+                    <div class="pillar-head" style="background:var(--ac-blue-800);">
+                        <p class="pillar-num">Pillar 01: Imagine</p>
+                        <p class="pillar-name">Autonomous execution</p>
+                    </div>
+                    <div class="pillar-body">
+                        <p class="pillar-desc">Strategy and campaign planning. Active Intelligence turns business goals into actionable strategies and campaign concepts.</p>
+                        <ul class="pillar-features">
+                            <li>Brand Kit integration: on-brand output from the first draft</li>
+                            <li>Custom Instructions: set voice and rules once</li>
+                            <li>AI Campaign Builder: complete campaigns from a single prompt</li>
+                            <li>AI Automation Builder: describe a workflow, get a working automation</li>
+                        </ul>
+                        <div class="pillar-example">
+                            <strong>Example</strong>
+                            Set a goal like "grow trial sign-ups" and Active Intelligence maps out the strategy, recommends the right channels, and builds the campaign plan before a single email is written.
+                        </div>
+                    </div>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-head" style="background:var(--midnight-900);">
+                        <p class="pillar-num">Pillar 02: Activate</p>
+                        <p class="pillar-name">Predictive intelligence</p>
+                    </div>
+                    <div class="pillar-body">
+                        <p class="pillar-desc">Campaign creation and cross-channel execution. AI Agents generate content, build automations, and launch campaigns across email, SMS, and more.</p>
+                        <ul class="pillar-features">
+                            <li>Memory: context and preferences carry across sessions</li>
+                            <li>Predictive Sending: optimal send time per contact</li>
+                            <li>Predictive lead scoring: know who to contact next</li>
+                            <li>Win probability and churn risk signals built in</li>
+                        </ul>
+                        <div class="pillar-example">
+                            <strong>Example</strong>
+                            AI Agents generate the email copy, build the automation, and launch the campaign across channels &#8212; from a single prompt, with no manual workflow building required.
+                        </div>
+                    </div>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-head" style="background:var(--moss-800);">
+                        <p class="pillar-num">Pillar 03: Validate</p>
+                        <p class="pillar-name">Scalable personalization</p>
+                    </div>
+                    <div class="pillar-body">
+                        <p class="pillar-desc">Performance insights, learning, and optimization. Active Intelligence tracks progress against your goals and improves automatically over time.</p>
+                        <ul class="pillar-features">
+                            <li>Document uploads: AI builds from your existing content</li>
+                            <li>Improved image generation: on-brand visuals in-flow</li>
+                            <li>AI-Suggested Segments: surface high-impact audiences</li>
+                            <li>Dynamic content blocks: every email feels personal</li>
+                        </ul>
+                        <div class="pillar-example">
+                            <strong>Example</strong>
+                            Active Intelligence tracks performance against your goals, surfaces what is working and what is not, and learns automatically &#8212; so every campaign makes the next one better.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>2.8 content angles to use</h3>
             <div class="feature-list">
-                <strong>Example</strong>
-                <p>Track your campaigns, automations, and forms against specific business outcomes like "increase form submissions" or "drive customer engagement." AI builds the entire workflow for you.</p>
+                <strong>Ready to use in your content</strong>
+                <ul>
+                    <li>"If you have ever spent more time fixing an AI draft than writing it yourself, Active Intelligence 2.8 is worth your attention."</li>
+                    <li>"Brand Kit, Memory, Custom Instructions &#8212; all shipping together, so every draft already sounds like you."</li>
+                    <li>"The first draft is supposed to be close to sendable. Now it actually is."</li>
+                    <li>"AI that builds from your brand, your voice, and your past campaigns instead of starting from a blank page."</li>
+                </ul>
+            </div>
+            <div class="callout callout-info">
+                <strong>Reference for your content &#8212; the AI slop argument</strong>
+                <p>This thought leadership piece from ActiveCampaign frames exactly the problem that 2.8 solves. It is worth reading before you write, and worth linking to if your content covers the brand voice problem in AI marketing. <a href="https://autonomous.activecampaign.com/stories/ai-slop-is-a-choice" target="_blank">Read "AI slop is a choice" &#8594;</a></p>
             </div>
 
-            <h4>⚡ Activate: Predictive intelligence</h4>
-            <p>Other platforms focus on reporting past failures. ActiveCampaign's Active Intelligence swiftly flags potential problems and creates opportunities proactively. Predictive insights and goal-driven AI agents replace dashboards and guesswork.</p>
-            <div class="feature-list">
-                <strong>Example</strong>
-                <p>Detect when revenue goals are falling behind, then automatically trigger new segments, personalized campaigns, and optimized send times to recover performance before it impacts results.</p>
-            </div>
-
-            <h4>🎯 Validate: Scalable personalization</h4>
-            <p>While simpler platforms impose ceilings on growth, ActiveCampaign's AI agents create personalized, adaptive experiences across email, SMS, WhatsApp, social, and website. Every piece of customer data becomes immediately actionable.</p>
-            <div class="feature-list">
-                <strong>Example</strong>
-                <p>Use AI-Suggested Segments to flag repeat buyers, high spenders, or at-risk customers, then generate personalized email, SMS, and WhatsApp campaigns with optimized timing and offers.</p>
-            </div>
-
-            <h3>Key AI Agents to highlight</h3>
-            <ul>
-                <li><strong>AI Campaign Builder:</strong> Generate complete campaigns from a single prompt.</li>
-                <li><strong>AI Automation Builder:</strong> Describe your workflow in plain language, get a working automation.</li>
-                <li><strong>Predictive Sending:</strong> Optimize send times at the individual contact level.</li>
-                <li><strong>AI-Suggested Segments:</strong> Surface high-impact audiences automatically.</li>
-                <li><strong>AI Brand Kit:</strong> Import brand identity from your URL in seconds.</li>
-                <li><strong>Business Goals:</strong> Get AI recommendations tailored to your objectives.</li>
-            </ul>
-
-            <p style="margin-top: 1.5rem;"><a href="https://www.activecampaign.com/use-cases/ai-agents" target="_blank">Explore all AI Agents →</a></p>
+            <p><a href="https://help.activecampaign.com/hc/en-us/articles/28394786714268-Active-Intelligence-2-8" target="_blank">Read the Active Intelligence 2.8 release notes &#8594;</a></p>
         </div>
+    </div>
 
-        <!-- Section 3: Proof Points -->
-        <div class="section" id="section-3">
+    <!-- SECTION 3: PROOF POINTS -->
+    <div class="section" id="section-3">
+        <div class="section-inner">
             <h2 class="section-title">Proof Points and Results</h2>
 
             <h3>Business impact</h3>
             <div class="stats-grid">
-                <div class="stat-box">
-                    <strong>3× faster</strong>
-                    <p>Campaign building with Active Intelligence</p>
-                </div>
-                <div class="stat-box">
-                    <strong>15 days saved</strong>
-                    <p>From idea to execution</p>
-                </div>
-                <div class="stat-box">
-                    <strong>17% CTR increase</strong>
-                    <p>Using Predictive Sending</p>
-                </div>
-                <div class="stat-box">
-                    <strong>83% ROI</strong>
-                    <p>Within first year</p>
-                </div>
+                <div class="stat-box"><strong>8&#215; faster</strong><p>To build your first campaign from scratch</p></div>
+                <div class="stat-box"><strong>10 hrs/week</strong><p>Saved each week with autonomous marketing</p></div>
+                <div class="stat-box"><strong>17% higher CTR</strong><p>With timed messages (Predictive Sending)</p></div>
+                <div class="stat-box"><strong>83%</strong><p>Of customers see ROI within a year</p></div>
+                <div class="stat-box"><strong>94.2%</strong><p>Number one in EmailTooltester's January 2024 independent study</p></div>
+                <div class="stat-box"><strong>1,000+</strong><p>App integrations</p></div>
+            </div>
+
+            <div class="callout callout-primary">
+                <strong>How to use proof points in your content</strong>
+                <p>Lead with the stat most relevant to your reader's situation. A solo marketer cares about time saved. An e-commerce brand cares about deliverability. A team lead cares about scale. Pair every number with a "so what" &#8212; the outcome that makes it meaningful to your specific audience.</p>
             </div>
 
             <h3>Customer success stories</h3>
 
             <div class="quote">
                 <p>"As we were growing, it became almost impossible to manage communication and growth manually. That's when we realized we needed automation, and that's where ActiveCampaign came in. 66% of revenue year on year is likely driven by ActiveCampaign automation."</p>
-                <div class="quote-author">— Manab Boruah, Product Marketing Manager, Kommunicate<br>
-                <strong>Results:</strong> 66% quarterly revenue growth, 1.5× conversion increase, 24% open rates<br>
-                <a href="https://www.activecampaign.com/customers/kommunicate" target="_blank">Read case study →</a></div>
+                <div class="quote-author">&#8212; Manab Boruah, Product Marketing Manager, Kommunicate<br>
+                <strong>Results:</strong> 66% of revenue year on year likely driven by ActiveCampaign automation, 1.5&#215; conversions quarter to quarter, 23% open rates. <a href="https://www.activecampaign.com/customers/kommunicate" target="_blank">Read case study &#8594;</a></div>
             </div>
 
             <div class="quote">
                 <p>"We're tracking trials started and trial conversions, and right now we're converting at over 20%. Before ActiveCampaign, we were converting less than 10%. ActiveCampaign has doubled our conversion rate."</p>
-                <div class="quote-author">— Nathan Monk, Co-Founder, Motrain<br>
-                <strong>Results:</strong> Doubled conversion rates (10% to 20%+), streamlined multi-product nurture flows<br>
-                <a href="https://www.activecampaign.com/customers/motrain" target="_blank">Read case study →</a></div>
+                <div class="quote-author">&#8212; Nathan Monk, Co-Founder, Motrain<br>
+                <strong>Results:</strong> Doubled conversion rates (10% to 20%+). <a href="https://www.activecampaign.com/customers/motrain" target="_blank">Read case study &#8594;</a></div>
             </div>
 
             <div class="quote">
-                <p>"ActiveCampaign has allowed us to do more in a smaller team... With automation, I can sleep at night knowing emails are going out when they should, and people are being followed up with."</p>
-                <div class="quote-author">— Scott Oldford, Founder, INFINITUS<br>
-                <strong>Results:</strong> Scaled operations without growing team, automated complex customer journeys<br>
-                <a href="https://www.activecampaign.com/customers/infinitus" target="_blank">Read case study →</a></div>
+                <p>"Tripled booked sales calls due to more frequent, AI-assisted email campaigns."</p>
+                <div class="quote-author">&#8212; Spark Joy New York<br>
+                <strong>Results:</strong> Tripled booked sales calls and sends 3&#215; the email campaigns with AI content generation. <a href="https://www.activecampaign.com/customers/spark-joy-new-york" target="_blank">Read case study &#8594;</a></div>
             </div>
 
             <h3>Third-party validation</h3>
             <ul>
-                <li><strong>Number one email deliverability:</strong> 93.4% (EmailTooltester 2024) — <a href="https://www.emailtooltester.com/en/email-deliverability-test/" target="_blank">View report</a></li>
-                <li><strong>G2 rating:</strong> 4.5/5 from 14,500+ reviews</li>
+                <li><strong>Number one email deliverability:</strong> Number one in EmailTooltester's January 2024 independent study (94.2%). <a href="https://www.emailtooltester.com/en/email-deliverability-test/" target="_blank">View report</a></li>
+                <li><strong>G2 rating:</strong> 4.4/5 from 14.6K+ verified reviews</li>
                 <li><strong>88% of customers</strong> say ActiveCampaign delivers value faster than competitors</li>
-                <li><strong>89% of customers</strong> say it meets their needs better than alternatives</li>
-                <li><strong>First autonomous marketing platform</strong> with Anthropic Claude integration (November 2025)</li>
+                                <li><strong>First autonomous marketing connector</strong> for Anthropic's Claude, launched November 18, 2025</li>
             </ul>
         </div>
+    </div>
 
-        <!-- Section 4: Content Ideas -->
-        <div class="section" id="section-4">
-            <h2 class="section-title">Content Creation Frameworks</h2>
+    <!-- SECTION 4: CONTENT IDEAS -->
+    <div class="section" id="section-4">
+        <div class="section-inner">
+            <h2 class="section-title">Content Ideas</h2>
 
-            <h3>Framework one: The "What is Autonomous Marketing" explainer</h3>
-            <div class="feature-list">
-                <strong>Structure</strong>
-                <ul>
-                    <li>Hook: "Marketers waste 13 hours/week on manual tasks. Here is how AI is changing that."</li>
-                    <li>Define autonomous marketing (Imagine, Activate, Validate)</li>
-                    <li>Compare old way vs. new way with specific examples</li>
-                    <li>Show ActiveCampaign's AI Agents in action</li>
-                    <li>Real results: customer stories or stats</li>
-                    <li>CTA: Try ActiveCampaign's AI features free for 14 days</li>
-                </ul>
-                <strong style="margin-top:0.75rem;">Best for:</strong> Blog posts, YouTube explainers, LinkedIn articles
-            </div>
+            <p>The best content in this category comes from real experience and a genuine point of view. Use these as starting points &#8212; the version your readers will trust is the one written in your own voice.</p>
 
-            <h3>Framework two: The "AI Agents deep dive"</h3>
-            <div class="feature-list">
-                <strong>Structure</strong>
-                <ul>
-                    <li>Problem: Building campaigns manually is time-consuming and error-prone</li>
-                    <li>Solution: ActiveCampaign's 25+ AI Agents that work for you</li>
-                    <li>Feature spotlight: AI Campaign Builder, Predictive Sending, AI-Suggested Segments</li>
-                    <li>Walk through: Building a campaign with vs. without AI Agents</li>
-                    <li>Time and effort saved calculation</li>
-                    <li>CTA: See which AI Agents fit your business</li>
-                </ul>
-                <strong style="margin-top:0.75rem;">Best for:</strong> Video tutorials, how-to blog posts, comparison content
-            </div>
-
-            <h3>Framework three: The "Before and after transformation"</h3>
-            <div class="feature-list">
-                <strong>Structure</strong>
-                <ul>
-                    <li>Before: Manual workflows, low deliverability, generic messaging</li>
-                    <li>The breaking point: Why businesses switch to autonomous marketing</li>
-                    <li>After: AI-powered campaigns, 93.4% deliverability, one-to-one personalization</li>
-                    <li>Real customer results (use Kommunicate, Motrain, or INFINITUS stories)</li>
-                    <li>How to make the transition</li>
-                    <li>CTA: Start your autonomous marketing journey</li>
-                </ul>
-                <strong style="margin-top:0.75rem;">Best for:</strong> Case study format, YouTube stories, LinkedIn posts
-            </div>
-
-            <h3>Framework four: The "Active Intelligence showcase"</h3>
-            <div class="feature-list">
-                <strong>Structure</strong>
-                <ul>
-                    <li>What is Active Intelligence and why it matters</li>
-                    <li>How it differs from basic "AI features" (trained on billions of marketing interactions)</li>
-                    <li>The three pillars: Imagine, Activate, Validate with examples</li>
-                    <li>Specific features powered by Active Intelligence</li>
-                    <li>Business outcomes: faster campaigns, better results, time savings</li>
-                    <li>CTA: Experience Active Intelligence yourself</li>
-                </ul>
-                <strong style="margin-top:0.75rem;">Best for:</strong> Product-focused blog posts, feature comparison videos, educational content
-            </div>
-
-            <div class="callout callout-info">
-                <strong>Pro tip</strong>
-                <p>Your best-performing content will likely combine education (what is autonomous marketing) with specific ActiveCampaign features (how Active Intelligence delivers it) and real proof (customer results).</p>
-            </div>
-        </div>
-
-        <!-- Section 5: Resources -->
-        <div class="section" id="section-5">
-            <h2 class="section-title">Resources and Asset Library</h2>
-
-            <h3>Asset library</h3>
-            <p>Ready-made creative assets to enhance your content. All resources available in your PartnerStack dashboard:</p>
-
-            <div class="feature-list">
-                <p><strong><a href="https://dash.partnerstack.com/activecampaign/resources/fold_lgqPV8Arck3CfI?skipValidation=true&resourceKey=mat_U3UQNjosll8q6K" target="_blank">ActiveCampaign Creatives →</a></strong><br>
-                Brand logos, banners, and general marketing materials</p>
-
-                <p><strong><a href="https://dash.partnerstack.com/activecampaign/resources/fold_lgqPV8Arck3CfI?skipValidation=true&resourceKey=mat_0TuvTQuKMAMvXf" target="_blank">Autonomous Marketing Creatives →</a></strong><br>
-                Assets highlighting AI Agents and autonomous marketing features</p>
-
-                <p><strong><a href="https://dash.partnerstack.com/activecampaign/resources/fold_lgqPV8Arck3CfI?skipValidation=true&resourceKey=mat_o819bttPuqkP2a" target="_blank">Mailchimp Comparison Creatives →</a></strong><br>
-                Pre-made graphics and comparison charts</p>
-
-                <p><strong><a href="https://dash.partnerstack.com/activecampaign/resources/fold_vf0KKDSZjQCFcA?skipValidation=true&resourceKey=mat_Uk2spWZnacgHqp" target="_blank">Platform Images →</a></strong><br>
-                Screenshots and product imagery of ActiveCampaign features</p>
-            </div>
-
-            <h3>Official ActiveCampaign resources</h3>
-            <ul>
-                <li><a href="https://www.activecampaign.com/platform/autonomous-marketing" target="_blank">Autonomous Marketing Overview</a></li>
-                <li><a href="https://www.activecampaign.com/platform/active-intelligence" target="_blank">Active Intelligence Platform</a></li>
-                <li><a href="https://www.activecampaign.com/use-cases/ai-agents" target="_blank">AI Agents Overview</a></li>
-                <li><a href="https://www.activecampaign.com/lp/activecampaign-roi" target="_blank">ActiveCampaign ROI Report</a></li>
-                <li><a href="https://www.activecampaign.com/customers" target="_blank">Customer Success Stories</a></li>
-                <li><a href="https://www.activecampaign.com/reports/13-hours-back-each-week" target="_blank">13 Hours Back Each Week Report</a></li>
+            <h3>Autonomous Marketing angles</h3>
+            <ul class="idea-list">
+                <li class="idea-item"><span class="idea-tag tag-blog">Blog</span><span class="idea-text">I let AI run my email marketing for 30 days &#8212; here is what happened</span><span class="idea-note">First-person experiment</span></li>
+                <li class="idea-item"><span class="idea-tag tag-video">Video</span><span class="idea-text">Building a full email sequence with ActiveCampaign's AI &#8212; live demo</span><span class="idea-note">Tutorial walkthrough</span></li>
+                <li class="idea-item"><span class="idea-tag tag-blog">Blog</span><span class="idea-text">What is autonomous marketing, and why does it matter for your business?</span><span class="idea-note">Educational explainer</span></li>
+                <li class="idea-item"><span class="idea-tag tag-blog">Blog</span><span class="idea-text">Five AI marketing automation workflows that practically run themselves</span><span class="idea-note">Practical how-to listicle</span></li>
+                <li class="idea-item"><span class="idea-tag tag-blog">Blog</span><span class="idea-text">How marketing AI agents are changing what a one-person team can accomplish</span><span class="idea-note">Thought leadership</span></li>
             </ul>
 
-            <h3>Key messaging points</h3>
-            <div class="callout callout-primary">
-                <strong>Use these in your content</strong>
-                <ul>
-                    <li>"From automation to autonomy: AI Agents that work toward your goals"</li>
-                    <li>"Set goals in plain language, AI handles execution"</li>
-                    <li>"Three times faster campaign building, 15 days saved from idea to launch"</li>
-                    <li>"Number one in email deliverability at 93.4%"</li>
-                    <li>"First autonomous marketing platform with Claude integration"</li>
-                    <li>"Predictive Sending increases CTR by 17% on average"</li>
-                </ul>
+            <h3>Active Intelligence 2.8 angles</h3>
+            <ul class="idea-list">
+                <li class="idea-item"><span class="idea-tag tag-blog">Blog</span><span class="idea-text">ActiveCampaign's Active Intelligence 2.8 fixes the biggest problem with AI marketing</span><span class="idea-note">Problem-solution</span></li>
+                <li class="idea-item"><span class="idea-tag tag-video">Video</span><span class="idea-text">I tested Active Intelligence 2.8's Brand Kit integration &#8212; here is what the output actually looks like</span><span class="idea-note">Hands-on test</span></li>
+                <li class="idea-item"><span class="idea-tag tag-video">Video</span><span class="idea-text">Before and after: AI campaign drafts with and without Active Intelligence 2.8</span><span class="idea-note">Before and after</span></li>
+                <li class="idea-item"><span class="idea-tag tag-blog">Blog</span><span class="idea-text">How to set up Brand Kit and Custom Instructions in ActiveCampaign</span><span class="idea-note">How-to tutorial</span></li>
+                <li class="idea-item"><span class="idea-tag tag-blog">Blog</span><span class="idea-text">The brand voice problem in AI marketing &#8212; and how Active Intelligence 2.8 fixes it</span><span class="idea-note">Problem-solution explainer</span></li>
+            </ul>
+
+            <div class="callout callout-success">
+                <strong>These angles are contest-ready</strong>
+                <p>The Active Intelligence 2.8 content ideas above will be eligible for the July &#8211; August content challenge. Creating 2.8 content now means you will have a head start when the contest opens.</p>
             </div>
 
-            <h3>Content angles that convert</h3>
-            <ul>
-                <li><strong>Time savings:</strong> "How I got 13 hours back each week"</li>
-                <li><strong>AI comparison:</strong> "AI features vs. autonomous marketing: what is the difference?"</li>
-                <li><strong>Results-focused:</strong> "How [business type] uses autonomous marketing to [specific outcome]"</li>
-                <li><strong>Educational:</strong> "The complete guide to autonomous marketing in 2026"</li>
-                <li><strong>Feature showcase:</strong> "Inside ActiveCampaign's AI Agents: what they actually do"</li>
-            </ul>
+            <div class="stats-grid">
+                <div class="stat-box" style="background:white;">
+                    <p><strong>Lead with the person, not the product.</strong> Start with a real problem your reader faces &#8212; not a feature list.</p>
+                </div>
+                <div class="stat-box" style="background:white;">
+                    <p><strong>Show it, do not just describe it.</strong> A screenshot from inside the platform does more work than a paragraph of description.</p>
+                </div>
+                <div class="stat-box" style="background:white;">
+                    <p><strong>Place your affiliate link in context.</strong> One well-placed link after a genuine proof point outperforms five forced ones.</p>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <!-- Section 6: Content Tips -->
-        <div class="section" id="section-6">
-            <h2 class="section-title">Creating Quality Autonomous Marketing Content</h2>
+    <!-- SECTION 5: CONTENT TIPS -->
+    <div class="section" id="section-5">
+        <div class="section-inner">
+            <h2 class="section-title">Creating Quality Content</h2>
 
             <div class="callout callout-primary">
                 <strong>Quality content drives results</strong>
-                <p>High-quality, well-researched content about autonomous marketing does not just rank better — it positions you as a thought leader and converts better. Focus on creating genuinely helpful educational content that serves your audience.</p>
+                <p>High-quality, well-researched content about autonomous marketing does not just rank better &#8212; it positions you as a thought leader and converts better. Focus on creating genuinely helpful educational content that serves your audience.</p>
             </div>
 
-            <h3>What makes great autonomous marketing content?</h3>
-            <ul>
-                <li><strong>Educational value:</strong> Teaches readers about autonomous marketing concepts and real-world applications</li>
-                <li><strong>Authentic integration:</strong> Mentions ActiveCampaign and Active Intelligence naturally within the broader topic</li>
-                <li><strong>Data-driven:</strong> Includes verifiable stats, customer results, and third-party validation</li>
-                <li><strong>Practical examples:</strong> Shows real use cases, workflows, or implementations readers can apply</li>
-                <li><strong>Visual support:</strong> Screenshots, diagrams, or videos that enhance understanding</li>
-                <li><strong>Clear CTAs:</strong> Includes your affiliate link naturally throughout</li>
-            </ul>
+            <h3>Content requirements</h3>
+            <p>Your content must meet these minimums to qualify for affiliate commission tracking and any active content contests.</p>
+            <table style="width:100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.875rem;">
+                <thead>
+                    <tr style="background: var(--midnight-1000); color: white;">
+                        <th style="padding: 10px 16px; text-align: left; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase;">Requirement</th>
+                        <th style="padding: 10px 16px; text-align: left; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase;">Blog post</th>
+                        <th style="padding: 10px 16px; text-align: left; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase;">Video</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid var(--midnight-200);">
+                        <td style="padding: 10px 16px;">Minimum length</td>
+                        <td style="padding: 10px 16px;">1,200 words</td>
+                        <td style="padding: 10px 16px;">Five minutes</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--midnight-200); background: var(--midnight-100);">
+                        <td style="padding: 10px 16px;">Mentions ActiveCampaign by name</td>
+                        <td style="padding: 10px 16px;">Required</td>
+                        <td style="padding: 10px 16px;">Required</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--midnight-200);">
+                        <td style="padding: 10px 16px;">Includes your affiliate link</td>
+                        <td style="padding: 10px 16px;">Required</td>
+                        <td style="padding: 10px 16px;">Required, in description</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--midnight-200); background: var(--midnight-100);">
+                        <td style="padding: 10px 16px;">Original, net-new content</td>
+                        <td style="padding: 10px 16px;">Required</td>
+                        <td style="padding: 10px 16px;">Required</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px 16px;">Visual or screenshot included</td>
+                        <td style="padding: 10px 16px;">Recommended</td>
+                        <td style="padding: 10px 16px;">Inherent to format</td>
+                    </tr>
+                </tbody>
+            </table>
 
-            <h3>SEO and AEO best practices</h3>
-
-            <h4>📊 Target high-value keywords</h4>
-            <p>Focus on these primary keywords with strong search volume and commercial intent:</p>
-            <ul>
-                <li><strong>"marketing automation"</strong> — Broad category term</li>
-                <li><strong>"email marketing automation"</strong> — Specific use case</li>
-                <li><strong>"marketing automation software"</strong> — Buying intent keyword</li>
-                <li><strong>"AI marketing automation"</strong> — Emerging high-intent term</li>
-                <li><strong>"AI marketing software"</strong> — Category and AI positioning</li>
-                <li><strong>"AI email marketing"</strong> — Specific AI application</li>
-                <li><strong>"marketing AI agents"</strong> — Autonomous marketing angle</li>
-            </ul>
-
-            <h4>🎯 Optimize for AI Overviews (AEO)</h4>
-            <p>AI-generated search results favor content that directly answers questions about autonomous marketing:</p>
-            <ul>
-                <li><strong>Use question-based headings:</strong> "What is autonomous marketing?" or "How does AI marketing automation work?"</li>
-                <li><strong>Answer questions directly:</strong> Start with clear definitions, then elaborate with examples</li>
-                <li><strong>Include structured data:</strong> Comparison tables, feature lists, step-by-step guides</li>
-                <li><strong>Cite authoritative sources:</strong> Link to ActiveCampaign research reports, customer case studies, and third-party reviews</li>
-                <li><strong>Feature FAQ sections:</strong> Address common autonomous marketing questions explicitly</li>
-                <li><strong>Define terminology:</strong> Explain Active Intelligence, AI Agents, Predictive Sending, and so on</li>
-            </ul>
-
-            <h4>📝 Content structure for rankings</h4>
-            <div class="feature-list">
-                <strong>Recommended article structure (1,500–3,000 words)</strong>
-                <ol>
-                    <li><strong>Hook and definition (200–300 words):</strong> What is autonomous marketing? Why does it matter now?</li>
-                    <li><strong>The problem (200–300 words):</strong> Manual marketing challenges, time waste, execution vs. strategy</li>
-                    <li><strong>The solution (400–600 words):</strong> How autonomous marketing works (Imagine, Activate, Validate framework)</li>
-                    <li><strong>Platform deep-dive (500–800 words):</strong> ActiveCampaign's Active Intelligence and AI Agents with examples</li>
-                    <li><strong>Real results (300–400 words):</strong> Customer success stories with specific outcomes</li>
-                    <li><strong>Implementation guide (300–500 words):</strong> How to get started with autonomous marketing</li>
-                    <li><strong>FAQ section (300–400 words):</strong> Five to eight common questions about autonomous marketing</li>
-                    <li><strong>Conclusion (100–150 words):</strong> Summary with a clear CTA</li>
-                </ol>
+            <h3>Target keywords for this content category</h3>
+            <p>These are the search terms your readers are already using. Incorporate them naturally &#8212; in your title, headings, and body copy.</p>
+            <div class="kw-grid">
+                <div class="kw-pill">marketing automation software</div>
+                <div class="kw-pill">email marketing automation software</div>
+                <div class="kw-pill">marketing automation tools</div>
+                <div class="kw-pill">email marketing automation</div>
+                <div class="kw-pill">best email marketing automation for small business</div>
+                <div class="kw-pill">marketing automation platform</div>
             </div>
 
-            <h4>🎥 Video content for YouTube SEO</h4>
-            <ul>
-                <li><strong>Title optimization:</strong> "What is autonomous marketing? [2026 complete guide]" or "AI marketing automation explained"</li>
-                <li><strong>Timestamps:</strong> Chapter markers for each concept (what is it, how it works, AI Agents, results, getting started)</li>
-                <li><strong>Show platform demos:</strong> Screen recordings of the Active Intelligence workspace and AI Agents in action</li>
-                <li><strong>Hook in the first 30 seconds:</strong> State the time savings or key benefit immediately</li>
-                <li><strong>Educational tone:</strong> Position as teaching, not selling</li>
-                <li><strong>Pin affiliate link:</strong> "Try Active Intelligence free" in description and pinned comment</li>
+            <h3>SEO best practices</h3>
+            <ul class="tip-list">
+                <li class="tip-item"><span class="tip-num">01</span><div><p class="tip-title">Lead your title with the keyword</p><p class="tip-body">Put "marketing automation software" or "marketing automation platform" at or near the start of your title. Search engines weight the beginning of headlines more heavily.</p></div></li>
+                <li class="tip-item"><span class="tip-num">02</span><div><p class="tip-title">Use your primary keyword in the first 100 words</p><p class="tip-body">Establish your topic early. Introduce "marketing automation software" or "email marketing automation" naturally in your opening paragraph.</p></div></li>
+                <li class="tip-item"><span class="tip-num">03</span><div><p class="tip-title">Structure with H2 and H3 headings that include keywords</p><p class="tip-body">Example H2: "What is email marketing automation and how does it work?" Example H3: "How marketing automation tools handle campaign optimization."</p></div></li>
+                <li class="tip-item"><span class="tip-num">04</span><div><p class="tip-title">Hit 1,500 to 2,500 words for competitive keywords</p><p class="tip-body">Longer, more comprehensive content consistently outranks thin articles for competitive search terms in this category. Aim for depth, not padding.</p></div></li>
+                <li class="tip-item"><span class="tip-num">05</span><div><p class="tip-title">Write a meta description that includes your primary keyword</p><p class="tip-body">Aim for 150&#8211;160 characters and naturally include "marketing automation software" or "marketing automation platform."</p></div></li>
+                <li class="tip-item"><span class="tip-num">06</span><div><p class="tip-title">Link to official ActiveCampaign pages with descriptive anchor text</p><p class="tip-body">"ActiveCampaign's marketing automation software" is more useful anchor text than "click here."</p></div></li>
             </ul>
 
-            <h3>Content angles that rank and convert</h3>
-            <ul>
-                <li><strong>Explainer:</strong> "What is autonomous marketing? A complete guide"</li>
-                <li><strong>Comparison:</strong> "Marketing automation vs. autonomous marketing: what is the difference?"</li>
-                <li><strong>How-to:</strong> "How to implement autonomous marketing in your business"</li>
-                <li><strong>Feature focus:</strong> "AI marketing agents explained: what they do and why you need them"</li>
-                <li><strong>Results-driven:</strong> "How autonomous marketing saves 13 hours per week"</li>
-                <li><strong>Industry-specific:</strong> "Autonomous marketing for [e-commerce / SaaS / agencies]"</li>
-                <li><strong>Trend piece:</strong> "The future of marketing automation: AI Agents and autonomous execution"</li>
-            </ul>
-
-            <h3>Link placement strategy</h3>
-            <p>For maximum conversions, include your ActiveCampaign affiliate link:</p>
-            <ul>
-                <li><strong>When introducing Active Intelligence:</strong> "Learn more about Active Intelligence" or "Try Active Intelligence free"</li>
-                <li><strong>After explaining AI Agents:</strong> "See all AI Agents in action"</li>
-                <li><strong>Following customer results:</strong> "Experience autonomous marketing yourself"</li>
-                <li><strong>In FAQ answers:</strong> When answering "What platform offers autonomous marketing?" or "How do I get started?"</li>
-                <li><strong>In your conclusion:</strong> Strong CTA to free trial with a focus on autonomous marketing benefits</li>
-            </ul>
-
-            <h3>Content quality checklist</h3>
-            <div class="callout callout-info">
-                <strong>Before publishing, ensure your content:</strong>
-                <ul>
-                    <li>✓ Clearly defines autonomous marketing and how it differs from basic automation</li>
-                    <li>✓ Explains the Imagine, Activate, Validate framework with examples</li>
-                    <li>✓ Showcases at least three to four specific AI Agents or Active Intelligence features</li>
-                    <li>✓ Includes real customer results or case studies with metrics</li>
-                    <li>✓ Features screenshots or diagrams showing Active Intelligence in action</li>
-                    <li>✓ Cites ActiveCampaign research reports (13 Hours Back, ROI Report, and so on)</li>
-                    <li>✓ Provides practical guidance on implementation or getting started</li>
-                    <li>✓ Includes your affiliate link three to five times naturally throughout</li>
-                </ul>
+            <h3>AEO: optimizing for AI Overviews and answer engines</h3>
+            <p>AI Overviews (Google's AI-generated answers) and tools like Perplexity pull from content that directly answers questions. Here is how to get your content cited.</p>
+            <div class="aeo-grid">
+                <div class="aeo-card"><p class="aeo-title">Answer the question in the first sentence</p><p class="aeo-body">If your heading is "What is marketing automation software?", your very next sentence should be a direct, complete definition.</p></div>
+                <div class="aeo-card"><p class="aeo-title">Use clear, scannable structure</p><p class="aeo-body">Numbered lists, bullet points, and short paragraphs are more likely to be extracted by AI.</p></div>
+                <div class="aeo-card"><p class="aeo-title">Include a comparison table</p><p class="aeo-body">A simple table comparing ActiveCampaign to an alternative on key metrics is highly citable by AI answer engines.</p></div>
+                <div class="aeo-card"><p class="aeo-title">Add a FAQ section</p><p class="aeo-body">End your content with three to five common questions answered concisely. These are prime citation targets for AI Overviews.</p></div>
+                <div class="aeo-card"><p class="aeo-title">Cite your sources</p><p class="aeo-body">Link to official statistics and the ActiveCampaign product pages you reference. Credible sources make your content more trustworthy to AI systems.</p></div>
+                <div class="aeo-card"><p class="aeo-title">For YouTube: add timestamps</p><p class="aeo-body">Add timestamps for every major section in your video description. YouTube surfaces timestamped sections in search results.</p></div>
             </div>
 
             <h3>What to avoid</h3>
             <ul>
-                <li><strong>Vague buzzwords:</strong> Do not just say "AI-powered" without explaining how</li>
-                <li><strong>Feature dumps:</strong> Focus on benefits and outcomes, not just listing features</li>
-                <li><strong>No proof points:</strong> Always back claims with data, stats, or customer results</li>
-                <li><strong>Pure product pitch:</strong> Lead with education about autonomous marketing, not just ActiveCampaign</li>
-                <li><strong>Outdated examples:</strong> Use current features and recent customer stories</li>
+                <li><strong>Vague buzzwords:</strong> Do not just say "AI-powered" without explaining how.</li>
+                <li><strong>Feature dumps:</strong> Focus on benefits and outcomes, not just listing features.</li>
+                <li><strong>No proof points:</strong> Always back claims with data, stats, or customer results.</li>
+                <li><strong>Pure product pitch:</strong> Lead with education about autonomous marketing, not just ActiveCampaign.</li>
+                <li><strong>Outdated examples:</strong> Use current features, especially Active Intelligence 2.8, and recent customer stories. Stats like integrations and G2 ratings change — verify before publishing.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECTION 6: RESOURCES -->
+    <div class="section" id="section-6">
+        <div class="section-inner">
+            <h2 class="section-title">Resources and Asset Library</h2>
+
+            <p>Use these links for research, screenshots, and accurate product information before you write or record.</p>
+
+            <div class="resource-grid">
+                <div class="resource-card" style="border-color:var(--ac-blue-800);border-width:2px;background:var(--ac-blue-100);">
+                    <p class="resource-title" style="color:var(--ac-blue-800);">Interactive demo</p>
+                    <p class="resource-desc">The best asset you can use before creating content. Walk through the platform live, including Active Intelligence 2.8 features, before you write or record.</p>
+                    <a class="resource-link" href="https://www.activecampaign.com/demo" target="_blank">Launch the interactive demo &#8594;</a>
+                </div>
+                <div class="resource-card">
+                    <p class="resource-title">Active Intelligence 2.8 release notes</p>
+                    <p class="resource-desc">The official release notes covering every new feature in the 2.8 update.</p>
+                    <a class="resource-link" href="https://help.activecampaign.com/hc/en-us/articles/28394786714268-Active-Intelligence-2-8" target="_blank">Read release notes &#8594;</a>
+                </div>
+                <div class="resource-card">
+                    <p class="resource-title">Active Intelligence overview</p>
+                    <p class="resource-desc">The official product page for AC's AI capabilities, good for feature accuracy and screenshots.</p>
+                    <a class="resource-link" href="https://www.activecampaign.com/platform/active-intelligence" target="_blank">View page &#8594;</a>
+                </div>
+                <div class="resource-card">
+                    <p class="resource-title">Autonomous marketing overview</p>
+                    <p class="resource-desc">The official platform overview for autonomous marketing positioning and messaging.</p>
+                    <a class="resource-link" href="https://www.activecampaign.com/platform/autonomous-marketing" target="_blank">View page &#8594;</a>
+                </div>
+                <div class="resource-card">
+                    <p class="resource-title">AI Agents overview</p>
+                    <p class="resource-desc">Full list of AI Agents available in ActiveCampaign with descriptions and use cases.</p>
+                    <a class="resource-link" href="https://www.activecampaign.com/use-cases/ai-agents" target="_blank">View page &#8594;</a>
+                </div>
+                <div class="resource-card">
+                    <p class="resource-title">Customer success stories</p>
+                    <p class="resource-desc">Real examples and case studies to reference as proof points in your content.</p>
+                    <a class="resource-link" href="https://www.activecampaign.com/customers" target="_blank">View stories &#8594;</a>
+                </div>
+                <div class="resource-card">
+                    <p class="resource-title">AI Lab</p>
+                    <p class="resource-desc">ActiveCampaign's AI Lab: the latest thinking, experiments, and product direction around AI and autonomous marketing.</p>
+                    <a class="resource-link" href="https://autonomous.activecampaign.com" target="_blank">Explore AI Lab &#8594;</a>
+                </div>
+                <div class="resource-card">
+                    <p class="resource-title">Your affiliate dashboard</p>
+                    <p class="resource-desc">Access your unique affiliate link, commission tracking, and payout history.</p>
+                    <a class="resource-link" href="https://activecampaign.partnerstack.com" target="_blank">Open dashboard &#8594;</a>
+                </div>
+            </div>
+
+            <h3>PartnerStack asset library</h3>
+            <p>Ready-made creative assets available in your PartnerStack dashboard:</p>
+            <ul>
+                <li><a href="https://dash.partnerstack.com/activecampaign/resources/fold_xBkqZlQWQuL2xg" target="_blank">Active Intelligence 2.8 Hub</a>: Assets specifically for Active Intelligence 2.8 content</li>
+                <li><a href="https://dash.partnerstack.com/activecampaign/resources/fold_lgqPV8Arck3CfI?skipValidation=true&resourceKey=mat_U3UQNjosll8q6K" target="_blank">ActiveCampaign Creatives</a>: Brand logos, banners, and general marketing materials</li>
+                <li><a href="https://dash.partnerstack.com/activecampaign/resources/fold_lgqPV8Arck3CfI?skipValidation=true&resourceKey=mat_0TuvTQuKMAMvXf" target="_blank">Autonomous Marketing Creatives</a>: Assets highlighting AI Agents and autonomous marketing features</li>
+                <li><a href="https://autonomous.activecampaign.com/stories/ai-slop-is-a-choice" target="_blank">"AI Slop Is a Choice"</a>: Thought leadership piece framing the brand voice problem Active Intelligence 2.8 solves</li>
+                <li><a href="https://dash.partnerstack.com/activecampaign/resources/fold_vf0KKDSZjQCFcA?skipValidation=true&resourceKey=mat_Uk2spWZnacgHqp" target="_blank">Platform Images</a>: Screenshots and product imagery of ActiveCampaign features</li>
             </ul>
 
             <div class="callout callout-success">
-                <strong>Need help or resources?</strong>
-                <p>Check the Resources section for ActiveCampaign assets, research reports, customer stories, and official platform links. For questions, reach out to your ActiveCampaign affiliate manager via PartnerStack or email <a href="mailto:psaffiliates@activecampaign.com">psaffiliates@activecampaign.com</a>.</p>
+                <strong>Questions?</strong>
+                <p>Reach out to your ActiveCampaign affiliate manager via PartnerStack or email <a href="mailto:psaffiliates@activecampaign.com">psaffiliates@activecampaign.com</a>.</p>
             </div>
         </div>
-
     </div>
 
-    <div class="footer">
-        <p><strong>Questions or need support?</strong> Reach out to your ActiveCampaign affiliate manager or visit the PartnerStack dashboard.</p>
-        <p style="margin-top: 0.75rem; color: var(--midnight-800);">© 2026 ActiveCampaign. Good luck with your content creation.</p>
-    </div>
+</div>
 
-    <script>
-        function showSection(index) {
-            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-            document.getElementById('section-' + index).classList.add('active');
-            document.querySelectorAll('.nav-btn')[index].classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
+<div class="footer">
+    <p><strong>Questions or need support?</strong> Reach out to your ActiveCampaign affiliate manager or visit the PartnerStack dashboard.</p>
+    <p style="margin-top: 0.75rem;">&#169; 2026 ActiveCampaign. Good luck with your content creation.</p>
+</div>
+
+<script>
+    function showSection(index) {
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById('section-' + index).classList.add('active');
+        document.querySelectorAll('.nav-btn')[index].classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
 </body>
 </html>
